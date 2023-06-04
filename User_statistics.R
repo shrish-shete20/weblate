@@ -1,13 +1,12 @@
-# Required libraries
+
 library(httr)
 library(jsonlite)
 library(rvest)
 
-# Weblate API configuration
+
 api_token <- "wwlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"
 api_url <- "https://translate.rx.studio/api/"
 
-# API request: Fetch all languages
 endpoint <- paste0(api_url, "users/")
 headers <- add_headers(Authorization = paste("Token", api_token))
 response <- GET(url = endpoint, headers = headers)
