@@ -57,3 +57,4 @@ data$Lanaguages_Count<-languages_count
 data2<-data.frame(data,stringsAsFactors = FALSE)
 data2$Languages<-languages
 data2<-as.list(data2)
+View(data2)
