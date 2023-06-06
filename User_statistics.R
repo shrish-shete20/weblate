@@ -56,5 +56,16 @@ data<-cbind(data,translated)
 data$Lanaguages_Count<-languages_count
 data2<-data.frame(data,stringsAsFactors = FALSE)
 data2$Languages<-languages
-data2<-as.list(data2)
-View(data2)
+data2$Languages[[3]]
+typeof(data2$Languages)
+data2 <- data2 %>%
+  mutate(serial_number = row_number()) %>%
+  select(serial_number, everything())
+
+library(tidyverse)
+data2<-tibble(data2)
+data2 <- data2 %>%
+  group_by(serial_number)%>%
+  mutate(Languages=paste(Languages))
+
+write_csv(data2, "Statistics.csv")
