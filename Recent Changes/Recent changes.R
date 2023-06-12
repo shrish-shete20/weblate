@@ -103,7 +103,7 @@ for (i in 1:pages) {
   times<-c(times,time)
 }
 translated_data<-data.frame(user=users,language=lang,library=lib,units=units,date=dates,time=times)
-write_csv(translated_data,"New Translation.csv")
+
 
 ### Marked for edit 
 edit_url<-"https://translate.rx.studio/api/changes/?action=37"
@@ -298,15 +298,43 @@ changed_data<-changed_data[!du_row,]
 
 ###Data Processing
 
+
+
 elements_changed<-intersect(mark_data$units,changed_data$units)
 indexes<-match(elements_changed,mark_data$units)
-mark_data<-mark_data[-indexes,]
+indexes2<-match(elements_changed,changed_data$units)
+
+date_at_indexes<-as.Date(mark_data[indexes,]$date,origin="1970-01-01")
+time_at_indexes<-mark_data[indexes,]$time
+timestamp_at_indexes<-paste0(date_at_indexes," ",time_at_indexes)
+datetime_at_indexes <- as.POSIXct(timestamp_at_indexes, format = "%Y-%m-%d %H:%M:%S")
+
+date_at_indexes2<-as.Date(changed_data[indexes2,]$date,origin="1970-01-01")
+time_at_indexes2<-changed_data[indexes2,]$time
+timestamp_at_indexes2<-paste0(date_at_indexes2," ",time_at_indexes2)
+datetime_at_indexes2 <- as.POSIXct(timestamp_at_indexes2, format = "%Y-%m-%d %H:%M:%S")
+j<-c()
+k<-c()
+for(i in 1:length(indexes))
+{
+  if(timestamp_at_indexes2[i]>timestamp_at_indexes[i])
+  {
+    j<-c(j,i)
+  }else{
+    k<-c(k,i)
+  }
+}
+mark_data<-mark_data[-indexes[j],]
+changed_data<-changed_data[-indexes[k],]
 editing<-dim(mark_data)[1]
 
 translation_edited<-intersect(translated_data$units,mark_data$units)
+translated_indexes<-match(translation_edited,translated_data$units)
+translated_data<-translated_data[-translated_indexes,]
 
 translation_changed<-intersect(translated_data$units,changed_data$units)
 changed_indexes<-match(translation_changed,translated_data$units)
-translated_data2<-translated_data[-changed_indexes,]
-translated_data2<-rbind(translated_data2,changed_data[changed_indexes2,])
-
+translated_data<-translated_data[-changed_indexes,]
+translated_data<-rbind(translated_data,changed_data[changed_indexes,])
+write_csv(translated_data,"New Translation.csv")
+write_csv(mark_data,"Marked for Edit.csv")
