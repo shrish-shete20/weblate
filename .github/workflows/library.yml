@@ -30,7 +30,7 @@ jobs:
         
     - name: Run R scripts
       run: | 
-        Rscript Library Language Statistics.R
+        Rscript "Library Language Statistics.R"
       
     - name: Configure 
       run: |
