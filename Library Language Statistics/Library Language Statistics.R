@@ -35,6 +35,7 @@ translated<-list()
 fuzzy<-list()
 total<-list()
 untranslated<-list()
+lang_count<-numeric(length(slugs))
 i=1
 for(slug in slugs)
 {
