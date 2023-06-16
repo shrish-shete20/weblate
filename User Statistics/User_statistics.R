@@ -5,7 +5,6 @@ library(rvest)
 library(readr)
 library(data.table)
 Language_Statistics <- read_csv("Language_Statistics_new.csv")
-
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
 api_url <- "https://translate.rx.studio/api/"
