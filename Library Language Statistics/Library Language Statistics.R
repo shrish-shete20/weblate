@@ -36,7 +36,7 @@ fuzzy<-list()
 total<-list()
 untranslated<-list()
 lang_count<-numeric(length(slugs))
-i=1
+i=1 
 for(slug in slugs)
 {
   library_url<-"https://translate.rx.studio/api/components/r-project/"
