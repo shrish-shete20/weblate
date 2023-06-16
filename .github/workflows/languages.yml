@@ -26,7 +26,7 @@ jobs:
         
     - name: Run R scripts
       run: | 
-        Rscript "Language Statisitics/Languages_Statistics.R"
+        Rscript Languages_Statistics.R
       
     - name: Configure 
       run: |
