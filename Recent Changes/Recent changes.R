@@ -338,3 +338,4 @@ translated_data<-translated_data[-changed_indexes,]
 translated_data<-rbind(translated_data,changed_data[changed_indexes,])
 write_csv(translated_data,"New Translation.csv")
 write_csv(mark_data,"Marked for Edit.csv")
+print(24)
