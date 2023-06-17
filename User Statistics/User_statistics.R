@@ -3,7 +3,9 @@ library(httr)
 library(jsonlite)
 library(rvest)
 library(readr)
+library(tidyverse)
 library(data.table)
+library(dplyr)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
@@ -61,7 +63,6 @@ data2 <- data2 %>%
   mutate(serial_number = row_number()) %>%
   select(serial_number, everything())
 
-library(tidyverse)
 data2<-tibble(data2)
 data2 <- data2 %>%
   group_by(serial_number)%>%
