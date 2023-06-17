@@ -38,5 +38,5 @@ jobs:
     - name: Commit and Push Changes
       run: |
         git add .
-        git commit -m "Updated changes Csv"
+        git commit -m "Updated users Csv"
         git push
