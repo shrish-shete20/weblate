@@ -3,7 +3,7 @@ library(httr)
 library(jsonlite)
 library(stringr)  
 library(readr)
-Language_Statistics <- read_csv("~/weblate/Language Statisitics/Language_Statistics_new.csv")
+Language_Statistics <- read_csv("~/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
 
 changes_url<-"https://translate.rx.studio/api/changes/?action=5"
