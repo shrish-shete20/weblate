@@ -10,7 +10,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages
 9,Shun Wang,ShunWang,1612,1,Chinese (Simplified)
 10,Kwangchun Lee,tidyverse,15,1,Korean
 11,joygram,joygram,2,1,Korean
-12,Macarena Quiroga,msquiroga,304,1,Spanish
+12,Macarena Quiroga,msquiroga,310,1,Spanish
 13,Heather Turner,hturner,153,1,English (United Kingdom)
 14,Patricia loto,PatriLoto,55,1,Spanish
 15,Gabriel Tormin,Gtormin,24,2,"c(""English (United Kingdom)"", ""English"")"
@@ -31,11 +31,11 @@ serial_number,name,username,translated,Lanaguages_Count,Languages
 30,Martin Mächler,maechlerETH,15,2,"c(""German"", ""English"")"
 31,Roberto Villegas-Diaz,villegar,0,1,Spanish
 32,Binod Jung Bogati,bjungbogati,295,1,Nepali
-33,Shrish Shete,shrishs21,0,2,"c(""English (United Kingdom)"", ""Hindi"")"
+33,Shrish Shete,shrishs21,2,2,"c(""English (United Kingdom)"", ""Hindi"")"
 34,Om Shivam Verma,omsv135,0,0,character(0)
 35,Sovan Karmakar,Sovan,7,3,"c(""Bengali"", ""English (United Kingdom)"", ""English"")"
 36,Shreshtha Modi,shreshthamodi,52,2,"c(""Hindi"", ""English (United Kingdom)"")"
 37,María Cristina Nanton,MCNanton,0,1,Spanish
 38,Hugo Gruson,hgruson,17,1,French
-39,Paola Corrales,PaoCorrales,112,1,Spanish
-40,Shriharsh,shriharsh,1,2,"c(""Hindi"", ""English"")"
+39,Paola Corrales,PaoCorrales,119,1,Spanish
+40,Shriharsh,shriharsh,3,2,"c(""Hindi"", ""English"")"
