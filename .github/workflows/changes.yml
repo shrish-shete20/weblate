@@ -1,4 +1,4 @@
-name: Languages Statistics Refresh
+name: Recent Chnages refresh
 
 on: 
   schedule:  
