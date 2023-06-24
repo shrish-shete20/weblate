@@ -6,6 +6,7 @@ library(readr)
 library(tidyverse)
 library(data.table)
 library(dplyr)
+library(curl)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
@@ -14,8 +15,8 @@ api_url <- "https://translate.rx.studio/api/"
 
 # API request: Fetch all languages
 endpoint <- paste0(api_url, "users/")
-headers <- add_headers(Authorization = paste("Token"," ",api_token))
-response <- GET(url = endpoint, headers = headers)
+headers2 <- add_headers(Authorization = paste("Token",api_token2))
+response <- GET(url = endpoint,authenticate("shrishs21","kvell@2003"))
 users <- content(response, "text", encoding = "UTF-8")
 users <- fromJSON(users)
 count<-users$count
@@ -90,19 +91,23 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
-  headers2 <- add_headers(Authorization = paste("Token"," ",api_token2))
-  last_url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
-  response_last <- GET(url = last_url, headers = headers2, authenticate("shriharsh","gokuldhamsociety"))
-  users_last <- content(response_last, "text", encoding = "UTF-8")
-  users_last <- fromJSON(users_last)
+  
+  url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
+  h <- new_handle()
+  handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
+  handle_setopt(h, customrequest = "GET")
+  handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
+  res <- curl_fetch_memory(url, handle = h)
+  
+  content <- rawToChar(res$content)
+  users_last <- fromJSON(content)
   pages_count<-ceiling(users_last$count/50)
-  print(headers(response_last)$'x-ratelimit-remaining')
   if(pages_count!=0)
   {
     url_last<-paste0("https://translate.rx.studio/api/changes/?page=",pages_count,"&user=",user)
-    last_response <- GET(url = url_last, headers = headers, authenticate("shrishs21","kvell@2003"))
-    last_users <- content(last_response, "text", encoding = "UTF-8")
-    last_users <- fromJSON(last_users)
+    res2<-curl_fetch_memory(url_last, handle = h)
+    content2<-rawToChar(res2$content)
+    last_users<-fromJSON(content2)
     remain<-pages_count%%50
     if(remain==0)
     {
