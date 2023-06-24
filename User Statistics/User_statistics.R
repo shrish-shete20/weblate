@@ -9,12 +9,13 @@ library(dplyr)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
+api_token2<-"wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"
 api_url <- "https://translate.rx.studio/api/"
 
 # API request: Fetch all languages
 endpoint <- paste0(api_url, "users/")
 headers <- add_headers(Authorization = paste("Token"," ",api_token))
-response <- GET(url = endpoint, headers = headers, authenticate("shrishs21","kvell@2003"))
+response <- GET(url = endpoint, headers = headers)
 users <- content(response, "text", encoding = "UTF-8")
 users <- fromJSON(users)
 count<-users$count
@@ -89,7 +90,7 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
-  headers2 <- add_headers(Authorization = paste("Token"," ",api_token))
+  headers2 <- add_headers(Authorization = paste("Token"," ",api_token2))
   last_url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
   response_last <- GET(url = last_url, headers = headers2, authenticate("shrishs21","kvell@2003"))
   users_last <- content(response_last, "text", encoding = "UTF-8")
