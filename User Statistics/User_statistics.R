@@ -95,6 +95,7 @@ for(user in Statistics$username)
   users_last <- content(response_last, "text", encoding = "UTF-8")
   users_last <- fromJSON(users_last)
   pages_count<-ceiling(users_last$count/50)
+  headers(response_last)$'x-ratelimit-remaining'
   if(pages_count!=0)
   {
     url_last<-paste0("https://translate.rx.studio/api/changes/?page=",pages_count,"&user=",user)
@@ -111,7 +112,7 @@ for(user in Statistics$username)
   {
     created<-c(created,"N/A")
   }
-  
+  print(user)
 }
 data2$Last_Activity<-created
 
