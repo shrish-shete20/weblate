@@ -7,7 +7,6 @@ library(tidyverse)
 library(data.table)
 library(dplyr)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
-Statistics <- read_csv("/home/runner/work/weblate/weblate/User Statistics/Statistics.csv")
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
 api_url <- "https://translate.rx.studio/api/"
