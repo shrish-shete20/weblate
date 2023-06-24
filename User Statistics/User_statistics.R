@@ -70,7 +70,7 @@ data2 <- data2 %>%
   mutate(Languages=paste(Languages))
 
 timestamp<-c()
-for(user in Statistics$username)
+for(user in data2$username)
 {
   url_timestamp<-paste0("https://translate.rx.studio/api/changes/?user=",user)
   response_timestamp <- GET(url = url_timestamp, headers = headers, authenticate("shrishs21","kvell@2003"))
@@ -88,7 +88,7 @@ data2$created<-timestamp
 
 
 created<-c()
-for(user in Statistics$username)
+for(user in data2$username)
 {
   last_url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
   response_last <- GET(url = last_url, headers = headers, authenticate("shrishs21","kvell@2003"))
