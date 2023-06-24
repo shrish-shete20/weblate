@@ -203,7 +203,6 @@ lente,Portuguese (Brazil),tools (R files),109120,19236,19:23:34
 lente,Portuguese (Brazil),tools (R files),109121,19236,19:24:03
 lente,Portuguese (Brazil),tools (R files),109123,19236,19:24:36
 lente,Portuguese (Brazil),tools (R files),109126,19236,19:25:29
-lente,Portuguese (Brazil),tools (R files),109127,19236,19:25:59
 lente,Portuguese (Brazil),tools (R files),109128,19236,19:27:00
 lente,Portuguese (Brazil),tools (R files),109129,19236,19:27:08
 lente,Portuguese (Brazil),tools (R files),109130,19236,19:27:26
@@ -415,7 +414,6 @@ lente,Portuguese (Brazil),tools (R files),109433,19237,14:17:53
 lente,Portuguese (Brazil),tools (R files),109434,19237,14:18:27
 lente,Portuguese (Brazil),tools (R files),109436,19237,14:19:07
 lente,Portuguese (Brazil),tools (R files),109437,19237,14:19:16
-lente,Portuguese (Brazil),tools (R files),109438,19237,14:19:44
 lente,Portuguese (Brazil),tools (R files),109439,19237,14:20:58
 lente,Portuguese (Brazil),tools (R files),109440,19237,14:21:25
 lente,Portuguese (Brazil),tools (R files),109441,19237,14:21:52
@@ -548,15 +546,11 @@ lente,Portuguese (Brazil),utils (R files),115896,19237,17:17:17
 lente,Portuguese (Brazil),utils (R files),115897,19237,17:17:30
 lente,Portuguese (Brazil),utils (R files),115898,19237,17:17:51
 lente,Portuguese (Brazil),utils (R files),115899,19237,17:17:57
-lente,Portuguese (Brazil),utils (R files),115900,19237,17:19:32
 lente,Portuguese (Brazil),utils (R files),115902,19237,17:20:12
 lente,Portuguese (Brazil),utils (R files),115904,19237,17:21:14
 lente,Portuguese (Brazil),utils (R files),115905,19237,17:21:24
 lente,Portuguese (Brazil),utils (R files),115906,19237,17:22:50
 lente,Portuguese (Brazil),utils (R files),115907,19237,17:23:00
-lente,Portuguese (Brazil),utils (R files),115909,19237,17:24:34
-lente,Portuguese (Brazil),utils (R files),115910,19237,17:25:26
-lente,Portuguese (Brazil),utils (R files),115911,19237,17:25:40
 lente,Portuguese (Brazil),utils (R files),115912,19237,17:25:59
 lente,Portuguese (Brazil),utils (R files),115913,19237,17:26:15
 lente,Portuguese (Brazil),utils (R files),115915,19237,17:26:39
@@ -598,7 +592,6 @@ lente,Portuguese (Brazil),utils (R files),115954,19237,17:43:23
 lente,Portuguese (Brazil),utils (R files),115955,19237,17:43:44
 lente,Portuguese (Brazil),utils (R files),115956,19237,17:43:58
 lente,Portuguese (Brazil),utils (R files),115957,19237,17:44:10
-lente,Portuguese (Brazil),utils (R files),115958,19237,17:46:10
 lente,Portuguese (Brazil),utils (R files),115959,19237,17:46:37
 lente,Portuguese (Brazil),utils (R files),115960,19237,17:47:02
 lente,Portuguese (Brazil),utils (R files),115961,19237,17:47:19
@@ -708,7 +701,6 @@ lente,Portuguese (Brazil),utils (R files),116081,19237,18:36:57
 lente,Portuguese (Brazil),utils (R files),116082,19237,18:37:04
 lente,Portuguese (Brazil),utils (R files),116083,19237,18:37:20
 lente,Portuguese (Brazil),utils (R files),116084,19237,18:37:47
-lente,Portuguese (Brazil),utils (R files),116085,19237,18:38:18
 lente,Portuguese (Brazil),utils (R files),116086,19237,18:38:39
 lente,Portuguese (Brazil),utils (R files),116087,19237,18:39:18
 lente,Portuguese (Brazil),utils (R files),116088,19237,18:39:25
@@ -2024,30 +2016,29 @@ shriharsh,Hindi,base (C files),129017,19512,11:39:28
 PaoCorrales,Spanish,base (C files),49129,19514,23:11:15
 PaoCorrales,Spanish,base (C files),49174,19514,23:11:36
 PaoCorrales,Spanish,base (C files),49175,19514,23:12:00
-PaoCorrales,Spanish,base (C files),49176,19514,23:12:11
 PaoCorrales,Spanish,base (C files),49199,19514,23:12:53
 PaoCorrales,Spanish,base (C files),49208,19514,23:13:01
 PaoCorrales,Spanish,base (C files),49271,19514,23:13:13
 angelasanzo,Spanish,base (C files),48697,19199,11:51:47
 angelasanzo,Spanish,base (C files),48742,19199,11:56:44
-mr148,French,grDevices (C files),73007,19234,14:46:26
 mr148,French,grDevices (C files),73093,19234,14:48:05
-mr148,Italian,The R Project for Statistical Computing,118538,19234,16:13:35
+mr148,French,grid (R files),82005,19234,14:49:37
 kryekuzhinieri,Albanian,base (R files),124079,19234,16:19:50
-mr148,Italian,stats4 (R files),99501,19234,16:22:20
+kryekuzhinieri,Albanian,base (C files),123436,19234,16:19:50
 mr148,Italian,stats (R files),96738,19234,16:22:20
 kryekuzhinieri,Albanian,base (R files),124088,19234,16:26:08
 kryekuzhinieri,Albanian,base (C files),123445,19234,16:26:08
-kryekuzhinieri,Albanian,base (R files),124091,19234,16:28:12
+mr148,Italian,stats (R files),96772,19234,16:27:41
 kryekuzhinieri,Albanian,base (C files),123448,19234,16:28:12
-lente,Portuguese (Brazil),base (R files),38755,19234,18:26:10
-lente,Portuguese (Brazil),base (R files),38779,19234,18:31:35
-lente,Portuguese (Brazil),base (R files),38850,19235,18:18:28
-lente,Portuguese (Brazil),base (R files),38858,19235,18:21:33
-lente,Portuguese (Brazil),base (R files),38863,19235,18:22:04
-lente,Portuguese (Brazil),base (R files),38870,19235,18:24:54
-lente,Portuguese (Brazil),base (R files),38875,19235,18:25:46
-llrs,Spanish,base (R GUI),28727,19235,19:07:16
+kryekuzhinieri,Albanian,base (R files),124090,19234,16:28:19
+lente,Portuguese (Brazil),base (R files),38766,19234,18:26:47
+lente,Portuguese (Brazil),base (R files),38782,19234,18:31:53
+lente,Portuguese (Brazil),base (R files),38851,19235,18:18:53
+lente,Portuguese (Brazil),base (R files),38861,19235,18:21:40
+lente,Portuguese (Brazil),base (R files),38864,19235,18:22:23
+lente,Portuguese (Brazil),base (R files),38873,19235,18:25:23
+lente,Portuguese (Brazil),base (R files),38880,19235,18:25:51
+llrs,Spanish,base (R GUI),28725,19235,19:07:40
 lente,Portuguese (Brazil),base (R files),38975,19235,19:22:12
 lente,Portuguese (Brazil),base (R files),38992,19235,19:27:46
 lente,Portuguese (Brazil),base (R files),39000,19235,19:32:27
@@ -2079,68 +2070,66 @@ lente,Portuguese (Brazil),tools (R files),109278,19236,20:42:30
 lente,Portuguese (Brazil),tools (R files),109286,19236,20:46:26
 lente,Portuguese (Brazil),tools (R files),109321,19236,20:56:42
 lente,Portuguese (Brazil),tools (R files),109328,19236,20:59:27
-lente,Portuguese (Brazil),tools (R files),109331,19236,21:00:13
-lente,Portuguese (Brazil),tools (R files),109396,19236,21:16:01
-lente,Portuguese (Brazil),tools (R files),109400,19236,21:16:45
-lente,Portuguese (Brazil),tools (R files),109408,19236,21:20:51
+lente,Portuguese (Brazil),tools (R files),109332,19236,21:01:43
+lente,Portuguese (Brazil),tools (R files),109399,19236,21:16:40
+lente,Portuguese (Brazil),tools (R files),109403,19236,21:17:42
 lente,Portuguese (Brazil),tools (R files),109412,19236,21:21:52
 lente,Portuguese (Brazil),tools (R files),109290,19237,14:10:53
-lente,Portuguese (Brazil),tools (R files),109538,19237,14:56:36
-lente,Portuguese (Brazil),utils (R files),115853,19237,17:05:47
-lente,Portuguese (Brazil),utils (R files),115854,19237,17:05:59
+lente,Portuguese (Brazil),tools (R files),109526,19237,14:50:04
+lente,Portuguese (Brazil),utils (R files),115849,19237,17:04:56
+lente,Portuguese (Brazil),utils (R files),115856,19237,17:06:05
 lente,Portuguese (Brazil),utils (R files),115857,19237,17:06:28
-lente,Portuguese (Brazil),utils (R files),115858,19237,17:06:37
-lente,Portuguese (Brazil),utils (R files),115908,19237,17:24:23
-lente,Portuguese (Brazil),utils (R files),115963,19237,17:47:51
+lente,Portuguese (Brazil),utils (R files),115884,19237,17:14:43
+lente,Portuguese (Brazil),utils (R files),115914,19237,17:26:26
 lente,Portuguese (Brazil),utils (R files),115964,19237,17:48:14
-lente,Portuguese (Brazil),utils (R files),115975,19237,17:50:40
-lente,Portuguese (Brazil),utils (R files),116037,19237,18:19:54
-lente,Portuguese (Brazil),utils (R files),116061,19237,18:29:24
-lente,Portuguese (Brazil),tcltk (R files),104689,19237,18:40:48
-lente,Portuguese (Brazil),stats (R files),100605,19237,18:50:18
-angelasanzo,Spanish,base (C files),48772,19251,14:34:48
-angelasanzo,Spanish,base (C files),48778,19251,14:37:14
-angelasanzo,Spanish,base (C files),48785,19251,14:38:58
-ShunWang,Chinese (Simplified),base (C files),68418,19260,04:07:06
+lente,Portuguese (Brazil),utils (R files),115968,19237,17:49:21
+lente,Portuguese (Brazil),base (C files),63478,19237,17:51:13
+lente,Portuguese (Brazil),utils (R files),116044,19237,18:21:47
+lente,Portuguese (Brazil),utils (R files),116070,19237,18:33:01
+lente,Portuguese (Brazil),utils (R files),116102,19237,18:43:43
+lente,Portuguese (Brazil),utils (R files),116135,19237,18:52:34
+angelasanzo,Spanish,base (C files),48776,19251,14:35:52
+angelasanzo,Spanish,base (C files),48779,19251,14:38:05
+angelasanzo,Spanish,base (C files),48792,19251,14:40:39
 ShunWang,Chinese (Simplified),base (C files),68444,19260,04:08:57
-ShunWang,Chinese (Simplified),base (C files),68445,19260,04:09:21
+ShunWang,Chinese (Simplified),base (C files),68446,19260,04:09:53
 ShunWang,Chinese (Simplified),base (C files),68447,19260,04:10:59
-ShunWang,Chinese (Simplified),base (C files),68448,19260,04:11:53
-tidyverse,Korean,base (C files),56867,19263,02:15:09
-tidyverse,Korean,base (C files),56880,19263,02:17:03
+tidyverse,Korean,base (C files),56866,19263,02:13:01
+tidyverse,Korean,base (C files),56868,19263,02:13:34
 tidyverse,Korean,compiler,71872,19264,03:22:14
 tidyverse,Korean,grid (C files),81136,19266,01:52:11
 msquiroga,Spanish,base (C files),48746,19279,13:16:20
+Gtormin,Portuguese (Brazil),base (R GUI),31101,19280,13:16:32
 Gtormin,Portuguese (Brazil),base (R GUI),30950,19280,13:16:50
-Gtormin,Portuguese (Brazil),base (R files),39109,19280,13:34:48
-ShunWang,Chinese (Simplified),methods (R files),88764,19326,07:25:49
-ShunWang,Chinese (Simplified),tools (R files),111152,19329,13:58:07
+Gtormin,Portuguese (Brazil),base (R GUI),31124,19280,13:17:08
+Gtormin,Portuguese (Brazil),tools (C files),105146,19280,13:38:38
+ShunWang,Chinese (Simplified),utils (R files),117258,19326,07:26:48
 ShunWang,Chinese (Simplified),base (C files),68643,19329,13:58:38
 dickoa,French,base (C files),52953,19377,16:03:05
 llrs,Spanish,base (C files),49556,19377,16:16:24
-ShunWang,Chinese (Simplified),base (C files),68456,19386,10:33:58
-lente,Portuguese (Brazil),methods (R files),87712,19389,15:29:04
-lente,Portuguese (Brazil),methods (R files),88015,19389,15:38:51
-rcastelo,Spanish,base (C files),48830,19390,11:35:29
-Saranjeet,Hindi,base (R GUI),128597,19392,10:46:30
-DeBARtha,Bengali,base (R files),130188,19392,12:20:34
-DeBARtha,Bengali,base (R files),130192,19392,12:30:38
-RichDeto,Spanish,base (R files),124816,19414,09:29:09
-ShunWang,Chinese (Simplified),base (C files),68539,19424,06:50:48
-ShunWang,Chinese (Simplified),base (C files),68623,19424,06:52:43
-ShunWang,Chinese (Simplified),base (C files),68651,19424,06:56:04
-ShunWang,Chinese (Simplified),base (C files),68736,19424,06:59:31
-EllaKaye,English (United Kingdom),base (C files),126931,19460,09:28:40
-hgruson,French,base (C files),52051,19460,09:29:15
-hgruson,French,stats (R files),95756,19460,09:36:34
-llrs,Spanish,base (C files),48903,19465,20:25:57
-llrs,Spanish,base (C files),49229,19465,22:09:22
+ShunWang,Chinese (Simplified),tools (R files),110928,19386,10:03:28
+ShunWang,Chinese (Simplified),base (C files),68473,19386,10:50:40
+lente,Portuguese (Brazil),methods (R files),87719,19389,15:36:04
+lente,Portuguese (Brazil),methods (R files),87710,19389,15:36:43
+Saranjeet,Hindi,base (R GUI),128590,19392,09:41:54
+Saranjeet,Hindi,base (R GUI),128603,19392,11:33:39
+Saranjeet,Hindi,base (R GUI),128604,19392,11:33:47
+RichDeto,Spanish,base (R files),124775,19414,08:51:01
+RichDeto,Spanish,base (R files),124856,19414,13:07:57
+ShunWang,Chinese (Simplified),base (C files),68561,19424,06:51:43
+ShunWang,Chinese (Simplified),base (C files),68645,19424,06:55:25
+ShunWang,Chinese (Simplified),base (C files),68696,19424,06:58:26
+shreshthamodi,Hindi,base (C files),128972,19452,14:14:05
+hgruson,French,base (C files),51951,19460,09:27:30
+hgruson,French,base (C files),53008,19460,09:30:30
+hturner,English (United Kingdom),base (C files),127113,19464,09:08:25
+llrs,Spanish,base (C files),49181,19465,22:06:43
+llrs,Spanish,base (C files),49377,19465,22:10:16
 llrs,Spanish,base (C files),49581,19465,22:12:21
-llrs,Spanish,base (C files),49660,19465,22:15:49
-llrs,Spanish,base (C files),49718,19465,22:21:11
-llrs,Spanish,base (C files),50050,19465,22:34:37
-llrs,Spanish,base (C files),49693,19465,22:45:00
-PaoCorrales,Spanish,base (C files),48894,19488,10:09:57
+llrs,Spanish,base (C files),49699,19465,22:19:11
+llrs,Spanish,base (C files),50026,19465,22:32:13
+llrs,Spanish,base (C files),50251,19465,22:44:18
+PaoCorrales,Spanish,base (C files),48857,19488,10:08:13
 NA,NA,NA,NA,NA,NA
 NA,NA,NA,NA,NA,NA
 NA,NA,NA,NA,NA,NA
