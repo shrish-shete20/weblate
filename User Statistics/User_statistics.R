@@ -72,33 +72,21 @@ data2 <- data2 %>%
 timestamp<-c()
 for(user in Statistics$username)
 {
-  i=1
-  pages<-i
-  while(i<=pages)
+  url_timestamp<-paste0("https://translate.rx.studio/api/changes/?user=",user)
+  response_timestamp <- GET(url = url_timestamp, headers = headers, authenticate("shrishs21","kvell@2003"))
+  users_timestamp <- content(response_timestamp, "text", encoding = "UTF-8")
+  users_timestamp <- fromJSON(users_timestamp)
+  if(users_timestamp$count==0)
   {
-    url_timestamp<-paste0("https://translate.rx.studio/api/changes/?action=45&page=",i)
-    response_time <- GET(url = url_timestamp, headers = headers, authenticate("shrishs21","kvell@2003"))
-    users_time <- content(response_time, "text", encoding = "UTF-8")
-    users_time <- fromJSON(users_time)
-    extracted_users <- str_extract(users_time$results$user, "/([^/]+)/$")
-    extracted_users <- str_remove_all(extracted_users, "/")
-    pages<-ceiling(users_time$count/50)
-    if(length(which(extracted_users==user))!=0)
-    {
-      index<-tail(which(extracted_users==user),1)
-      timestamp<-c(timestamp,users_time$results$timestamp[index])
-      break
-    }else
-    {
-      i=i+1
-      if(i>pages)
-      {
-        timestamp<-c(timestamp,"N/A")
-      }
-    }
+    timestamp<-c(timestamp,"N/A")
+  }else
+  {
+      timestamp<-c(timestamp,users_timestamp$results$timestamp[1])
   }
 }
 data2$created<-timestamp
+
+
 created<-c()
 for(user in Statistics$username)
 {
@@ -106,7 +94,7 @@ for(user in Statistics$username)
   response_last <- GET(url = last_url, headers = headers, authenticate("shrishs21","kvell@2003"))
   users_last <- content(response_last, "text", encoding = "UTF-8")
   users_last <- fromJSON(users_last)
-  pages_count<-ceiling(users_last$results$count/50)
+  pages_count<-ceiling(users_last$count/50)
   if(pages_count!=0)
   {
     url_last<-paste0("https://translate.rx.studio/api/changes/?page=",pages_count,"&user=",user)
@@ -125,7 +113,7 @@ for(user in Statistics$username)
   }
   
 }
-data2$created<-created
+data2$Last_Activity<-created
 
 write_csv(data2, "Statistics.csv")
 
