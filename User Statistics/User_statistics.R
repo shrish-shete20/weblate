@@ -91,7 +91,6 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
-  user<-"ShunWang"
   url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
   h <- new_handle()
   handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
