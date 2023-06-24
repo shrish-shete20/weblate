@@ -91,7 +91,7 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
-  
+  user<-"ShunWang"
   url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
   h <- new_handle()
   handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
@@ -108,7 +108,7 @@ for(user in data2$username)
     res2<-curl_fetch_memory(url_last, handle = h)
     content2<-rawToChar(res2$content)
     last_users<-fromJSON(content2)
-    remain<-pages_count%%50
+    remain<-users_last$count%%50
     if(remain==0)
     {
       remain=50
