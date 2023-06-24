@@ -89,8 +89,9 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
+  headers2 <- add_headers(Authorization = paste("Token"," ",api_token))
   last_url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
-  response_last <- GET(url = last_url, headers = headers, authenticate("shrishs21","kvell@2003"))
+  response_last <- GET(url = last_url, headers = headers2, authenticate("shrishs21","kvell@2003"))
   users_last <- content(response_last, "text", encoding = "UTF-8")
   users_last <- fromJSON(users_last)
   pages_count<-ceiling(users_last$count/50)
