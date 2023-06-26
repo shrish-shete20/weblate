@@ -9,5 +9,11 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(htmltools)
 source("Data_contains.R")
+```
+
+Sidebar {.sidebar data-width=200}
+```{r, echo=FALSE, results='asis'}
+htmltools::includeHTML('fragments/sidebar.html')
 ```
