@@ -1,0 +1,13 @@
+---
+title: "Weblate R translation Status Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+source("Data_contains.R")
+```
