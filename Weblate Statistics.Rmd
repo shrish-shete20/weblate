@@ -17,3 +17,4 @@ Sidebar {.sidebar data-width=200}
 ```{r, echo=FALSE, results='asis'}
 htmltools::includeHTML('fragments/sidebar.html')
 ```
+
