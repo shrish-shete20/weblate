@@ -1,0 +1,35 @@
+---
+title: "Themed dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      bootswatch: minty
+      heading_font:
+        google: Sen
+      base_font: 
+        google: Prompt
+    orientation: rows
+    vertical_layout: scroll
+    source_code: embed
+    navbar:
+      - { title: "Github", href: "https://github.com/shrish-shete20/weblate", align: right, icon: fa-github}
+    css: ["fragments/custom.css"]
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(htmltools)
+library(fontawesome)
+source("Data_contains.R")
+# Install thematic and un-comment for themed static plots (i.e., ggplot2)
+#thematic::thematic_rmd()
+```
+
+
+Sidebar {.sidebar data-width=200}
+=====================================
+```{r, echo=FALSE, results='asis'}
+htmltools::includeHTML('fragments/sidebar.html')
+```
+
