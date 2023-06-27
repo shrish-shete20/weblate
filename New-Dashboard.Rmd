@@ -10,6 +10,7 @@ output:
       base_font: 
         google: Prompt
     orientation: rows
+    self_contained: false
     vertical_layout: scroll
     source_code: embed
     navbar:
@@ -33,3 +34,18 @@ Sidebar {.sidebar data-width=200}
 htmltools::includeHTML('fragments/sidebar.html')
 ```
 
+Leaderboard
+=====================================
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+huihuihui
+
+world-map
+=====================================
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+hello
