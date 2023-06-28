@@ -51,6 +51,8 @@ Statistics$Languages <- lapply(Statistics$Languages, function(x) {
     x
   }
 })
+board<-Statistics[order(Statistics$translated,decreasing = TRUE),]
+boards<-board %>% select(name,username,translated,Languages,Active)
 
 ```
 
