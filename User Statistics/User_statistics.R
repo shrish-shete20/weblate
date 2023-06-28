@@ -7,6 +7,7 @@ library(tidyverse)
 library(data.table)
 library(dplyr)
 library(curl)
+library(lubridate)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 # Weblate API configuration
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
@@ -120,6 +121,25 @@ for(user in data2$username)
   print(user)
 }
 data2$Last_Activity<-created
-
+now<-Sys.time()
+active_time<-now %m+% months(-6)
+active<-c()
+for(time in as.POSIXct(data2$Last_Activity,format = "%Y-%m-%dT%H:%M:%OSZ", tz = "Asia/Kolkata") )
+{
+  if(is.na(time))
+  {
+    active<-c(active,"Unbegun")
+  }else
+  {
+    if(time>active_time)
+    {
+      active<-c(active,"Active")
+    }else
+    {
+      active<-c(active,"Inactive")
+    }
+  }
+}
+data2$Active<-active
 write_csv(data2, "Statistics.csv")
 

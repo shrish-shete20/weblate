@@ -22,6 +22,7 @@ output:
 library(flexdashboard)
 library(htmltools)
 library(fontawesome)
+library(reactable)
 source("Data_contains.R")
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 #thematic::thematic_rmd()
@@ -40,7 +41,12 @@ Leaderboard
 Row {data-height=450}
 -----------------------------------------------------------------------
 
-huihuihui
+### Weblate Leaderboard
+
+```{r}
+Statistics
+```
+
 
 world-map
 =====================================
