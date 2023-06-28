@@ -1893,21 +1893,6 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<pre><code># A tibble: 40 × 8
-   serial_number name            usern…¹ trans…² Lanag…³ Langu…⁴ created Last_…⁵
-           &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
- 1             1 Angela Sanzo    angela…     107       1 &quot;Spani… 2022-0… 2022-1…
- 2             2 Taha Nawfal Al… tahana…       0       1 &quot;Arabi… N/A     N/A    
- 3             3 Marcel Ramos    mr148        93       3 &quot;c(\&quot;I… 2022-0… 2022-0…
- 4             4 Krye Kuzhinieri kryeku…      80       1 &quot;Alban… 2022-0… 2022-0…
- 5             5 Caio Lente      lente      1222       1 &quot;Portu… 2022-0… 2023-0…
- 6             6 Lluís           llrs        215       1 &quot;Spani… 2022-0… 2023-0…
- 7             7 Beatriz Milz    beatri…      68       1 &quot;Portu… 2022-1… 2022-1…
- 8             8 Martin Mächler  mmaech…       0       1 &quot;Germa… N/A     N/A    
- 9             9 Shun Wang       ShunWa…    1612       1 &quot;Chine… 2022-0… 2023-0…
-10            10 Kwangchun Lee   tidyve…      15       1 &quot;Korea… 2022-0… 2022-1…
-# … with 30 more rows, and abbreviated variable names ¹​username, ²​translated,
-#   ³​Lanaguages_Count, ⁴​Languages, ⁵​Last_Activity</code></pre>
 </div>
 </div>
 </div>
@@ -1982,7 +1967,14 @@ Row {data-height=450}
 ### Weblate Leaderboard
 
 ```{r}
-Statistics
+Statistics$Languages &lt;- lapply(Statistics$Languages, function(x) {
+  if (startsWith(x, "c(")) {
+    eval(parse(text = x))
+  } else {
+    x
+  }
+})
+
 ```
 
 

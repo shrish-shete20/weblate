@@ -44,7 +44,14 @@ Row {data-height=450}
 ### Weblate Leaderboard
 
 ```{r}
-Statistics
+Statistics$Languages <- lapply(Statistics$Languages, function(x) {
+  if (startsWith(x, "c(")) {
+    eval(parse(text = x))
+  } else {
+    x
+  }
+})
+
 ```
 
 
