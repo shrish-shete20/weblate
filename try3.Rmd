@@ -11,10 +11,11 @@ library(jsonlite)
 library(dplyr)
 library(crosstalk)
 library(htmltools)
-
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r table, echo=FALSE, message=FALSE}
+
 
 # tmdb_movies.json is a JSON dataset with 2000 rows and 22 columns.
 # Some of these columns contain nested lists (e.g., multiple genres per movie).
@@ -343,8 +344,7 @@ div(
   tbl
 )
 ```
-
-```{css,echo=FALSE}
+```{css}
 /* Font from https://fontsarena.com/hanken-grotesk-by-hanken-design-co/ */
 @font-face {
   font-family: 'Hanken Grotesk';

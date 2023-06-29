@@ -23,6 +23,8 @@ library(flexdashboard)
 library(htmltools)
 library(fontawesome)
 library(reactable)
+library(dplyr)
+library(crosstalk)
 source("Data_contains.R")
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 #thematic::thematic_rmd()
@@ -43,7 +45,7 @@ Row {data-height=450}
 
 ### Weblate Leaderboard
 
-```{r}
+```{r table, echo=FALSE, message=FALSE}
 Statistics$Languages <- lapply(Statistics$Languages, function(x) {
   if (startsWith(x, "c(")) {
     eval(parse(text = x))
@@ -54,8 +56,175 @@ Statistics$Languages <- lapply(Statistics$Languages, function(x) {
 board<-Statistics[order(Statistics$translated,decreasing = TRUE),]
 boards<-board %>% select(name,username,translated,Languages,Active)
 
+boards<-boards%>%mutate(Rank=row_number())
+
+shared_data <- SharedData$new(boards)
+
+shared_data%>%reactable(
+  .,
+  pagination = TRUE,
+  showPageSizeOptions = TRUE,
+  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+  columns = list(
+    Rank = colDef(
+      name = "Rank",
+      align = "center",
+      minWidth = 70,
+      maxWidth = 90
+    ),
+    name = colDef(
+      name = "Name",
+      # Since there are so many rows, we use a JS render function to keep the
+      # page size down. This would be much easier to code in R, but that would
+      # significantly increase the file size.
+      html = TRUE,
+      minWidth = 150,
+      filterable = TRUE
+    ),
+    username = colDef(
+      name = "User-Name",
+      # Since there are so many rows, we use a JS render function to keep the
+      # page size down. This would be much easier to code in R, but that would
+      # significantly increase the file size.
+      cell = JS("renderMovie"),
+      html = TRUE,
+      minWidth = 150
+    ),
+    translated = colDef(
+      name = "Translations",
+      defaultSortOrder = "desc",
+      # Show the user score in a donut chart like TMDb does. Since donut charts
+      # are hard to compare, apply a color scale as well.
+      html = TRUE,
+      align = "center",
+      width = 140,
+      class = "user-score"
+    ),
+    Active = colDef(cell = function(value){
+      class<-paste0("tag status-",tolower(value))
+      div(class=class,value)
+    }),
+    Languages = colDef(show = FALSE)
+  ),
+  highlight = TRUE,
+  bordered = TRUE,
+  compact = TRUE,
+  class = "movies-tbl"
+)
+
 ```
 
+```{js table_js, echo=FALSE}
+// Custom JavaScript cell renderer for the Movie column
+function renderMovie(cellInfo) {
+  const url = 'https://translate.rx.studio/user/' + cellInfo.row['username']
+  const imageSrc = 'https://translate.rx.studio/avatar/128/' + cellInfo.row['username']+'.png'
+  const altText = cellInfo.value + ' movie poster'
+  const poster = `<a href="${url}"><img src="${imageSrc}" class="movie-poster" alt="${altText}"></a>`
+
+  const title = `<a href="${url}">${cellInfo.value}</a>`
+
+  const text = `<div class="movie-info-text">${title}</div>`
+  return `<div class="movie-info">${poster}${text}</div>`
+}
+
+```
+
+
+```{css,echo=FALSE}
+/* Font from https://fontsarena.com/hanken-grotesk-by-hanken-design-co/ */
+.movies {
+  font-family: 'Hanken Grotesk', Helvetica, Arial, sans-serif;
+}
+
+.movies h2 {
+  font-weight: 600;
+}
+
+.movies a {
+  color: #007899;
+  text-decoration: none;
+}
+
+.movies a:hover,
+.movies a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, 0.0625rem);
+}
+
+.movies-tbl {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.header {
+  color: hsl(220, 100%, 75%);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.header:hover[aria-sort],
+.header[aria-sort='ascending'],
+.header[aria-sort='descending'] {
+  color: hsl(0, 100%, 55%);
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+}
+
+.movie-info-text {
+  margin-left: 0.75rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-info-details {
+  margin-top: 0.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 40%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.75rem;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.status-active {
+  background: hsl(116, 60%, 90%);
+  color: hsl(116, 30%, 25%);
+}
+
+.status-inactive {
+  background: hsl(230, 70%, 90%);
+  color: hsl(230, 45%, 30%);
+}
+
+.status-unbegun {
+  background: hsl(350, 70%, 90%);
+  color: hsl(350, 45%, 30%);
+}
+.movie-poster {
+  width: 45px;
+  height: 68px;
+  box-shadow: 0 0 0 1px hsl(0, 0%, 95%);
+}
+
+
+.user-score {
+  font-weight: 600;
+}
+```
 
 world-map
 =====================================
