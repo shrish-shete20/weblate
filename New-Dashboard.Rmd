@@ -26,6 +26,28 @@ library(reactable)
 library(dplyr)
 library(crosstalk)
 source("Data_contains.R")
+Statistics$Languages <- lapply(Statistics$Languages, function(x) {
+  if (startsWith(x, "c(")) {
+    eval(parse(text = x))
+  } else {
+    x
+  }
+})
+compute_active <- function() {
+  active_count<-nrow(subset(Statistics,Active=="Active"))
+  total<-nrow(Statistics)
+  return(active_count*100/total)
+}
+compute_inactive <- function() {
+  inactive_count<-nrow(subset(Statistics,Active=="Inactive"))
+  total<-nrow(Statistics)
+  return(inactive_count*100/total)
+}
+compute_unbegun <- function() {
+  unbegun_count<-nrow(subset(Statistics,Active=="Unbegun"))
+  total<-nrow(Statistics)
+  return(unbegun_count*100/total)
+}
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 #thematic::thematic_rmd()
 ```
@@ -46,13 +68,7 @@ Row {data-height=450}
 ### Weblate Leaderboard
 
 ```{r table, echo=FALSE, message=FALSE}
-Statistics$Languages <- lapply(Statistics$Languages, function(x) {
-  if (startsWith(x, "c(")) {
-    eval(parse(text = x))
-  } else {
-    x
-  }
-})
+
 board<-Statistics[order(Statistics$translated,decreasing = TRUE),]
 boards<-board %>% select(name,username,translated,Languages,Active)
 
@@ -225,7 +241,34 @@ function renderMovie(cellInfo) {
   font-weight: 600;
 }
 ```
+Row 
+-----------------------------------------------------------------------
 
+### Active Users
+
+```{r}
+active <- compute_active()
+gauge(active, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(50, 100), warning = c(30,50), danger = c(0, 30)
+))
+```
+
+### Inactive Users
+
+```{r}
+inactive <- compute_inactive()
+gauge(inactive, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(0,20), warning = c(20,50), danger = c(50, 100)
+))
+```
+### Unbegun Users
+
+```{r}
+unbegun <- compute_unbegun()
+gauge(unbegun, min = 0, max = 50, symbol = '%', gaugeSectors(
+  success = c(0,5), warning = c(5,15), danger = c(15,50)
+))
+```
 world-map
 =====================================
 

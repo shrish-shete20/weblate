@@ -51,6 +51,10 @@ window.FlexDashboardComponents = [];
 <script src="New-Dashboard_files/reactable-binding-0.4.4/reactable.js"></script>
 <link href="New-Dashboard_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="New-Dashboard_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="New-Dashboard_files/raphael-2.1.4/raphael-2.1.4.min.js"></script>
+<link href="New-Dashboard_files/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
+<script src="New-Dashboard_files/justgage-1.2.2.1/justgage.js"></script>
+<script src="New-Dashboard_files/gauge-binding-0.6.1/gauge.js"></script>
 <style type="text/css">
 /*
   CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
@@ -1902,8 +1906,8 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f49e98ec0759c7a76814" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f49e98ec0759c7a76814">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["Shun Wang","Caio Lente","Saranjeet Kaur Bhogal","Macarena Quiroga","Binod Jung Bogati","Lluís","Heather Turner","Paola Corrales","Richard Detomasi","Angela Sanzo","Marcel Ramos","Krye Kuzhinieri","Beatriz Milz","Julieta Laurino","Patricia loto","Shreshtha Modi","Debartha Paul","Gabriel Tormin","Robert Castelo","Detlef Steuer","Ella Kaye","Hugo Gruson","Gaby Sandoval","Kwangchun Lee","Martin Mächler","Ahmadou Dicko","Elio","Sumit Ghosh","Sovan Karmakar","Michael Chirico","Shriharsh","joygram","Shrish Shete","Taha Nawfal Alobaidy","Martin Mächler","Yheni Farfan","Philip Khor","Roberto Villegas-Diaz","Om Shivam Verma","María Cristina Nanton"],"username":["ShunWang","lente","Saranjeet","msquiroga","bjungbogati","llrs","hturner","PaoCorrales","RichDeto","angelasanzo","mr148","kryekuzhinieri","beatrizmilz","julilaurino","PatriLoto","shreshthamodi","DeBARtha","Gtormin","rcastelo","dsteuer","EllaKaye","hgruson","Gabs","tidyverse","maechlerETH","dickoa","eliocamp","Sumit","Sovan","michaelchirico","shriharsh","joygram","shrishs21","tahanawfal","mmaechler","Yheni","philip-khor","villegar","omsv135","MCNanton"],"translated":[1612,1222,349,310,295,215,153,119,117,107,93,80,68,61,55,52,37,24,23,20,17,17,16,15,15,7,7,7,7,4,3,2,2,0,0,0,0,0,0,0],"Languages":["Chinese (Simplified)","Portuguese (Brazil)","Hindi","Spanish","Nepali","Spanish","English (United Kingdom)","Spanish","Spanish","Spanish",["Italian","Spanish","French"],"Albanian","Portuguese (Brazil)","Spanish","Spanish",["Hindi","English (United Kingdom)"],"Bengali",["English (United Kingdom)","English"],"Spanish","German","English (United Kingdom)","French","Spanish","Korean",["German","English"],"French","Spanish",["Bengali","Hindi"],["Bengali","English (United Kingdom)","English"],"Japanese",["Hindi","English"],"Korean",["English (United Kingdom)","Hindi"],"Arabic","German","Spanish",["Chinese (Simplified)","Indonesian"],"Spanish","character(0)","Spanish"],"Active":["Active","Active","Active","Active","Active","Active","Active","Active","Active","Inactive","Inactive","Inactive","Inactive","Inactive","Inactive","Active","Active","Inactive","Active","Active","Active","Active","Inactive","Inactive","Active","Active","Active","Active","Active","Active","Active","Inactive","Active","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun"],"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]},"columns":[{"id":"name","name":"Name","type":"character","vAlign":"center","headerClassName":"header","filterable":true,"html":true,"minWidth":150},{"id":"username","name":"User-Name","type":"character","vAlign":"center","headerClassName":"header","cell":"renderMovie","html":true,"minWidth":150},{"id":"translated","name":"Translations","type":"numeric","vAlign":"center","headerClassName":"header","defaultSortDesc":true,"html":true,"width":140,"align":"center","className":"user-score"},{"id":"Languages","name":"Languages","type":"list","vAlign":"center","headerClassName":"header","show":false},{"id":"Active","name":"Active","type":"character","vAlign":"center","headerClassName":"header","cell":[{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]}]},{"id":"Rank","name":"Rank","type":"numeric","vAlign":"center","headerClassName":"header","minWidth":70,"maxWidth":90,"align":"center"}],"showPageSizeOptions":true,"highlight":true,"bordered":true,"compact":true,"className":"movies-tbl","crosstalkKey":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"],"crosstalkGroup":"SharedDatacc7a40c2","dataKey":"9732911b6de780ab4540413da9b9492c"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.1.cell"],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b5fbc892303cabaa0a49" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b5fbc892303cabaa0a49">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["Shun Wang","Caio Lente","Saranjeet Kaur Bhogal","Macarena Quiroga","Binod Jung Bogati","Lluís","Heather Turner","Paola Corrales","Richard Detomasi","Angela Sanzo","Marcel Ramos","Krye Kuzhinieri","Beatriz Milz","Julieta Laurino","Patricia loto","Shreshtha Modi","Debartha Paul","Gabriel Tormin","Robert Castelo","Detlef Steuer","Ella Kaye","Hugo Gruson","Gaby Sandoval","Kwangchun Lee","Martin Mächler","Ahmadou Dicko","Elio","Sumit Ghosh","Sovan Karmakar","Michael Chirico","Shriharsh","joygram","Shrish Shete","Taha Nawfal Alobaidy","Martin Mächler","Yheni Farfan","Philip Khor","Roberto Villegas-Diaz","Om Shivam Verma","María Cristina Nanton"],"username":["ShunWang","lente","Saranjeet","msquiroga","bjungbogati","llrs","hturner","PaoCorrales","RichDeto","angelasanzo","mr148","kryekuzhinieri","beatrizmilz","julilaurino","PatriLoto","shreshthamodi","DeBARtha","Gtormin","rcastelo","dsteuer","EllaKaye","hgruson","Gabs","tidyverse","maechlerETH","dickoa","eliocamp","Sumit","Sovan","michaelchirico","shriharsh","joygram","shrishs21","tahanawfal","mmaechler","Yheni","philip-khor","villegar","omsv135","MCNanton"],"translated":[1612,1222,349,310,295,215,153,119,117,107,93,80,68,61,55,52,37,24,23,20,17,17,16,15,15,7,7,7,7,4,3,2,2,0,0,0,0,0,0,0],"Languages":["Chinese (Simplified)","Portuguese (Brazil)","Hindi","Spanish","Nepali","Spanish","English (United Kingdom)","Spanish","Spanish","Spanish",["Italian","Spanish","French"],"Albanian","Portuguese (Brazil)","Spanish","Spanish",["Hindi","English (United Kingdom)"],"Bengali",["English (United Kingdom)","English"],"Spanish","German","English (United Kingdom)","French","Spanish","Korean",["German","English"],"French","Spanish",["Bengali","Hindi"],["Bengali","English (United Kingdom)","English"],"Japanese",["Hindi","English"],"Korean",["English (United Kingdom)","Hindi"],"Arabic","German","Spanish",["Chinese (Simplified)","Indonesian"],"Spanish","character(0)","Spanish"],"Active":["Active","Active","Active","Active","Active","Active","Active","Active","Active","Inactive","Inactive","Inactive","Inactive","Inactive","Inactive","Active","Active","Inactive","Active","Active","Active","Active","Inactive","Inactive","Active","Active","Active","Active","Active","Active","Active","Inactive","Active","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun","Unbegun"],"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]},"columns":[{"id":"name","name":"Name","type":"character","vAlign":"center","headerClassName":"header","filterable":true,"html":true,"minWidth":150},{"id":"username","name":"User-Name","type":"character","vAlign":"center","headerClassName":"header","cell":"renderMovie","html":true,"minWidth":150},{"id":"translated","name":"Translations","type":"numeric","vAlign":"center","headerClassName":"header","defaultSortDesc":true,"html":true,"width":140,"align":"center","className":"user-score"},{"id":"Languages","name":"Languages","type":"list","vAlign":"center","headerClassName":"header","show":false},{"id":"Active","name":"Active","type":"character","vAlign":"center","headerClassName":"header","cell":[{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-inactive"},"children":["Inactive"]},{"name":"div","attribs":{"className":"tag status-active"},"children":["Active"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]},{"name":"div","attribs":{"className":"tag status-unbegun"},"children":["Unbegun"]}]},{"id":"Rank","name":"Rank","type":"numeric","vAlign":"center","headerClassName":"header","minWidth":70,"maxWidth":90,"align":"center"}],"showPageSizeOptions":true,"highlight":true,"bordered":true,"compact":true,"className":"movies-tbl","crosstalkKey":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"],"crosstalkGroup":"SharedData676cb23b","dataKey":"9732911b6de780ab4540413da9b9492c"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.1.cell"],"jsHooks":[]}</script>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
@@ -2021,10 +2025,37 @@ function renderMovie(cellInfo) {
 </style>
 </div>
 </div>
+<div id="row-1" class="section level2">
+<h2>Row</h2>
+<div id="active-users" class="section level3">
+<h3>Active Users</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="gauge html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8ae80da475f3cd722c91" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-8ae80da475f3cd722c91">{"x":{"value":57.5,"min":0,"max":100,"customSectors":{"percents":false,"ranges":[{"lo":50,"hi":100,"color":"#56cc9d"},{"lo":30,"hi":50,"color":"#ffce67"},{"lo":0,"hi":30,"color":"#ff7851"}]},"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null,"gaugeColor":"#E2E2E2","valueFontColor":"#1B1B1B","labelFontColor":"#525252","valueFontFamily":"Prompt","labelFontFamily":"Prompt"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="inactive-users" class="section level3">
+<h3>Inactive Users</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="gauge html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8e65f6f509180394956d" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-8e65f6f509180394956d">{"x":{"value":25,"min":0,"max":100,"customSectors":{"percents":false,"ranges":[{"lo":0,"hi":20,"color":"#56cc9d"},{"lo":20,"hi":50,"color":"#ffce67"},{"lo":50,"hi":100,"color":"#ff7851"}]},"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null,"gaugeColor":"#E2E2E2","valueFontColor":"#1B1B1B","labelFontColor":"#525252","valueFontFamily":"Prompt","labelFontFamily":"Prompt"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="unbegun-users" class="section level3">
+<h3>Unbegun Users</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="gauge html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4720eae62e5bc133803d" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-4720eae62e5bc133803d">{"x":{"value":17.5,"min":0,"max":50,"customSectors":{"percents":false,"ranges":[{"lo":0,"hi":5,"color":"#56cc9d"},{"lo":5,"hi":15,"color":"#ffce67"},{"lo":15,"hi":50,"color":"#ff7851"}]},"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null,"gaugeColor":"#E2E2E2","valueFontColor":"#1B1B1B","labelFontColor":"#525252","valueFontFamily":"Prompt","labelFontFamily":"Prompt"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 </div>
 <div id="world-map" class="section level1">
 <h1>world-map</h1>
-<div id="row-1" class="section level2" data-height="450">
+<div id="row-2" class="section level2" data-height="450">
 <h2>Row</h2>
 <p>hello</p>
 </div>
@@ -2075,6 +2106,28 @@ library(reactable)
 library(dplyr)
 library(crosstalk)
 source("Data_contains.R")
+Statistics$Languages &lt;- lapply(Statistics$Languages, function(x) {
+  if (startsWith(x, "c(")) {
+    eval(parse(text = x))
+  } else {
+    x
+  }
+})
+compute_active &lt;- function() {
+  active_count&lt;-nrow(subset(Statistics,Active=="Active"))
+  total&lt;-nrow(Statistics)
+  return(active_count*100/total)
+}
+compute_inactive &lt;- function() {
+  inactive_count&lt;-nrow(subset(Statistics,Active=="Inactive"))
+  total&lt;-nrow(Statistics)
+  return(inactive_count*100/total)
+}
+compute_unbegun &lt;- function() {
+  unbegun_count&lt;-nrow(subset(Statistics,Active=="Unbegun"))
+  total&lt;-nrow(Statistics)
+  return(unbegun_count*100/total)
+}
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 #thematic::thematic_rmd()
 ```
@@ -2095,13 +2148,7 @@ Row {data-height=450}
 ### Weblate Leaderboard
 
 ```{r table, echo=FALSE, message=FALSE}
-Statistics$Languages &lt;- lapply(Statistics$Languages, function(x) {
-  if (startsWith(x, "c(")) {
-    eval(parse(text = x))
-  } else {
-    x
-  }
-})
+
 board&lt;-Statistics[order(Statistics$translated,decreasing = TRUE),]
 boards&lt;-board %&gt;% select(name,username,translated,Languages,Active)
 
@@ -2274,7 +2321,34 @@ function renderMovie(cellInfo) {
   font-weight: 600;
 }
 ```
+Row 
+-----------------------------------------------------------------------
 
+### Active Users
+
+```{r}
+active &lt;- compute_active()
+gauge(active, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(50, 100), warning = c(30,50), danger = c(0, 30)
+))
+```
+
+### Inactive Users
+
+```{r}
+inactive &lt;- compute_inactive()
+gauge(inactive, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(0,20), warning = c(20,50), danger = c(50, 100)
+))
+```
+### Unbegun Users
+
+```{r}
+unbegun &lt;- compute_unbegun()
+gauge(unbegun, min = 0, max = 50, symbol = '%', gaugeSectors(
+  success = c(0,5), warning = c(5,15), danger = c(15,50)
+))
+```
 world-map
 =====================================
 
