@@ -25,14 +25,9 @@ library(fontawesome)
 library(reactable)
 library(dplyr)
 library(crosstalk)
+library(DT)
+library(plotly)
 source("Data_contains.R")
-Statistics$Languages <- lapply(Statistics$Languages, function(x) {
-  if (startsWith(x, "c(")) {
-    eval(parse(text = x))
-  } else {
-    x
-  }
-})
 compute_active <- function() {
   active_count<-nrow(subset(Statistics,Active=="Active"))
   total<-nrow(Statistics)
@@ -48,6 +43,7 @@ compute_unbegun <- function() {
   total<-nrow(Statistics)
   return(unbegun_count*100/total)
 }
+
 # Install thematic and un-comment for themed static plots (i.e., ggplot2)
 #thematic::thematic_rmd()
 ```
@@ -69,6 +65,13 @@ Row {data-height=450}
 
 ```{r table, echo=FALSE, message=FALSE}
 
+Statistics$Languages <- lapply(Statistics$Languages, function(x) {
+  if (startsWith(x, "c(")) {
+    eval(parse(text = x))
+  } else {
+    x
+  }
+})
 board<-Statistics[order(Statistics$translated,decreasing = TRUE),]
 boards<-board %>% select(name,username,translated,Languages,Active)
 
@@ -86,7 +89,25 @@ shared_data%>%reactable(
       name = "Rank",
       align = "center",
       minWidth = 70,
-      maxWidth = 90
+      maxWidth = 120,
+      cell = JS('function(cellInfo) {
+        let units; 
+        if(cellInfo.viewIndex === 0)
+        {
+          units="🥇"
+        }else if(cellInfo.viewIndex === 1)
+        {
+          units="🥈"
+        }else if(cellInfo.viewIndex === 2)
+        {
+          units="🥉"
+        }else
+        {
+          units=""
+        }
+        return cellInfo.value + `<div class="units">${units}</div>`
+      }'),
+      html = TRUE
     ),
     name = colDef(
       name = "Name",
@@ -186,7 +207,10 @@ function renderMovie(cellInfo) {
 .header[aria-sort='descending'] {
   color: hsl(0, 100%, 55%);
 }
-
+.units {
+  display: inline-block;
+  width: 1.125rem;
+}
 .movie-info {
   display: flex;
   align-items: center;
@@ -269,10 +293,49 @@ gauge(unbegun, min = 0, max = 50, symbol = '%', gaugeSectors(
   success = c(0,5), warning = c(5,15), danger = c(15,50)
 ))
 ```
+
+Row 
+---------------------------------------------------------------
+--------
+
+### primary
+```{r}
+valueBox(nrow(subset(Statistics,Active=="Active")), caption = "Active Users", icon = "fa-solid fa-users")
+```
+
+### Warning
+
+```{r}
+valueBox(nrow(subset(Statistics,Active=="Inactive")), caption = "Inactive Users", color = "warning", icon = "fa-solid fa-user-minus")
+```
+
+### Danger
+
+```{r}
+valueBox(nrow(subset(Statistics,Active=="Unbegun")), caption = "Unbegun users", color = "danger", icon = "fa-solid fa-user-slash")
+```
+
+Row 
+---------------------------------------------------------------
+--------
+
+### Graph of Top 10 Users vs Translation 
+
+
+```{r}
+fig <- plot_ly(boards[1:10,], x = ~name, y = ~translated, type = 'bar', color=~name)
+fig <- fig %>% layout(xaxis = list(title = "Name", tickangle = -45,categoryorder = "total descending"),
+         yaxis = list(title = "Translations"),
+         margin = list(b = 100),showlegend=FALSE,rangeslider=list(type="name"))
+
+fig
+
+```
+
 world-map
 =====================================
 
 Row {data-height=450}
 -----------------------------------------------------------------------
 
-hello
+🥇🥈🥉
