@@ -339,3 +339,68 @@ Row {data-height=450}
 -----------------------------------------------------------------------
 
 🥇🥈🥉
+
+Languages
+=====================================
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Populations
+
+```{r}
+fig <- plot_ly(Language_Statistics_new, labels = ~Name, values = ~Population, type = 'pie',width=850,marker = list(line = list(color = '#FFFFFF', width = 1)))
+fig <- fig %>% layout(title = 'No of people speaking that Languages',
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+fig
+```
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Words to be Translated
+
+```{r}
+fig<-plot_ly(Language_Statistics_new,labels=~Name,values=~Total_Words,width = 850)
+fig <- fig %>% add_pie(hole = 0.5,rotation=90)
+fig <- fig %>% layout(xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+fig
+
+```
+
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Translation Status
+
+```{r}
+fig<-plot_ly()
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Translated,name="Translated",domain = list(x = c(0, 0.4), y = c(0.4, 1)),textposition="inside")
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Fuzzy,name="Fuzzy", domain = list(x = c(0.6, 1), y = c(0.4, 1)),textposition="inside")
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Untranslated,name="Untranslated",domain = list(x = c(0.25, 0.75), y = c(0, 0.6)),textposition="inside")
+fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE), annotations = list(
+    list(
+      text = "Translated",
+      x = 0.2,  # x position of the label
+      y = 0.75  # y position of the label
+    ),
+    list(
+      text = "Fuzzy",
+      x = 0.8,  # x position of the label
+      y = 0.75  # y position of the label
+    ),
+    list(
+      text = "Untranslated",
+      x = 0.5,  # x position of the label
+      y = 0.25  # y position of the label
+    )
+  ))
+fig
+```
