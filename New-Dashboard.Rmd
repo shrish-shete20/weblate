@@ -27,6 +27,7 @@ library(dplyr)
 library(crosstalk)
 library(DT)
 library(plotly)
+library(reshape2)
 source("Data_contains.R")
 compute_active <- function() {
   active_count<-nrow(subset(Statistics,Active=="Active"))
@@ -403,4 +404,20 @@ fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
     )
   ))
 fig
+```
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Translations
+
+```{r fig.width=20,fig.height=10}
+df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
+df_long <- reshape2::melt(df, id.vars = "Name")
+
+ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Languages", y = "Translation") +
+  scale_fill_manual(values = c("Translated" = "blue", "Fuzzy" = "green", "Untranslated" = "red")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14))
+
 ```
