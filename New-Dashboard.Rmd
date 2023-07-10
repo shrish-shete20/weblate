@@ -429,7 +429,7 @@ Row {data-height=450}
 
 ### Languages V/S Users
 
-```{r echo=FALSE}
+```{r}
 vec<-numeric()
 for(i in board$Languages)
 {
