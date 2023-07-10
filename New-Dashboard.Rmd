@@ -27,6 +27,7 @@ library(dplyr)
 library(crosstalk)
 library(DT)
 library(plotly)
+library(reshape2)
 source("Data_contains.R")
 compute_active <- function() {
   active_count<-nrow(subset(Statistics,Active=="Active"))
@@ -339,8 +340,10 @@ Row {data-height=450}
 -----------------------------------------------------------------------
 
 🥇🥈🥉
+```{r}
+```
 
-Languages
+languages
 =====================================
 
 Row {data-height=450}
@@ -403,4 +406,45 @@ fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
     )
   ))
 fig
+```
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Translations
+
+```{r fig.width=20,fig.height=10}
+df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
+df_long <- reshape2::melt(df, id.vars = "Name")
+
+ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Languages", y = "Translation",fill="Legend") +
+  scale_fill_manual(values = c("Translated" = "green", "Fuzzy" = "blue", "Untranslated" = "red")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
+
+```
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Users
+
+```{r echo=FALSE}
+vec<-numeric()
+for(i in board$Languages)
+{
+  vec<-c(vec,i)
+}
+counting<-Language_Statistics_new
+counting$Count<-rep(0,length(counting$Name))
+for(i in vec)
+{
+  if(i %in% counting$Name)
+  {
+    index<-which(counting$Name==i)
+    counting$Count[index]<-counting$Count[index]+1
+  }
+}
+
+
 ```
