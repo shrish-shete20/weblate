@@ -28,6 +28,8 @@ library(crosstalk)
 library(DT)
 library(plotly)
 library(reshape2)
+library(formattable)
+library(htmlwidgets)
 source("Data_contains.R")
 compute_active <- function() {
   active_count<-nrow(subset(Statistics,Active=="Active"))
@@ -445,6 +447,26 @@ for(i in vec)
     counting$Count[index]<-counting$Count[index]+1
   }
 }
+counting<-counting[ ,!(colnames(counting) %in% c("Code", "Date","Time"))]
+counting$Translations_50<-ifelse(counting$Translated*2>=counting$Total_Words,TRUE,FALSE)
+```
 
+```{r}
+formattable(counting,list(Population = color_tile("white", "orange"),area(col = c("Total_Words")) ~ normalize_bar("pink", 0.2),area(col = c("Translated")) ~ normalize_bar("lightgreen", 0.2),area(col = c("Fuzzy")) ~ normalize_bar("lightblue", 0.2),area(col = c("Untranslated")) ~ normalize_bar("rgb(255, 182, 193)", 0.2),Name = formatter(
+    "span",
+    style = x ~ ifelse(counting$Count == 0, "color:red; font-weight:bold","color:black")
+  ),Count = formatter(
+    "span",
+    style = x ~ ifelse(x == 0, "color:red", "color:black")
+  ),Translations_50 = formatter("span",
+                         style = x ~ style(color = ifelse(x, "green", "red")),
+                         x ~ icontext(ifelse(x, "ok", "remove"), ifelse(x, "Yes", "No")))
+)) 
+```
 
+```{css,echo=FALSE}
+.bootstrap-table{
+overflow-y: scroll !important; 
+height: 450px;
+}
 ```
