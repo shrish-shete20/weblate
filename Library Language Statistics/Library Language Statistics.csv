@@ -206,7 +206,7 @@
 "205",9,"methods (C files)","C","Polish",30,26,4,0
 "206",10,"methods (C files)","C","Portuguese (Brazil)",30,22,3,5
 "207",11,"methods (C files)","C","Russian",30,30,0,0
-"208",12,"methods (C files)","C","Chinese (Simplified)",30,26,3,1
+"208",12,"methods (C files)","C","Chinese (Simplified)",30,30,0,0
 "209",13,"methods (C files)","C","Chinese (Traditional)",30,26,4,0
 "210",14,"methods (C files)","C","Arabic",30,0,30,0
 "211",1,"methods (R files)","R","English",408,408,0,0
@@ -220,7 +220,7 @@
 "219",9,"methods (R files)","R","Polish",406,393,7,6
 "220",10,"methods (R files)","R","Portuguese (Brazil)",406,45,150,211
 "221",11,"methods (R files)","R","Russian",406,401,4,1
-"222",12,"methods (R files)","R","Chinese (Simplified)",406,381,12,13
+"222",12,"methods (R files)","R","Chinese (Simplified)",406,387,9,10
 "223",13,"methods (R files)","R","Chinese (Traditional)",406,393,7,6
 "224",14,"methods (R files)","R","Arabic",406,0,406,0
 "225",15,"methods (R files)","R","Spanish",406,3,403,0
@@ -334,7 +334,7 @@
 "333",9,"tcltk (C files)","C","Polish",10,9,1,0
 "334",10,"tcltk (C files)","C","Portuguese (Brazil)",10,9,1,0
 "335",11,"tcltk (C files)","C","Russian",10,10,0,0
-"336",12,"tcltk (C files)","C","Chinese (Simplified)",10,9,1,0
+"336",12,"tcltk (C files)","C","Chinese (Simplified)",10,10,0,0
 "337",13,"tcltk (C files)","C","Chinese (Traditional)",10,9,1,0
 "338",14,"tcltk (C files)","C","Arabic",10,0,10,0
 "339",15,"tcltk (C files)","C","Bengali",10,1,9,0
