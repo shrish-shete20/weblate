@@ -470,3 +470,45 @@ overflow-y: scroll !important;
 height: 450px;
 }
 ```
+Library
+=====================================
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Libraries 
+
+```{r}
+df <- data.frame(x = runif(200), y = runif(200), z = runif(200), j = runif(200), k = rep(0.7, 200), i = rnorm(200,0.6,0.05))
+
+create_buttons <- function(df, y_axis_var_names) {
+  lapply(
+    y_axis_var_names,
+    FUN = function(var_name, df) {
+      button <- list(
+        method = 'restyle',
+        args = list('y', list(df[, var_name])),
+        label = sprintf('Show %s', var_name)
+      )
+    },
+    df
+  )
+  
+}
+
+y_axis_var_names <- c('y', 'z', 'j', 'k', 'i')
+
+p <- plot_ly(df, x = ~x, y = ~y, mode = "markers", name = "A", visible = T) %>%
+  layout(
+    title = "Drop down menus - Styling",
+    xaxis = list(domain = c(0.1, 1)),
+    yaxis = list(title = "y"),
+    updatemenus = list(
+      list(
+        y = 0.7,
+        buttons = create_buttons(df, y_axis_var_names)
+      )
+    ))
+p
+
+```
