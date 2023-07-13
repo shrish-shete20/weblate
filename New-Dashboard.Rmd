@@ -473,42 +473,56 @@ height: 450px;
 Library
 =====================================
 
-Row {data-height=450}
+Row
 -----------------------------------------------------------------------
 
 ### Libraries 
 
-```{r}
-df <- data.frame(x = runif(200), y = runif(200), z = runif(200), j = runif(200), k = rep(0.7, 200), i = rnorm(200,0.6,0.05))
+```{r fig.height=7}
 
-create_buttons <- function(df, y_axis_var_names) {
-  lapply(
-    y_axis_var_names,
-    FUN = function(var_name, df) {
-      button <- list(
-        method = 'restyle',
-        args = list('y', list(df[, var_name])),
-        label = sprintf('Show %s', var_name)
-      )
-    },
-    df
-  )
-  
-}
+# Your code for creating the initial plot
+fig <- plot_ly(Library_Language_Statistics, x = ~Language, y = ~Translated, text = ~paste("Translated:", Translated, "<br>",
+                                                                                          "Library:", Library, "<br>",
+                                                                                          "Language:", Language), type = 'scatter', mode = 'markers', marker = list(opacity = 0.5, sizemode = 'diameter',size=8))
+fig <- fig %>% layout(title = 'Status of Languages in each Library',
+                      xaxis = list(showgrid = FALSE),
+                      yaxis = list(showgrid = FALSE),
+                      showlegend = FALSE)
 
-y_axis_var_names <- c('y', 'z', 'j', 'k', 'i')
-
-p <- plot_ly(df, x = ~x, y = ~y, mode = "markers", name = "A", visible = T) %>%
-  layout(
-    title = "Drop down menus - Styling",
-    xaxis = list(domain = c(0.1, 1)),
-    yaxis = list(title = "y"),
-    updatemenus = list(
+# Create a list of buttons for the dropdown menu
+buttons <- lapply(unique(Library_Language_Statistics$Library), function(lib) {
+  list(
+    method = "restyle",
+    args = list(
       list(
-        y = 0.7,
-        buttons = create_buttons(df, y_axis_var_names)
+        x = list(Library_Language_Statistics$Language[Library_Language_Statistics$Library == lib]),
+        y = list(Library_Language_Statistics$Translated[Library_Language_Statistics$Library == lib]),
+        text = list(paste("Library:", Library_Language_Statistics$Library[Library_Language_Statistics$Library == lib], "<br>",
+                          "Language:", Library_Language_Statistics$Language[Library_Language_Statistics$Library == lib], "<br>",
+                          "Translated:", Library_Language_Statistics$Translated[Library_Language_Statistics$Library == lib])),
+        hovertext = list(paste("Library:", Library_Language_Statistics$Library[Library_Language_Statistics$Library == lib], "<br>",
+                               "Language:", Library_Language_Statistics$Language[Library_Language_Statistics$Library == lib], "<br>",
+                               "Translated:", Library_Language_Statistics$Translated[Library_Language_Statistics$Library == lib]))
+,        marker = list(
+          size=10,
+          color = "blue"
+)
       )
-    ))
-p
+    ),
+    label = lib
+  )
+})
+
+# Add the dropdown menu to the plot
+fig <- fig %>% layout(
+  updatemenus = list(
+    list(
+      y = 1,
+      buttons = buttons
+    )
+  )
+)
+
+fig
 
 ```
