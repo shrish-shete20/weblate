@@ -527,7 +527,7 @@ fig
 
 ```
 
-Row
+Row{data-height=620px}
 -----------------------------------------------------------------------------
 ```{r}
 libraries <- unique(Library_Language_Statistics$Library)
@@ -640,6 +640,7 @@ for (libr in libraries) {
 
 
 ### Library Translation Status
+
 ```{r}
 subplot1 <- subplot(plots[[5]], plots[[6]], nrows = 1)
 subplot2 <- subplot(plots[[7]], plots[[8]], nrows = 1)
@@ -653,7 +654,7 @@ for (i in seq_along(plots)) {
 
 subplots2 <- subplot(plots, nrows = length(libraries) / 2) %>% layout(width = 1030, height = 305 * length(libraries))
 scrollable_div <- div(
-  style = "overflow-y: scroll; height: 400px;",
+  style = "overflow-y: scroll; height: 600px;",
   subplots2
 )
 
