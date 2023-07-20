@@ -526,94 +526,125 @@ fig <- fig %>% layout(
 fig
 
 ```
-Row
------------------------------------------------------------------------
-
-```{r}
-# Set up a 2x2 grid of plots
-par(mfrow = c(1,4))
-
-# Create four plots
-plot(1:10, main = "Plot 1")
-plot(rnorm(10), main = "Plot 2")
-hist(rnorm(100), main = "Plot 3")
-boxplot(mtcars$mpg ~ mtcars$cyl, main = "Plot 4")
-
-```
 
 Row
------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------
 ```{r}
-libraies<-unique(Library_Language_Statistics$Library)
+libraries <- unique(Library_Language_Statistics$Library)
 plots <- list()
 top_label <- c('Total<br>Words', 'Translated', 'Fuzzy', 'Untranslated')
-for(libr in libraies)
-{
-df<-subset(Library_Language_Statistics,Library==libr)
-fi <- plot_ly(df, x = ~Total_words, y = ~Language, type = 'bar', orientation = 'h',
-              name = 'Total Words',
-              marker = list(color = 'rgba(38, 24, 74, 0.8)',
-                            line = list(color = 'rgb(248, 248, 249)', width = 1))) 
 
-fi <- fi %>% add_trace(x = ~Translated,  name = 'Translated', marker = list(color = 'rgba(71, 58, 131, 0.8)')) 
-fi <- fi %>% add_trace(x = ~Fuzzy,name = 'Fuzzy', marker = list(color = 'rgba(122, 120, 168, 0.8)')) 
-fi <- fi %>% add_trace(x = ~Untranslated,name = 'Untranslated', marker = list(color = 'rgba(164, 163, 204, 0.85)')) 
-fi <- fi %>% layout(xaxis = list(title = "",
-                                 showgrid = FALSE,
-                                 showline = FALSE,
-                                 showticklabels = FALSE,
-                                 zeroline = FALSE,
-                                 domain = c(0.15, 1)),
-                    yaxis = list(title = "",
-                                 showgrid = FALSE,
-                                 showline = FALSE,
-                                 showticklabels = FALSE,
-                                 zeroline = FALSE),
-                    barmode = 'stack',
-                    paper_bgcolor = 'rgb(248, 248, 255)', plot_bgcolor = 'rgb(248, 248, 255)',
-                    margin = list(l = 120, r = 10, t = 140, b = 80),
-                    showlegend = TRUE) 
-
-
-fi <- fi %>% add_annotations(xref = 'paper', yref = 'y', x = 0.14, y = df$Language,
-                             xanchor = 'right',
-                             text = df$Language,
-                             font = list(family = 'Arial', size = 12,
-                                         color = 'rgb(67, 67, 67)'),
-                             showarrow = FALSE, align = 'right') 
-
-fi <- fi %>% add_annotations(xref = 'x', yref = 'y',
-                             x = df$Total_words / 2, y = df$Language,
-                             text = paste(df$Total_words),
-                             font = list(family = 'Arial', size = 12,
-                                         color = 'rgb(248, 248, 255)'),
-                             showarrow = FALSE) 
-fi
-
-fi <- fi %>% add_annotations(xref = 'x', yref = 'y',
-                               x = df$Total_words+df$Translated / 2, y = df$Language,
-                               text = ifelse(df$Translated != 0, paste(df$Translated), ""),
-                               font = list(family = 'Arial', size = 12,
-                                           color = 'rgb(248, 248, 255)'),
-                               showarrow = FALSE) 
-
-fi <- fi %>% add_annotations(xref = 'x', yref = 'y',
-                             x = df$Total_words+df$Translated+df$Fuzzy / 2, y = df$Language,
-                             text = ifelse(df$Fuzzy != 0, paste(df$Fuzzy), ""),
-                             font = list(family = 'Arial', size = 12,
-                                         color = 'rgb(248, 248, 255)'),
-                             showarrow = FALSE) 
-
-fi <- fi %>% add_annotations(xref = 'x', yref = 'y',
-                             x = df$Total_words+df$Translated+df$Fuzzy+df$Untranslated / 2, y = df$Language,
-                             text = ifelse(df$Untranslated != 0, paste(df$Untranslated), ""),
-                             font = list(family = 'Arial', size = 12,
-                                         color = 'rgb(248, 248, 255)'),
-                             showarrow = FALSE) 
-
-plots[[libr]] <- fi
+for (libr in libraries) {
+  df <- subset(Library_Language_Statistics, Library == libr)
+  
+  fi <- plot_ly(df, x = ~Total_words, y = ~Language, type = 'bar', orientation = 'h',
+                name = 'Total Words',
+                marker = list(color = 'rgba(38, 24, 74, 0.8)',
+                              line = list(color = 'rgb(248, 248, 249)', width = 1)))
+  
+  fi <- fi %>% add_trace(x = ~Translated, name = 'Translated', marker = list(color = 'rgba(71, 58, 131, 0.8)')) 
+  fi <- fi %>% add_trace(x = ~Fuzzy, name = 'Fuzzy', marker = list(color = 'rgba(122, 120, 168, 0.8)')) 
+  fi <- fi %>% add_trace(x = ~Untranslated, name = 'Untranslated', marker = list(color = 'rgba(164, 163, 204, 0.85)')) 
+  
+  fi <- fi %>% layout(
+    xaxis = list(
+      title = "",
+      showgrid = FALSE,
+      showline = FALSE,
+      showticklabels = FALSE,
+      zeroline = FALSE,
+      domain = c(0.15, 1)
+    ),
+    yaxis = list(
+      title = "",
+      showgrid = FALSE,
+      showline = FALSE,
+      showticklabels = FALSE,
+      zeroline = FALSE
+    ),
+    barmode = 'stack',
+    paper_bgcolor = 'rgb(248, 248, 255)',
+    plot_bgcolor = 'rgb(248, 248, 255)',
+    margin = list(),
+    showlegend = F,
+    title = libr
+  )
+  
+  fi <- fi %>% add_annotations(
+    xref = 'paper',
+    yref = 'y',
+    x = 0.14,
+    y = df$Language,
+    xanchor = 'right',
+    text = df$Language,
+    font = list(family = 'Arial', size = 10, color = 'rgb(67, 67, 67)'),
+    showarrow = FALSE,
+    align = 'right'
+  ) 
+  
+  fi <- fi %>% add_annotations(
+    xref = 'x',
+    yref = 'y',
+    x = df$Total_words / 2,
+    y = df$Language,
+    text = paste(df$Total_words),
+    font = list(family = 'Arial', size = 10, color = 'rgb(248, 248, 255)'),
+    showarrow = FALSE
+  ) 
+  
+  fi <- fi %>% add_annotations(
+    xref = 'x',
+    yref = 'y',
+    x = df$Total_words + df$Translated / 2,
+    y = df$Language,
+    text = ifelse(df$Translated != 0, paste(df$Translated), ""),
+    font = list(family = 'Arial', size = 10, color = 'rgb(248, 248, 255)'),
+    showarrow = FALSE
+  ) 
+  
+  fi <- fi %>% add_annotations(
+    xref = 'x',
+    yref = 'y',
+    x = df$Total_words + df$Translated + df$Fuzzy / 2,
+    y = df$Language,
+    text = ifelse(df$Fuzzy != 0, paste(df$Fuzzy), ""),
+    font = list(family = 'Arial', size = 10, color = 'rgb(248, 248, 255)'),
+    showarrow = FALSE
+  ) 
+  
+  fi <- fi %>% add_annotations(
+    xref = 'x',
+    yref = 'y',
+    x = df$Total_words + df$Translated + df$Fuzzy + df$Untranslated / 2,
+    y = df$Language,
+    text = ifelse(df$Untranslated != 0, paste(df$Untranslated), ""),
+    font = list(family = 'Arial', size = 10, color = 'rgb(248, 248, 255)'),
+    showarrow = FALSE
+  ) 
+  fi <- fi %>% layout(title = libr)
+  
+  plots[[libr]] <- fi
 }
-subplot(plots, nrows =length(libraies)/2 , shareX = TRUE, titleX = FALSE)
+```
 
+
+### Libraries 
+```{r}
+subplot1 <- subplot(plots[[5]], plots[[6]], nrows = 1)
+subplot2 <- subplot(plots[[7]], plots[[8]], nrows = 1)
+subplot1 <- subplot1 %>% layout(margin = list(t = 30, b = 30))
+subplot2 <- subplot2 %>% layout(margin = list(t = 30, b = 30))
+subplots <- subplot(subplot1, subplot2, subplot2, nrows = 3) %>% layout(width = 1030, height = 305 * 3)
+
+for (i in seq_along(plots)) {
+  plots[[i]] <- plots[[i]] %>% layout(margin = list(t = 30, b = 30))
+}
+
+subplots2 <- subplot(plots, nrows = length(libraries) / 2) %>% layout(width = 1030, height = 305 * length(libraries))
+scrollable_div <- div(
+  style = "overflow-y: scroll; height: 400px;",
+  subplots2
+)
+
+scrollable_div
 ```

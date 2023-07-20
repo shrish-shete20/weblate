@@ -407,7 +407,7 @@ body hr {
   margin-left: 0;
 }
 
-.nav-tabs-custom > .nav-tabs > li.active:first-of-type > a {
+.nav-tabs-custom > .nav-tabs > li:first-of-type.active > a {
   border-left-color: transparent;
 }
 
@@ -427,7 +427,7 @@ body hr {
   border-left-width: 1px;
 }
 
-.nav-tabs-custom > .nav-tabs.pull-right > li.active:first-of-type > a {
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type.active > a {
   border-left-color: #e5e5e5;
   border-right-color: transparent;
 }
