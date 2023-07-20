@@ -661,10 +661,125 @@ scrollable_div <- div(
 scrollable_div
 ```
 
-Row
+Row{data-height=800px}
 ---------------------------------------------------------------------------------
 ### Component Translation Status
 
 ```{r}
+component<-unique(Library_Language_Statistics$Component)
+r_component<-subset(Library_Language_Statistics,Component==component[1])
+c_component<-subset(Library_Language_Statistics,Component==component[3])
+english_component<-subset(Library_Language_Statistics,Component==component[2])
+
+library<-unique(r_component$Library)
+libra<-c()
+total_word<-c()
+translate<-c()
+for(lib in library)
+{
+  indexes<-which(r_component$Library==lib)
+  total_word<-c(total_word,sum(r_component$Total_words[indexes]))
+  translate<-c(translate,sum(r_component$Translated[indexes]))
+  libra<-c(libra,lib)
+}
+r_df<-data.frame(libra,total_word,translate)
+
+library<-unique(c_component$Library)
+libra<-c()
+total_word<-c()
+translate<-c()
+for(lib in library)
+{
+  indexes<-which(c_component$Library==lib)
+  total_word<-c(total_word,sum(c_component$Total_words[indexes]))
+  translate<-c(translate,sum(c_component$Translated[indexes]))
+  libra<-c(libra,lib)
+}
+c_df<-data.frame(libra,total_word,translate)
+
+library<-unique(english_component$Library)
+libra<-c()
+total_word<-c()
+translate<-c()
+for(lib in library)
+{
+  indexes<-which(english_component$Library==lib)
+  total_word<-c(total_word,sum(english_component$Total_words[indexes]))
+  translate<-c(translate,sum(english_component$Translated[indexes]))
+  libra<-c(libra,lib)
+}
+eng_df<-data.frame(libra,total_word,translate)
+
+# 
+# television_2 <- list(
+#   xref = 'paper',
+#   x = 0.95,
+#   y = 0.95,
+#   xanchor = 'left',
+#   yanchor = 'middle',
+#   text = paste("Total words"),
+#   font = list(family = 'Arial',
+#               size = 16,
+#               color = 'rgba(67,67,67,1)'),
+#   showarrow = FALSE)
+# 
+# internet_2 <- list(
+#   xref = 'paper',
+#   x = 0.95,
+#   y = 0.95,
+#   xanchor = 'left',
+#   yanchor = 'middle',
+#   text = paste("Translated"),
+#   font = list(family = 'Arial',
+#               size = 16,
+#               color = 'rgba(67,67,67,1)'),
+#   showarrow = FALSE)
+# 
+
+
+plot_r<-plot_ly(r_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers")
+plot_r<-plot_r%>%add_trace(y=~translate,name="Translate",mode="lines+markers")%>%layout(showlegend = FALSE,annotations = list(
+  list(
+    x = 0.5,
+    y = 1.1,
+    text = "R component",
+    showarrow = F,
+    xref = 'paper',
+    yref = 'paper',
+    xanchor = 'center',
+    yanchor = 'top',
+    font=list(size=16)
+  ))
+)
+plot_c<-plot_ly(c_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers")
+plot_c<-plot_c%>%add_trace(y=~translate,name="Translate",mode="lines+markers")%>%layout(showlegend = FALSE,annotations = list(
+  list(
+    x = 0.5,
+    y = 1.1,
+    text = "C component",
+    showarrow = F,
+    xref = 'paper',
+    yref = 'paper',
+    xanchor = 'center',
+    yanchor = 'top',
+    font=list(size=16)
+  )))
+
+plot_eng<-plot_ly(eng_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers",line=list(color="pink"))
+plot_eng<-plot_eng%>%add_trace(y=~translate,name="Translate",mode="lines+markers",line=list(color="rgb(0,100,80)"))%>%layout(showlegend = FALSE,annotations = list(
+  list(
+    x = 0.5,
+    y = 1.1,
+    text = "English",
+    showarrow = F,
+    xref = 'paper',
+    yref = 'paper',
+    xanchor = 'center',
+    yanchor = 'top',
+    font=list(size=16)
+  )))
+
+subplot(plot_r,plot_c,plot_eng,nrows=3,margin = 0.07)
+
 
 ```
