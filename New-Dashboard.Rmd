@@ -566,8 +566,7 @@ for (libr in libraries) {
     paper_bgcolor = 'rgb(248, 248, 255)',
     plot_bgcolor = 'rgb(248, 248, 255)',
     margin = list(),
-    showlegend = F,
-    title = libr
+    showlegend = F
   )
   
   fi <- fi %>% add_annotations(
@@ -621,14 +620,26 @@ for (libr in libraries) {
     font = list(family = 'Arial', size = 10, color = 'rgb(248, 248, 255)'),
     showarrow = FALSE
   ) 
-  fi <- fi %>% layout(title = libr)
+  fi <- fi %>% layout(annotations = list(
+    list(
+      x = 0.5,
+      y = 1.1,
+      text = libr,
+      showarrow = F,
+      xref = 'paper',
+      yref = 'paper',
+      xanchor = 'center',
+      yanchor = 'top',
+      font = list(size = 16)
+    )
+  ))
   
   plots[[libr]] <- fi
 }
 ```
 
 
-### Libraries 
+### Library Translation Status
 ```{r}
 subplot1 <- subplot(plots[[5]], plots[[6]], nrows = 1)
 subplot2 <- subplot(plots[[7]], plots[[8]], nrows = 1)
@@ -637,7 +648,7 @@ subplot2 <- subplot2 %>% layout(margin = list(t = 30, b = 30))
 subplots <- subplot(subplot1, subplot2, subplot2, nrows = 3) %>% layout(width = 1030, height = 305 * 3)
 
 for (i in seq_along(plots)) {
-  plots[[i]] <- plots[[i]] %>% layout(margin = list(t = 30, b = 30))
+  plots[[i]] <- plots[[i]] %>% layout(margin = list(t = 60, b = 30))
 }
 
 subplots2 <- subplot(plots, nrows = length(libraries) / 2) %>% layout(width = 1030, height = 305 * length(libraries))
