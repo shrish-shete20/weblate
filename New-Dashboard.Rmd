@@ -660,3 +660,11 @@ scrollable_div <- div(
 
 scrollable_div
 ```
+
+Row
+---------------------------------------------------------------------------------
+### Component Translation Status
+
+```{r}
+
+```
