@@ -36,6 +36,9 @@ library(plotly)
 library(reshape2)
 library(formattable)
 library(htmlwidgets)
+library(curl)
+library(lubridate)
+library(jsonlite)
 source("Data_contains.R")
 compute_active <- function() {
   active_count<-nrow(subset(Statistics,Active=="Active"))
@@ -794,5 +797,51 @@ Translations
 Row 
 --------------------------------------------------------------------------------
 ```{r}
+linked<-c()
+for(u in Marked_for_Edit$units)
+{
+url<-paste0("https://translate.rx.studio/api/units/",u,"/")
+h <- new_handle()
+handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
+handle_setopt(h, customrequest = "GET")
+handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
 
+res <- curl_fetch_memory(url, handle = h)
+content <- rawToChar(res$content)
+users_last <- fromJSON(content)
+linked<-c(linked,users_last$web_url)
+}
+data <- cbind(
+  Marked_for_Edit,links=NA
+)
+data$linked <- linked
 ```
+
+
+```{r}
+reactable(
+  data,
+  showPageSizeOptions = TRUE,
+  defaultColDef = colDef(show = TRUE),
+  columns = list(
+    # Render a "show details" button in the last column of the table.
+    # This button won't do anything by itself, but will trigger the custom
+    # click action on the column.
+    linked = colDef(show = FALSE),
+    links = colDef(
+      name = "",
+      sortable = FALSE,
+      cell = function() htmltools::tags$button("Links")
+    )
+  ),
+  onClick = JS("function(rowInfo, column) {
+  if (column.id !== 'links') {
+    return
+  }
+  var link = rowInfo.row.linked;
+  console.log(link);
+  window.open(link, '_blank');
+}")
+)
+```
+
