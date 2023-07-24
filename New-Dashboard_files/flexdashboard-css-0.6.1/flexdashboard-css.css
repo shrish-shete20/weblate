@@ -3,13 +3,13 @@
  (https://github.com/keen/dashboards)
 */
 body {
-  background: #f7f7f7;
+  background: whitesmoke;
   padding: 60px 0 0 8px;
   /* padding-top overridden by output template */
 }
 
 body hr {
-  border-color: #e5e5e5;
+  border-color: #e0e0e0;
   margin: 10px 0;
 }
 
@@ -28,7 +28,7 @@ body hr {
 
 .navbar-author {
   margin-left: 10px;
-  font-size: 1.1rem;
+  font-size: 1.03125rem;
 }
 
 .navbar .dropdown-menu .fa {
@@ -45,18 +45,17 @@ body hr {
 .nav-tabs-custom,
 .sbframe-commentary {
   background: #fff;
-  border: 1px solid #eceeef;
-  border-radius: 0.4rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
   margin-bottom: 8px;
   margin-right: 8px;
 }
 
 .chart-title {
-  border-bottom: 1px solid #eceeef;
-  font-size: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.9375rem;
   font-weight: 300;
   padding: 7px 10px 4px;
-  color: #5a5a5a;
   font-family: Sen;
 }
 
@@ -71,10 +70,10 @@ body hr {
 }
 
 .chart-wrapper .chart-notes {
-  background: #fdfdfd;
-  border-top: 1px solid #eceeef;
-  color: #adadad;
-  font-size: 0.875rem;
+  background: #fcfcfc;
+  border-top: 1px solid #dee2e6;
+  color: #9b9d9e;
+  font-size: 0.825rem;
   padding: 8px 10px 5px;
 }
 
@@ -229,12 +228,12 @@ body hr {
 }
 
 .chart-stage .table-bordered > tbody > tr > td {
-  border-top: 1px solid #eceeef;
+  border-top: 1px solid #dee2e6;
 }
 
 .chart-stage .table-bordered > thead > tr > th {
   border: none;
-  border-bottom: 2px solid #eceeef;
+  border-bottom: 2px solid #dee2e6;
 }
 
 .bootstrap-table table > thead {
@@ -249,7 +248,7 @@ body hr {
 .bootstrap-table table.data > tbody > tr > th,
 .bootstrap-table table.shiny-table > tbody > tr > th {
   border-top: none;
-  border-bottom: 2px solid #eceeef;
+  border-bottom: 2px solid #dee2e6;
   padding: 5px;
 }
 
@@ -313,34 +312,34 @@ body hr {
 /* STORYBOARD */
 .storyboard-nav .sbnext,
 .storyboard-nav .sbprev {
-  font-size: 3.5rem;
-  color: #5a5a5a;
+  font-size: 3.28125rem;
+  color: #373a3c;
 }
 
 .storyboard-nav .sbframelist ul li {
   background: #fff;
-  border: 1px solid #eceeef;
-  border-radius: 0.4rem;
-  color: #838383;
-  font-size: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  color: #696b6d;
+  font-size: 0.9375rem;
 }
 
 .storyboard-nav .sbframelist ul li.active {
   color: #fff;
-  background-color: rgba(120, 194, 173, 0.7);
+  background-color: rgba(39, 128, 227, 0.7);
 }
 
 .sbframe-commentary {
   background: #fcfcfc;
-  font-size: 1rem;
+  font-size: 0.9375rem;
 }
 
 /* NAV TABS */
 .nav-tabs-custom > .nav-tabs {
   margin: 0;
-  border-bottom: 1px solid #eceeef;
-  color: rgba(90, 90, 90, 0.6);
-  font-size: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  color: rgba(95, 97, 99, 0.6);
+  font-size: 0.9375rem;
   font-weight: 300;
   font-family: Sen;
   border-top-right-radius: 3px;
@@ -355,9 +354,9 @@ body hr {
 
 .nav-tabs-custom > .nav-tabs > li > a,
 .nav-tabs-custom > .nav-tabs > li > a:active {
-  color: #5a5a5a;
+  color: #5f6163;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   border-radius: 0;
   padding: 3px 10px 5px;
   text-transform: none;
@@ -368,7 +367,7 @@ body hr {
 }
 
 .nav-tabs-custom > .nav-tabs > li > a.text-muted {
-  color: rgba(90, 90, 90, 0.6);
+  color: rgba(95, 97, 99, 0.6);
 }
 
 .nav-tabs-custom > .nav-tabs > li > a,
@@ -378,7 +377,7 @@ body hr {
 }
 
 .nav-tabs-custom > .nav-tabs > li > a:hover {
-  color: rgba(90, 90, 90, 0.6);
+  color: rgba(95, 97, 99, 0.6);
 }
 
 .nav-tabs-custom > .nav-tabs > li:not(.active) > a:hover,
@@ -388,19 +387,19 @@ body hr {
 }
 
 .nav-tabs-custom > .nav-tabs > li.active {
-  border-top-color: #78c2ad;
+  border-top-color: #2780e3;
 }
 
 .nav-tabs-custom > .nav-tabs > li.active > a,
 .nav-tabs-custom > .nav-tabs > li.active:hover > a {
   background-color: #fff;
-  color: #5a5a5a;
+  color: #5f6163;
 }
 
 .nav-tabs-custom > .nav-tabs > li.active > a {
   border-top-color: transparent;
-  border-left-color: #e5e5e5;
-  border-right-color: #e5e5e5;
+  border-left-color: #e0e0e0;
+  border-right-color: #e0e0e0;
 }
 
 .nav-tabs-custom > .nav-tabs > li:first-of-type {
@@ -428,15 +427,15 @@ body hr {
 }
 
 .nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type.active > a {
-  border-left-color: #e5e5e5;
+  border-left-color: #e0e0e0;
   border-right-color: transparent;
 }
 
 .nav-tabs-custom > .nav-tabs > li.header {
   line-height: 35px;
   padding: 0 10px;
-  font-size: 1.5rem;
-  color: #5a5a5a;
+  font-size: 1.40625rem;
+  color: #5f6163;
 }
 
 .nav-tabs-custom > .nav-tabs > li.header > .fa,
@@ -472,7 +471,7 @@ body hr {
 .nav-tabs-custom .dropdown.open > a:active,
 .nav-tabs-custom .dropdown.open > a:focus {
   background: transparent;
-  color: #5a5a5a;
+  color: #5f6163;
 }
 
 @media (max-width: 767px) {
@@ -492,8 +491,8 @@ body hr {
   /* overridden by output template */
   left: 0;
   bottom: 0;
-  border-right: 1px solid #eceeef;
-  background-color: rgba(120, 194, 173, 0.1);
+  border-right: 1px solid #dee2e6;
+  background-color: rgba(39, 128, 227, 0.1);
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -522,7 +521,7 @@ body hr {
 }
 
 .featherlight:last-of-type {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgba(55, 58, 60, 0.7);
 }
 
 .featherlight-inner {
@@ -533,7 +532,7 @@ body hr {
   margin: 0;
   border: 0;
   background: #fff;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
 }
 
 .unselectable {
@@ -566,11 +565,11 @@ body hr {
 }
 
 table.dataTable thead th {
-  border-bottom: 1px solid #eceeef;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .dataTables_wrapper.no-footer .dataTables_scrollBody {
-  border-bottom: 1px solid #eceeef;
+  border-bottom: 1px solid #dee2e6;
 }
 
 /* Mobile phone only CSS */
