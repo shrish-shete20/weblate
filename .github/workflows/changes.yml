@@ -25,7 +25,9 @@ jobs:
       run: |
         Rscript -e 'install.packages("jsonlite")'
         Rscript -e 'install.packages("stringr")'
-        Rscript -e 'install.packages("readr")'        
+        Rscript -e 'install.packages("readr")' 
+        Rscript -e 'install.packages("curl")' 
+        Rscript -e 'install.packages("lubridate")'
     - name: Run R scripts
       run: | 
         Rscript "Recent changes.R"
