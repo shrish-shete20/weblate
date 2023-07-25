@@ -823,6 +823,7 @@ Row
 ```{r}
 htmltools::div(
   style = "width: 100%;
+          height: 300px;
           overflow:auto;",
   reactable(
     data,
