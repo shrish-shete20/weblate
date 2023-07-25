@@ -822,8 +822,8 @@ Row
 
 ```{r}
 htmltools::div(
-  style = "width: 100%;,
-          overflow:auto";
+  style = "width: 100%;
+          overflow:auto;",
   reactable(
     data,
     filterable = TRUE,
