@@ -794,8 +794,7 @@ subplot(plot_r,plot_c,plot_eng,nrows=3,margin = 0.07)
 ```
 Translations
 =====================================
-Row 
---------------------------------------------------------------------------------
+
 ```{r}
 linked<-c()
 for(u in Marked_for_Edit$units)
@@ -816,32 +815,45 @@ data <- cbind(
 )
 data$linked <- linked
 ```
+Row 
+--------------------------------------------------------------------------------
 
+### Needs Editing
 
 ```{r}
-reactable(
-  data,
-  showPageSizeOptions = TRUE,
-  defaultColDef = colDef(show = TRUE),
-  columns = list(
-    # Render a "show details" button in the last column of the table.
-    # This button won't do anything by itself, but will trigger the custom
-    # click action on the column.
-    linked = colDef(show = FALSE),
-    links = colDef(
-      name = "",
-      sortable = FALSE,
-      cell = function() htmltools::tags$button("Links")
-    )
-  ),
-  onClick = JS("function(rowInfo, column) {
-  if (column.id !== 'links') {
-    return
-  }
-  var link = rowInfo.row.linked;
-  console.log(link);
-  window.open(link, '_blank');
-}")
+htmltools::div(
+  style = "width: 100%;,
+          overflow:auto";
+  reactable(
+    data,
+    filterable = TRUE,
+    groupBy=c("language","library"),
+    showPageSizeOptions = TRUE,
+    defaultColDef = colDef(show = TRUE),
+    columns = list(
+      linked = colDef(show = FALSE),
+      links = colDef(
+        name = "",
+        sortable = FALSE,
+        cell = function() htmltools::tags$button("Links")
+      )
+    ),
+    onClick = JS("function(rowInfo, column) {
+      if (column.id !== 'links') {
+        return
+      }
+      var link = rowInfo.row.linked;
+      console.log(link);
+      window.open(link, '_blank');
+    }")
+  )
 )
 ```
+Row
+---------------------------------------------------------------------------------
 
+```{r}
+x<-c(1,2,3)
+y<-c(2,4,6)
+plot(x,y)
+```
