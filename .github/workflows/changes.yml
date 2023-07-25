@@ -1,4 +1,4 @@
-name: Recent Chnages refresh
+name: Recent Changes refresh
 
 on: 
   schedule:  
