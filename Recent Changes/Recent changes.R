@@ -3,8 +3,6 @@ library(httr)
 library(jsonlite)
 library(stringr)  
 library(readr)
-library(curl)
-library(lubridate)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
 
@@ -338,28 +336,10 @@ translation_changed<-intersect(translated_data$units,changed_data$units)
 changed_indexes<-match(translation_changed,translated_data$units)
 translated_data<-translated_data[-changed_indexes,]
 translated_data<-rbind(translated_data,changed_data[changed_indexes,])
-
-linked<-c()
-for(u in Marked_for_Edit$units)
-{
-  url<-paste0("https://translate.rx.studio/api/units/",u,"/")
-  h <- new_handle()
-  handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
-  handle_setopt(h, customrequest = "GET")
-  handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
-  
-  res <- curl_fetch_memory(url, handle = h)
-  content <- rawToChar(res$content)
-  users_last <- fromJSON(content)
-  linked<-c(linked,users_last$web_url)
-}
-data <- cbind(
-  Marked_for_Edit,links=NA
-)
-data$linked <- linked
-
-
 write_csv(translated_data,"New Translation.csv")
-write_csv(data,"Marked for Edit.csv")
+write_csv(mark_data,"Marked for Edit.csv")
 print(24)
+<<<<<<< HEAD
   
+=======
+>>>>>>> parent of e878038 (Changed Recent changes file)
