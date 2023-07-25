@@ -362,4 +362,4 @@ data$linked <- linked
 write_csv(translated_data,"New Translation.csv")
 write_csv(data,"Marked for Edit.csv")
 print(24)
-
+  
