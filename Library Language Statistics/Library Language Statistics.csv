@@ -65,7 +65,7 @@
 "64",17,"base (R files)","R","Hungarian",583,0,583,0
 "65",18,"base (R files)","R","Arabic",583,0,583,0
 "66",19,"base (R files)","R","Albanian",583,35,548,0
-"67",20,"base (R files)","R","Spanish",583,200,292,91
+"67",20,"base (R files)","R","Spanish",583,201,282,100
 "68",21,"base (R files)","R","Indonesian",583,1,582,0
 "69",22,"base (R files)","R","Bengali",583,28,554,1
 "70",23,"base (R files)","R","Urdu",583,1,582,0
@@ -338,75 +338,76 @@
 "337",13,"tcltk (C files)","C","Chinese (Traditional)",10,9,1,0
 "338",14,"tcltk (C files)","C","Arabic",10,0,10,0
 "339",15,"tcltk (C files)","C","Bengali",10,1,9,0
-"340",1,"tcltk (R files)","R","English",30,30,0,0
-"341",2,"tcltk (R files)","R","Danish",30,28,1,1
-"342",3,"tcltk (R files)","R","German",30,30,0,0
-"343",4,"tcltk (R files)","R","French",30,30,0,0
-"344",5,"tcltk (R files)","R","Italian",30,30,0,0
-"345",6,"tcltk (R files)","R","Japanese",30,29,1,0
-"346",7,"tcltk (R files)","R","Korean",30,29,1,0
-"347",8,"tcltk (R files)","R","Lithuanian",30,29,1,0
-"348",9,"tcltk (R files)","R","Polish",30,29,1,0
-"349",10,"tcltk (R files)","R","Portuguese (Brazil)",30,29,1,0
-"350",11,"tcltk (R files)","R","Russian",30,29,1,0
-"351",12,"tcltk (R files)","R","Chinese (Simplified)",30,30,0,0
-"352",13,"tcltk (R files)","R","Chinese (Traditional)",30,29,1,0
-"353",14,"tcltk (R files)","R","Arabic",30,0,30,0
-"354",1,"tools (C files)","C","English",37,37,0,0
-"355",2,"tools (C files)","C","Danish",37,6,28,3
-"356",3,"tools (C files)","C","German",37,37,0,0
-"357",4,"tools (C files)","C","French",37,37,0,0
-"358",5,"tools (C files)","C","Italian",37,37,0,0
-"359",6,"tools (C files)","C","Japanese",37,32,3,2
-"360",7,"tools (C files)","C","Korean",37,30,5,2
-"361",8,"tools (C files)","C","Lithuanian",37,36,1,0
-"362",9,"tools (C files)","C","Polish",37,32,3,2
-"363",10,"tools (C files)","C","Portuguese (Brazil)",37,8,28,1
-"364",11,"tools (C files)","C","Russian",37,36,1,0
-"365",12,"tools (C files)","C","Chinese (Simplified)",37,32,3,2
-"366",13,"tools (C files)","C","Chinese (Traditional)",37,32,3,2
-"367",14,"tools (C files)","C","Arabic",37,0,37,0
-"368",1,"tools (R files)","R","English",460,460,0,0
-"369",2,"tools (R files)","R","Danish",423,55,351,17
-"370",3,"tools (R files)","R","German",423,423,0,0
-"371",4,"tools (R files)","R","French",423,423,0,0
-"372",5,"tools (R files)","R","Italian",457,457,0,0
-"373",6,"tools (R files)","R","Japanese",423,341,48,34
-"374",7,"tools (R files)","R","Korean",423,305,103,15
-"375",8,"tools (R files)","R","Lithuanian",423,421,1,1
-"376",9,"tools (R files)","R","Polish",423,365,41,17
-"377",10,"tools (R files)","R","Portuguese (Brazil)",454,410,36,8
-"378",11,"tools (R files)","R","Russian",423,421,1,1
-"379",12,"tools (R files)","R","Turkish",423,2,421,0
-"380",13,"tools (R files)","R","Chinese (Simplified)",423,271,87,65
-"381",14,"tools (R files)","R","Chinese (Traditional)",423,365,41,17
-"382",15,"tools (R files)","R","Arabic",423,0,423,0
-"383",16,"tools (R files)","R","Spanish",423,6,417,0
-"384",1,"utils (C files)","C","English",59,59,0,0
-"385",2,"utils (C files)","C","German",59,59,0,0
-"386",3,"utils (C files)","C","French",59,57,0,2
-"387",4,"utils (C files)","C","Italian",59,59,0,0
-"388",5,"utils (C files)","C","Korean",59,48,7,4
-"389",6,"utils (C files)","C","Lithuanian",59,56,1,2
-"390",7,"utils (C files)","C","Polish",59,53,2,4
-"391",8,"utils (C files)","C","Russian",59,56,1,2
-"392",9,"utils (C files)","C","Chinese (Traditional)",59,53,2,4
-"393",10,"utils (C files)","C","Arabic",59,0,59,0
-"394",11,"utils (C files)","C","Portuguese (Brazil)",59,54,5,0
-"395",1,"utils (R files)","R","English",427,427,0,0
-"396",2,"utils (R files)","R","Danish",413,41,341,31
-"397",3,"utils (R files)","R","German",413,413,0,0
-"398",4,"utils (R files)","R","Persian",413,6,406,1
-"399",5,"utils (R files)","R","French",413,411,0,2
-"400",6,"utils (R files)","R","Italian",422,422,0,0
-"401",7,"utils (R files)","R","Japanese",413,341,44,28
-"402",8,"utils (R files)","R","Korean",413,318,79,16
-"403",9,"utils (R files)","R","Lithuanian",413,406,2,5
-"404",10,"utils (R files)","R","Polish",413,370,26,17
-"405",11,"utils (R files)","R","Portuguese (Brazil)",420,326,81,13
-"406",12,"utils (R files)","R","Russian",413,406,2,5
-"407",13,"utils (R files)","R","Turkish",413,7,403,3
-"408",14,"utils (R files)","R","Chinese (Simplified)",413,319,53,41
-"409",15,"utils (R files)","R","Chinese (Traditional)",413,370,26,17
-"410",16,"utils (R files)","R","Arabic",413,0,413,0
-"411",17,"utils (R files)","R","Spanish",413,25,388,0
+"340",16,"tcltk (C files)","C","Spanish",10,5,4,1
+"341",1,"tcltk (R files)","R","English",30,30,0,0
+"342",2,"tcltk (R files)","R","Danish",30,28,1,1
+"343",3,"tcltk (R files)","R","German",30,30,0,0
+"344",4,"tcltk (R files)","R","French",30,30,0,0
+"345",5,"tcltk (R files)","R","Italian",30,30,0,0
+"346",6,"tcltk (R files)","R","Japanese",30,29,1,0
+"347",7,"tcltk (R files)","R","Korean",30,29,1,0
+"348",8,"tcltk (R files)","R","Lithuanian",30,29,1,0
+"349",9,"tcltk (R files)","R","Polish",30,29,1,0
+"350",10,"tcltk (R files)","R","Portuguese (Brazil)",30,29,1,0
+"351",11,"tcltk (R files)","R","Russian",30,29,1,0
+"352",12,"tcltk (R files)","R","Chinese (Simplified)",30,30,0,0
+"353",13,"tcltk (R files)","R","Chinese (Traditional)",30,29,1,0
+"354",14,"tcltk (R files)","R","Arabic",30,0,30,0
+"355",1,"tools (C files)","C","English",37,37,0,0
+"356",2,"tools (C files)","C","Danish",37,6,28,3
+"357",3,"tools (C files)","C","German",37,37,0,0
+"358",4,"tools (C files)","C","French",37,37,0,0
+"359",5,"tools (C files)","C","Italian",37,37,0,0
+"360",6,"tools (C files)","C","Japanese",37,32,3,2
+"361",7,"tools (C files)","C","Korean",37,30,5,2
+"362",8,"tools (C files)","C","Lithuanian",37,36,1,0
+"363",9,"tools (C files)","C","Polish",37,32,3,2
+"364",10,"tools (C files)","C","Portuguese (Brazil)",37,8,28,1
+"365",11,"tools (C files)","C","Russian",37,36,1,0
+"366",12,"tools (C files)","C","Chinese (Simplified)",37,32,3,2
+"367",13,"tools (C files)","C","Chinese (Traditional)",37,32,3,2
+"368",14,"tools (C files)","C","Arabic",37,0,37,0
+"369",1,"tools (R files)","R","English",460,460,0,0
+"370",2,"tools (R files)","R","Danish",423,55,351,17
+"371",3,"tools (R files)","R","German",423,423,0,0
+"372",4,"tools (R files)","R","French",423,423,0,0
+"373",5,"tools (R files)","R","Italian",457,457,0,0
+"374",6,"tools (R files)","R","Japanese",423,341,48,34
+"375",7,"tools (R files)","R","Korean",423,305,103,15
+"376",8,"tools (R files)","R","Lithuanian",423,421,1,1
+"377",9,"tools (R files)","R","Polish",423,365,41,17
+"378",10,"tools (R files)","R","Portuguese (Brazil)",454,410,36,8
+"379",11,"tools (R files)","R","Russian",423,421,1,1
+"380",12,"tools (R files)","R","Turkish",423,2,421,0
+"381",13,"tools (R files)","R","Chinese (Simplified)",423,271,87,65
+"382",14,"tools (R files)","R","Chinese (Traditional)",423,365,41,17
+"383",15,"tools (R files)","R","Arabic",423,0,423,0
+"384",16,"tools (R files)","R","Spanish",423,6,417,0
+"385",1,"utils (C files)","C","English",59,59,0,0
+"386",2,"utils (C files)","C","German",59,59,0,0
+"387",3,"utils (C files)","C","French",59,57,0,2
+"388",4,"utils (C files)","C","Italian",59,59,0,0
+"389",5,"utils (C files)","C","Korean",59,48,7,4
+"390",6,"utils (C files)","C","Lithuanian",59,56,1,2
+"391",7,"utils (C files)","C","Polish",59,53,2,4
+"392",8,"utils (C files)","C","Russian",59,56,1,2
+"393",9,"utils (C files)","C","Chinese (Traditional)",59,53,2,4
+"394",10,"utils (C files)","C","Arabic",59,0,59,0
+"395",11,"utils (C files)","C","Portuguese (Brazil)",59,54,5,0
+"396",1,"utils (R files)","R","English",427,427,0,0
+"397",2,"utils (R files)","R","Danish",413,41,341,31
+"398",3,"utils (R files)","R","German",413,413,0,0
+"399",4,"utils (R files)","R","Persian",413,6,406,1
+"400",5,"utils (R files)","R","French",413,411,0,2
+"401",6,"utils (R files)","R","Italian",422,422,0,0
+"402",7,"utils (R files)","R","Japanese",413,341,44,28
+"403",8,"utils (R files)","R","Korean",413,318,79,16
+"404",9,"utils (R files)","R","Lithuanian",413,406,2,5
+"405",10,"utils (R files)","R","Polish",413,370,26,17
+"406",11,"utils (R files)","R","Portuguese (Brazil)",420,326,81,13
+"407",12,"utils (R files)","R","Russian",413,406,2,5
+"408",13,"utils (R files)","R","Turkish",413,7,403,3
+"409",14,"utils (R files)","R","Chinese (Simplified)",413,319,53,41
+"410",15,"utils (R files)","R","Chinese (Traditional)",413,370,26,17
+"411",16,"utils (R files)","R","Arabic",413,0,413,0
+"412",17,"utils (R files)","R","Spanish",413,25,387,1
