@@ -3,18 +3,31 @@ library(httr)
 library(jsonlite)
 library(stringr)  
 library(readr)
+library(curl)
+library(lubridate)
 Language_Statistics <- read_csv("/home/runner/work/weblate/weblate/Language Statisitics/Language_Statistics_new.csv")
 api_token <- "wlu_s7fqhH2f9VgCCvIU2FQFlFMIZ27IH9GJwCg0"
 
 changes_url<-"https://translate.rx.studio/api/changes/?action=5"
 endpoint <- changes_url
-headers <- add_headers(Authorization = paste("Token"," ",api_token))
-response <- GET(url = endpoint, headers = headers, authenticate("shrishs21","kvell@2003"))
-changes <- content(response, "text", encoding = "UTF-8")
+
+h <- new_handle()
+handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
+handle_setopt(h, customrequest = "GET")
+handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
+
+response <- curl_fetch_memory(endpoint, handle = h)
+
+changes <- rawToChar(response$content)
+
 changes <- fromJSON(changes)
+
 libraries_url<-"https://translate.rx.studio/api/projects/r-project/components/"
-lib_response <- GET(url = libraries_url, headers = headers, authenticate("shrishs21","kvell@2003"))
-libraries <- content(lib_response, "text", encoding = "UTF-8")
+
+lib_response <- curl_fetch_memory(libraries_url, handle = h)
+
+libraries <- rawToChar(lib_response$content)
+
 libraries <- fromJSON(libraries)
 libraries_count<-libraries$count
 slugs<-libraries$results$slug
@@ -39,8 +52,11 @@ dates<-c()
 times<-c()
 for (i in 1:pages) {
   pages_url <- paste0("https://translate.rx.studio/api/changes/?action=5&page=", i)
-  pages_response <- GET(url = pages_url, headers = headers, authenticate("shrishs21", "kvell@2003"))
-  pages_changes <- content(pages_response, "text", encoding = "UTF-8")
+  
+  pages_response <- curl_fetch_memory(pages_url, handle = h)
+  
+  pages_changes <- rawToChar(pages_response$content)
+  
   pages_changes <- fromJSON(pages_changes)
   component<-str_extract(pages_changes$results$component, "components/(.*?)/")
   component<-str_remove_all(component, "components/|/")
@@ -103,13 +119,16 @@ for (i in 1:pages) {
   times<-c(times,time)
 }
 translated_data<-data.frame(user=users,language=lang,library=lib,units=units,date=dates,time=times)
-
-
+dd<-duplicated(translated_data$units,fromLast = TRUE)
+translated_data<-translated_data[!dd,]
 ### Marked for edit 
 edit_url<-"https://translate.rx.studio/api/changes/?action=37"
-headers <- add_headers(Authorization = paste("Token"," ",api_token))
-edit_response <- GET(url = edit_url, headers = headers, authenticate("shrishs21","kvell@2003"))
-edits <- content(edit_response, "text", encoding = "UTF-8")
+
+
+edit_response <- curl_fetch_memory(edit_url, handle = h)
+
+edits <- rawToChar(edit_response$content)
+
 edits <- fromJSON(edits)
 edit_count<-edits$count
 edit_remain<-edit_count%%50
@@ -132,9 +151,14 @@ mark_times<-c()
 for(i in 1:edit_pages)
 {
   mark_url <- paste0("https://translate.rx.studio/api/changes/?action=37&page=", i)
-  mark_response <- GET(url = mark_url, headers = headers, authenticate("shrishs21", "kvell@2003"))
-  mark_changes <- content(mark_response, "text", encoding = "UTF-8")
+  
+  
+  mark_response <- curl_fetch_memory(mark_url, handle = h)
+  
+  mark_changes <- rawToChar(mark_response$content)
+  
   mark_changes <- fromJSON(mark_changes)
+  
   mark_component<-str_extract(mark_changes$results$component, "components/(.*?)/")
   mark_component<-str_remove_all(mark_component, "components/|/")
   mark_extracted_users <- str_extract(mark_changes$results$user, "/([^/]+)/$")
@@ -202,9 +226,12 @@ editing<-dim(mark_data)[1]
 
 ###Translation changed
 changed_url<-"https://translate.rx.studio/api/changes/?action=2"
-headers <- add_headers(Authorization = paste("Token"," ",api_token))
-changed_response <- GET(url = changed_url, headers = headers, authenticate("shrishs21","kvell@2003"))
-changed <- content(changed_response, "text", encoding = "UTF-8")
+
+
+changes_response <- curl_fetch_memory(changed_url, handle = h)
+
+changed <- rawToChar(changes_response$content)
+
 changed <- fromJSON(changed)
 changed_count<-changed$count
 changed_remain<-changed_count%%50
@@ -228,8 +255,12 @@ for(i in 1:changed_pages)
 {
   
   ch_url <- paste0("https://translate.rx.studio/api/changes/?action=2&page=", i)
-  ch_response <- GET(url = ch_url, headers = headers, authenticate("shrishs21", "kvell@2003"))
-  ch_changes <- content(ch_response, "text", encoding = "UTF-8")
+  
+  
+  ch_response <- curl_fetch_memory(ch_url, handle = h)
+  
+  ch_changes <- rawToChar(ch_response$content)
+  
   ch_changes <- fromJSON(ch_changes)
   ch_component<-str_extract(ch_changes$results$component, "components/(.*?)/")
   ch_component<-str_remove_all(ch_component, "components/|/")
@@ -299,7 +330,6 @@ changed_data<-changed_data[!du_row,]
 ###Data Processing
 
 
-
 elements_changed<-intersect(mark_data$units,changed_data$units)
 indexes<-match(elements_changed,mark_data$units)
 indexes2<-match(elements_changed,changed_data$units)
@@ -334,9 +364,12 @@ translated_data<-translated_data[-translated_indexes,]
 
 translation_changed<-intersect(translated_data$units,changed_data$units)
 changed_indexes<-match(translation_changed,translated_data$units)
+changed_index<-match(translation_changed,changed_data$units)
 translated_data<-translated_data[-changed_indexes,]
-translated_data<-rbind(translated_data,changed_data[changed_indexes,])
+translated_data<-rbind(translated_data,changed_data[changed_index,])
+
 write_csv(translated_data,"New Translation.csv")
 write_csv(mark_data,"Marked for Edit.csv")
+
 print(24)
 

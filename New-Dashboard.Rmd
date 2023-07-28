@@ -853,8 +853,29 @@ htmltools::div(
 Row
 ---------------------------------------------------------------------------------
 
+### Growth of Translations over Last Year
+
 ```{r}
-x<-c(1,2,3)
-y<-c(2,4,6)
-plot(x,y)
+all_date<-as.POSIXct.Date(New_Translation$date,origin="1970-01-01")
+all_date2<-as.POSIXct.Date(Marked_for_Edit$date,origin="1970-01-01")
+all_date<-c(all_date,all_date2)
+# extract the year and month from each date
+year_month <- format(all_date, "%Y-%m")
+
+# count the number of dates in each month
+date_counts <- table(year_month)
+
+# display the result
+date_counts<-as.data.frame(date_counts)
+date_counts$cumFreq<-cumsum(date_counts$Freq)
+date_counts<-date_counts[(nrow(date_counts)-12):nrow(date_counts),]
+
+fig <- plot_ly(date_counts, x = ~year_month, y = ~cumFreq, name = 'Graph', type = 'scatter', mode = 'line', stackgroup = 'one', fillcolor = 'pink')
+fig <- fig %>% layout(title = 'Growth of Translations over time',
+                      xaxis = list(title = "Dates",
+                                   showgrid = FALSE),
+                      yaxis = list(title = "Transaltions",
+                                   showgrid = FALSE))
+
+fig
 ```
