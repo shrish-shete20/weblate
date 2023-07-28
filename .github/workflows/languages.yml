@@ -36,6 +36,7 @@ jobs:
         git config --global user.email "sheteshrish1203@gmail.com"
     - name: Commit and Push Changes
       run: |
+        git pull origin main
         git add .
         git commit -m "Updated language Csv"
         git push
