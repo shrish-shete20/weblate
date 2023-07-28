@@ -21,8 +21,8 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 20,Ella Kaye,EllaKaye,17,1,English (United Kingdom),2023-02-16T09:15:31.685928Z,2023-04-13T09:28:40.774532Z,Active
 21,Ahmadou Dicko,dickoa,7,1,French,2023-01-20T15:45:21.401670Z,2023-01-20T16:03:05.448593Z,Inactive
 22,Michael Chirico,michaelchirico,4,1,Japanese,2023-01-27T19:09:41.183410Z,2023-02-01T17:52:09.360246Z,Active
-23,Elio,eliocamp,7,1,Spanish,2023-01-28T13:50:05.838488Z,2023-01-28T13:53:28.051913Z,Active
-24,Detlef Steuer,dsteuer,20,1,German,2023-01-27T20:54:18.133641Z,2023-01-27T21:10:08.585138Z,Active
+23,Elio,eliocamp,7,1,Spanish,2023-01-28T13:50:05.838488Z,2023-01-28T13:53:28.051913Z,Inactive
+24,Detlef Steuer,dsteuer,20,1,German,2023-01-27T20:54:18.133641Z,2023-01-27T21:10:08.585138Z,Inactive
 25,Robert Castelo,rcastelo,23,1,Spanish,2023-02-02T11:30:11.116511Z,2023-04-05T09:17:59.630841Z,Active
 26,Philip Khor,philip-khor,0,2,"c(""Chinese (Simplified)"", ""Indonesian"")",N/A,N/A,Unbegun
 27,Debartha Paul,DeBARtha,37,1,Bengali,2023-02-02T15:53:09.927118Z,2023-03-01T17:50:54.794338Z,Active
