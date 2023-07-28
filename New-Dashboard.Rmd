@@ -814,6 +814,7 @@ data <- cbind(
   Marked_for_Edit,links=NA
 )
 data$linked <- linked
+data$date<-as.Date(data$date)
 ```
 Row 
 --------------------------------------------------------------------------------
@@ -828,9 +829,10 @@ htmltools::div(
   reactable(
     data,
     filterable = TRUE,
+    defaultColDef = colDef(show = TRUE),
     groupBy=c("language","library"),
     showPageSizeOptions = TRUE,
-    defaultColDef = colDef(show = TRUE),
+    pagination = TRUE,
     columns = list(
       linked = colDef(show = FALSE),
       links = colDef(
@@ -878,4 +880,26 @@ fig <- fig %>% layout(title = 'Growth of Translations over time',
                                    showgrid = FALSE))
 
 fig
+```
+
+Row 
+--------------------------------------------------------------------------------
+
+### Translated
+
+```{r}
+New_Translation$date<-as.Date(New_Translation$date)
+htmltools::div(
+  style = "width: 100%;
+          height:450px;
+          overflow:auto;",
+  reactable(
+    New_Translation,
+    filterable = TRUE,
+    defaultColDef = colDef(show = TRUE),
+    groupBy=c("library","language"),
+    showPageSizeOptions = TRUE,
+    columns = list()
+  )
+)
 ```
