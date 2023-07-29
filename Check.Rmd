@@ -1,0 +1,46 @@
+---
+title: "Themed dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      heading_font:
+        google: Sen
+      base_font: 
+        google: Prompt
+    orientation: rows
+    self_contained: false
+    vertical_layout: scroll
+    source_code: embed
+    navbar:
+      - { title: "Github", href: "https://github.com/shrish-shete20/weblate", align: right, icon: fa-github}
+    css: ["fragments/custom.css"]
+    skin:
+      header_bg: "#ffffff"
+      header_fg: "#000000"
+      sidebar_bg: "#00438d"
+      sidebar_fg: "#ffffff"
+      body_bg: "#f8f9fa"
+      body_fg: "#000000"
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+# Install thematic and un-comment for themed static plots (i.e., ggplot2)
+# thematic::thematic_rmd()
+```
+
+Information
+=====================================
+
+### R Translation Weblate Status
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+<strong>Dashboard Developer</strong>
+:::
+  <p><h3>Shrish Shete</h3>(<em>Contributor at GSOC 2023</em>)</p>
+  <b>About</b> : Student at <b>IIT Kanpur</b>,India (Statistics and Data Science)<br>
+  
+::::
+

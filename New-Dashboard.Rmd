@@ -906,6 +906,20 @@ htmltools::div(
 Information
 =====================================
 
-```{r}
+### R Translation Weblate Status
 
-```
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+<strong>Dashboard Developer</strong>
+:::
+  <h1>Shrish Shete</h1>
+  <b>About</b> : Student at IIT Kanpur,India 
+::::
+
+::: {.box}
+# Profile
+- Name: John Doe
+- Age: 30
+- Occupation: Data Scientist
+:::
+
