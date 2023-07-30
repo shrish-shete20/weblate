@@ -1,5 +1,5 @@
 ---
-title: "Themed dashboard"
+title: "Weblate dashboard"
 output: 
   flexdashboard::flex_dashboard:
     theme:
@@ -354,7 +354,7 @@ Row {data-height=450}
 ```{r}
 ```
 
-languages
+Languages
 =====================================
 
 Row {data-height=450}
@@ -964,15 +964,13 @@ The project aims to establish a robust framework for monitoring the translation 
 
 <i class="fa-solid fa-star"></i> <strong> Features</strong>
 
-- Leaderboard Page : 
+- <b>Leaderboard Page</b> : Contains a Leaderboard of all Users on Weblate. This allowed users to view their rank on the platform, providing a clear visual representation of translation progress. The leaderboard is expected to motivate contributors to continue their efforts.
 
+- <b> Language Page</b> : The Language Page provides a comprehensive overview of the translation status of each language. This is achieved through the use of a variety of visualizations, which display information such as the number of translators working on each language, the amount of work that remains to be translated, and the overall progress of the translation project. The Language Page is an essential tool for project managers and translators, as it allows them to track the progress of the translation project and identify areas where additional resources may be needed. It is also a valuable resource for users who are interested in contributing to the translation project.
 
+- <b> Library Page</b> : The Library Page provides an overview of the translation status of each library in each language. It includes information such as the number of components that have been translated, the amount of work that remains to be translated, and the overall progress of the translation project. The Library Page also includes an overview of the translation status in each component. It is also a valuable resource for users who are interested in contributing to the translation project.
 
-
-
-
-
-
+- <b> Translation Page</b> : The Translation Page provides a list of strings that have been translated, but still need editing. The list includes links to the translation site, so that users can easily contribute their edits. The Translation Page is designed to be user-friendly and informative. The list of strings is clear and easy to understand, and the links to the translation site are easy to find. The Translation Page is a valuable resource for anyone who is involved in the translation project, and it is an essential tool for ensuring the success of the project.
 
 <i class="fa-solid fa-toolbox"></i> <strong>TOOLS</strong>
 
@@ -1010,4 +1008,3 @@ htmltools::tags$div(
 )
 
 ```
-
