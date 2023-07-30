@@ -105,6 +105,13 @@ The project aims to establish a robust framework for monitoring the translation 
 
 - <i class="fa-solid fa-wrench"></i> Front-End : HTML <i class="fa-brands fa-html5"></i>,CSS <i class="fa-brands fa-css3-alt"></i>,Java Script <i class="fa-brands fa-js"></i>,bslib theme template <i class="fa-solid fa-code"></i>.
 - <i class="fa-solid fa-wrench"></i> Back-End : A small ETL infrastructure based on R <i class="fa-brands fa-r-project"></i>,Github actions <i class="fa-brands fa-github"></i>, Github Pages <i class="fa-brands fa-square-github"></i> that daily retrieves data from Weblate API. This infrastructure provides a way to work with Weblate's authentication system automatically. The back-end is completely separated from the front-end.
+- <i class="fa-solid fa-clock"></i> Update : The dashboard is updated daily. 
+<style>
+  ul {
+    list-style-type: none;
+  }
+</style>
+
 
 <i class="fa-solid fa-address-book"></i> <strong>Contact</strong>
 If you have any questions, feedback, suggestions, please open an issue on GitHub <i class="fa-brands fa-github"></i> here: https://github.com/shrish-shete20/weblate or email the primary maintainer: sheteshrish1203@gmail.com   
