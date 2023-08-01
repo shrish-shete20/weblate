@@ -1,6 +1,7 @@
 library(httr)
 library(jsonlite)
 library(data.table)
+library(utils)
 
 url <- "https://translate.rx.studio/api/"
 token <- "wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"
@@ -62,5 +63,4 @@ for (i in 1:count) {
   data$Untranslated[i] <- as.numeric(stats[1]) - as.numeric(stats[4]) - as.numeric(stats[5])
 }
 
-filename <- "Language_Statistics_new.csv"
-fwrite(data, file = filename)
+write.csv(data,"Language_Statistics_new.csv")

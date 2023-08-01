@@ -25,6 +25,7 @@ jobs:
       run: |
         Rscript -e 'install.packages("jsonlite")'
         Rscript -e 'install.packages("data.table")'
+        Rscript -e 'install.packages("utils")'
         
     - name: Run R scripts
       run: | 
