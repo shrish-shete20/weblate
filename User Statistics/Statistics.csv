@@ -3,7 +3,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 2,Taha Nawfal Alobaidy,tahanawfal,0,1,Arabic,N/A,N/A,Unbegun
 3,Marcel Ramos,mr148,93,3,"c(""Italian"", ""Spanish"", ""French"")",2022-08-30T14:34:46.552491Z,2022-08-30T16:37:10.190218Z,Inactive
 4,Krye Kuzhinieri,kryekuzhinieri,80,1,Albanian,2022-08-30T16:16:50.482141Z,2022-08-30T16:41:51.757269Z,Inactive
-5,Caio Lente,lente,1222,1,Portuguese (Brazil),2022-08-30T18:03:18.487743Z,2023-02-01T15:40:08.213102Z,Active
+5,Caio Lente,lente,1222,1,Portuguese (Brazil),2022-08-30T18:03:18.487743Z,2023-02-01T15:40:08.213102Z,Inactive
 6,Lluís,llrs,221,1,Spanish,2022-08-31T19:02:49.185580Z,2023-07-24T16:01:24.884328Z,Active
 7,Beatriz Milz,beatrizmilz,68,1,Portuguese (Brazil),2022-10-15T13:47:30.049688Z,2022-10-21T23:53:19.527141Z,Inactive
 8,Martin Mächler,mmaechler,0,1,German,N/A,N/A,Unbegun
@@ -20,7 +20,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 19,Richard Detomasi,RichDeto,117,1,Spanish,2022-10-17T03:06:43.307770Z,2023-04-04T19:54:37.257614Z,Active
 20,Ella Kaye,EllaKaye,17,1,English (United Kingdom),2023-02-16T09:15:31.685928Z,2023-04-13T09:28:40.774532Z,Active
 21,Ahmadou Dicko,dickoa,7,1,French,2023-01-20T15:45:21.401670Z,2023-01-20T16:03:05.448593Z,Inactive
-22,Michael Chirico,michaelchirico,4,1,Japanese,2023-01-27T19:09:41.183410Z,2023-02-01T17:52:09.360246Z,Active
+22,Michael Chirico,michaelchirico,4,1,Japanese,2023-01-27T19:09:41.183410Z,2023-02-01T17:52:09.360246Z,Inactive
 23,Elio,eliocamp,7,1,Spanish,2023-01-28T13:50:05.838488Z,2023-01-28T13:53:28.051913Z,Inactive
 24,Detlef Steuer,dsteuer,20,1,German,2023-01-27T20:54:18.133641Z,2023-01-27T21:10:08.585138Z,Inactive
 25,Robert Castelo,rcastelo,23,1,Spanish,2023-02-02T11:30:11.116511Z,2023-04-05T09:17:59.630841Z,Active
