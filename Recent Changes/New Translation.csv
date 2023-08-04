@@ -1,17 +1,8 @@
 user,language,library,units,date,time
-angelasanzo,Spanish,base (C files),48667,19199,11:49:36
-angelasanzo,Spanish,base (C files),48754,19199,12:00:32
-angelasanzo,Spanish,base (C files),48755,19199,12:00:47
-angelasanzo,Spanish,base (C files),48756,19199,12:01:10
-angelasanzo,Spanish,base (C files),48757,19199,12:01:33
-angelasanzo,Spanish,base (C files),48758,19199,12:02:10
-angelasanzo,Spanish,base (C files),50295,19199,15:37:41
-angelasanzo,Spanish,base (C files),50102,19199,15:40:11
 mr148,French,The R Project for Statistical Computing,118537,19234,14:34:46
 mr148,French,The R Project for Statistical Computing,118517,19234,14:35:20
 mr148,French,The R Project for Statistical Computing,118559,19234,14:36:57
 mr148,French,grid (R files),82007,19234,14:39:14
-mr148,French,grid (R files),82010,19234,14:40:19
 mr148,French,grid (R files),82030,19234,14:42:44
 mr148,French,grid (R files),82035,19234,14:45:10
 mr148,French,utils (C files),109797,19234,14:52:12
@@ -46,16 +37,12 @@ kryekuzhinieri,Albanian,base (R files),124080,19234,16:20:19
 kryekuzhinieri,Albanian,base (C files),123437,19234,16:20:19
 kryekuzhinieri,Albanian,base (R files),124081,19234,16:20:33
 kryekuzhinieri,Albanian,base (C files),123438,19234,16:20:33
-kryekuzhinieri,Albanian,base (R files),124082,19234,16:21:10
-kryekuzhinieri,Albanian,base (C files),123439,19234,16:21:10
 kryekuzhinieri,Albanian,base (R files),124083,19234,16:21:49
 kryekuzhinieri,Albanian,base (C files),123440,19234,16:21:49
 kryekuzhinieri,Albanian,base (R files),124084,19234,16:22:13
 kryekuzhinieri,Albanian,base (C files),123441,19234,16:22:13
 kryekuzhinieri,Albanian,base (R files),124085,19234,16:22:28
 kryekuzhinieri,Albanian,base (C files),123442,19234,16:22:29
-kryekuzhinieri,Albanian,base (R files),124086,19234,16:23:19
-kryekuzhinieri,Albanian,base (C files),123443,19234,16:23:19
 kryekuzhinieri,Albanian,base (R files),124087,19234,16:24:43
 kryekuzhinieri,Albanian,base (C files),123444,19234,16:24:43
 kryekuzhinieri,Albanian,base (R files),124089,19234,16:26:22
@@ -105,8 +92,6 @@ kryekuzhinieri,Albanian,base (C files),123470,19234,16:41:51
 lente,Portuguese (Brazil),base (R files),38617,19234,18:03:59
 lente,Portuguese (Brazil),base (R files),38618,19234,18:04:26
 lente,Portuguese (Brazil),base (R files),38619,19234,18:04:44
-lente,Portuguese (Brazil),base (R files),38679,19234,18:13:00
-lente,Portuguese (Brazil),base (R files),38686,19234,18:14:26
 lente,Portuguese (Brazil),base (R files),38717,19234,18:17:55
 lente,Portuguese (Brazil),base (R files),38701,19234,18:19:13
 lente,Portuguese (Brazil),base (R files),38774,19234,18:30:30
@@ -182,10 +167,6 @@ lente,Portuguese (Brazil),base (R files),39161,19235,20:01:45
 lente,Portuguese (Brazil),base (R files),39162,19235,20:02:12
 lente,Portuguese (Brazil),base (R files),39179,19235,20:12:18
 lente,Portuguese (Brazil),base (R files),39180,19235,20:13:24
-lente,Portuguese (Brazil),base (R files),38857,19235,20:19:42
-lente,Portuguese (Brazil),base (R files),38610,19235,20:21:55
-lente,Portuguese (Brazil),stats (R files),100784,19235,20:22:09
-lente,Portuguese (Brazil),base (R files),38614,19235,20:22:09
 lente,Portuguese (Brazil),The R Project for Statistical Computing,118544,19235,20:24:30
 lente,Portuguese (Brazil),The R Project for Statistical Computing,118524,19235,20:24:36
 lente,Portuguese (Brazil),The R Project for Statistical Computing,118566,19235,20:24:40
@@ -441,7 +422,6 @@ lente,Portuguese (Brazil),tools (R files),109464,19237,14:26:06
 lente,Portuguese (Brazil),tools (R files),109465,19237,14:26:31
 lente,Portuguese (Brazil),tools (R files),109466,19237,14:26:58
 lente,Portuguese (Brazil),tools (R files),109467,19237,14:27:04
-lente,Portuguese (Brazil),tools (R files),109468,19237,14:27:54
 lente,Portuguese (Brazil),tools (R files),109469,19237,14:28:05
 lente,Portuguese (Brazil),tools (R files),109470,19237,14:28:18
 lente,Portuguese (Brazil),tools (R files),109471,19237,14:28:49
@@ -611,7 +591,6 @@ lente,Portuguese (Brazil),utils (R files),115978,19237,17:51:13
 lente,Portuguese (Brazil),utils (R files),115979,19237,17:51:40
 lente,Portuguese (Brazil),utils (R files),115980,19237,17:51:48
 lente,Portuguese (Brazil),utils (R files),115981,19237,17:52:02
-lente,Portuguese (Brazil),utils (R files),115984,19237,17:53:24
 lente,Portuguese (Brazil),utils (R files),115985,19237,17:53:36
 lente,Portuguese (Brazil),utils (R files),115987,19237,17:54:07
 lente,Portuguese (Brazil),utils (R files),115988,19237,17:54:15
@@ -624,8 +603,6 @@ lente,Portuguese (Brazil),utils (R files),115994,19237,17:58:40
 lente,Portuguese (Brazil),utils (R files),115995,19237,17:59:59
 lente,Portuguese (Brazil),utils (R files),115996,19237,18:01:26
 lente,Portuguese (Brazil),utils (R files),115997,19237,18:01:42
-lente,Portuguese (Brazil),utils (R files),115998,19237,18:01:53
-lente,Portuguese (Brazil),utils (R files),115999,19237,18:02:04
 lente,Portuguese (Brazil),utils (R files),116000,19237,18:02:11
 lente,Portuguese (Brazil),utils (R files),116001,19237,18:02:24
 lente,Portuguese (Brazil),utils (R files),116002,19237,18:02:37
@@ -762,15 +739,9 @@ lente,Portuguese (Brazil),utils (R files),116152,19237,18:56:32
 lente,Portuguese (Brazil),utils (R files),116153,19237,18:56:49
 lente,Portuguese (Brazil),utils (R files),116154,19237,18:57:02
 lente,Portuguese (Brazil),utils (R files),116155,19237,18:57:09
-angelasanzo,Spanish,base (C files),50253,19251,14:29:56
-angelasanzo,Spanish,base (C files),50260,19251,14:31:50
-ShunWang,Chinese (Simplified),base (C files),68371,19260,04:01:27
-ShunWang,Chinese (Simplified),base (C files),68450,19260,04:12:45
 tidyverse,Korean,The R Project for Statistical Computing,118540,19263,02:06:44
 tidyverse,Korean,The R Project for Statistical Computing,118520,19263,02:06:55
 tidyverse,Korean,The R Project for Statistical Computing,118562,19263,02:07:02
-tidyverse,Korean,base (C files),56877,19263,02:12:49
-tidyverse,Korean,base (C files),56911,19263,02:20:16
 tidyverse,Korean,compiler,71873,19264,03:22:32
 tidyverse,Korean,compiler,71876,19264,03:22:54
 joygram,Korean,compiler,71874,19264,03:28:33
@@ -884,7 +855,6 @@ beatrizmilz,Portuguese (Brazil),utils (R files),116199,19280,14:33:13
 hturner,English (United Kingdom),grDevices (C files),72750,19280,14:33:16
 hturner,English (United Kingdom),grDevices (C files),72751,19280,14:33:21
 hturner,English (United Kingdom),grDevices (C files),72752,19280,14:33:26
-beatrizmilz,Portuguese (Brazil),utils (R files),116200,19280,14:33:31
 hturner,English (United Kingdom),grDevices (C files),72753,19280,14:33:31
 hturner,English (United Kingdom),grDevices (C files),72754,19280,14:33:36
 hturner,English (United Kingdom),grDevices (C files),72755,19280,14:33:42
@@ -905,7 +875,6 @@ hturner,English (United Kingdom),grDevices (C files),72769,19280,14:34:52
 hturner,English (United Kingdom),grDevices (C files),72770,19280,14:35:16
 hturner,English (United Kingdom),grDevices (C files),72771,19280,14:35:22
 hturner,English (United Kingdom),grDevices (C files),72772,19280,14:35:28
-beatrizmilz,Portuguese (Brazil),utils (R files),116202,19280,14:35:32
 hturner,English (United Kingdom),grDevices (C files),72776,19280,14:35:51
 hturner,English (United Kingdom),grDevices (C files),72777,19280,14:35:57
 hturner,English (United Kingdom),grDevices (C files),72778,19280,14:36:02
@@ -984,7 +953,6 @@ julilaurino,Spanish,base (R files),124778,19280,15:04:15
 julilaurino,Spanish,base (R files),124782,19280,15:05:22
 julilaurino,Spanish,base (R files),124783,19280,15:05:43
 julilaurino,Spanish,base (R files),124784,19280,15:06:00
-julilaurino,Spanish,base (R files),124785,19280,15:06:30
 julilaurino,Spanish,utils (R files),125567,19280,15:06:48
 julilaurino,Spanish,base (R files),124786,19280,15:06:48
 julilaurino,Spanish,base (R files),124787,19280,15:07:00
@@ -993,7 +961,6 @@ julilaurino,Spanish,base (R files),124788,19280,15:07:19
 julilaurino,Spanish,utils (R files),125569,19280,15:07:37
 julilaurino,Spanish,base (R files),124789,19280,15:07:37
 julilaurino,Spanish,base (R files),124791,19280,15:08:30
-julilaurino,Spanish,base (R files),124792,19280,15:09:06
 julilaurino,Spanish,base (R files),124794,19280,15:09:58
 julilaurino,Spanish,base (R files),124795,19280,15:10:20
 julilaurino,Spanish,base (R files),124796,19280,15:10:39
@@ -1183,27 +1150,13 @@ llrs,Spanish,stats4 (R files),128582,19377,16:24:03
 dsteuer,German,tcltk (R files),104481,19384,20:54:18
 dsteuer,German,stats4 (R files),99404,19384,21:00:56
 dsteuer,German,stats4 (R files),99406,19384,21:02:51
-dsteuer,German,base (R files),33363,19384,21:05:43
-dsteuer,German,stats (R files),95114,19384,21:06:06
-dsteuer,German,base (R files),33367,19384,21:06:06
 dsteuer,German,base (R files),33388,19384,21:07:31
 dsteuer,German,base (R files),33409,19384,21:10:08
-ShunWang,Chinese (Simplified),base (C files),68452,19386,10:31:45
-ShunWang,Chinese (Simplified),base (C files),68453,19386,10:33:35
-ShunWang,Chinese (Simplified),base (C files),68458,19386,10:34:08
-ShunWang,Chinese (Simplified),base (C files),68459,19386,10:34:23
-ShunWang,Chinese (Simplified),base (C files),68460,19386,10:49:28
-ShunWang,Chinese (Simplified),base (C files),68461,19386,10:49:49
-ShunWang,Chinese (Simplified),base (C files),68462,19386,10:49:59
-ShunWang,Chinese (Simplified),base (C files),68512,19386,10:51:35
 michaelchirico,Hindi,base (C files),128931,19387,16:50:40
 lente,Portuguese (Brazil),methods (R files),88016,19389,15:40:08
 michaelchirico,Indonesian,base (R files),129514,19389,17:43:18
 michaelchirico,Bengali,base (R files),130221,19389,17:49:47
 michaelchirico,Urdu,base (R files),130896,19389,17:52:09
-rcastelo,Spanish,base (C files),48809,19390,11:30:11
-rcastelo,Spanish,base (C files),48881,19390,11:37:05
-rcastelo,Spanish,base (C files),48929,19390,12:19:08
 DeBARtha,Bengali,The R Project for Statistical Computing,130813,19390,15:58:33
 DeBARtha,Bengali,The R Project for Statistical Computing,130790,19390,16:02:01
 DeBARtha,Bengali,The R Project for Statistical Computing,130859,19390,16:23:18
@@ -1481,10 +1434,6 @@ EllaKaye,English (United Kingdom),grDevices (R files),75283,19404,09:16:05
 EllaKaye,English (United Kingdom),grDevices (R files),75284,19404,09:16:14
 EllaKaye,English (United Kingdom),grDevices (R files),75285,19404,09:16:23
 EllaKaye,English (United Kingdom),grDevices (R files),75286,19404,09:16:33
-EllaKaye,English (United Kingdom),base (C files),126927,19404,21:47:54
-EllaKaye,English (United Kingdom),base (C files),126928,19404,21:48:12
-EllaKaye,English (United Kingdom),base (C files),126929,19404,21:48:24
-EllaKaye,English (United Kingdom),base (C files),126930,19404,21:48:33
 Sumit,Bengali,base (R files),130202,19409,12:12:58
 maechlerETH,German,The R Project for Statistical Computing,118514,19409,16:40:56
 maechlerETH,German,The R Project for Statistical Computing,118534,19409,16:41:08
@@ -1509,7 +1458,6 @@ RichDeto,Spanish,base (R files),124771,19414,08:47:39
 RichDeto,Spanish,base (R files),124773,19414,08:49:07
 RichDeto,Spanish,base (R files),124779,19414,08:52:18
 RichDeto,Spanish,base (R files),124781,19414,08:54:07
-RichDeto,Spanish,base (R files),124793,19414,08:56:58
 RichDeto,Spanish,base (R files),124800,19414,08:57:43
 RichDeto,Spanish,base (R files),124801,19414,08:59:14
 RichDeto,Spanish,base (R files),124802,19414,09:00:18
@@ -1521,8 +1469,6 @@ RichDeto,Spanish,base (R files),124808,19414,09:04:38
 RichDeto,Spanish,base (R files),124811,19414,09:07:37
 RichDeto,Spanish,base (R files),124812,19414,09:08:21
 RichDeto,Spanish,base (R files),124813,19414,09:09:17
-RichDeto,Spanish,base (R files),124716,19414,09:23:01
-RichDeto,Spanish,base (R files),124720,19414,09:23:36
 RichDeto,Spanish,base (R files),124814,19414,09:26:09
 RichDeto,Spanish,base (R files),124815,19414,09:26:41
 RichDeto,Spanish,base (R files),124817,19414,09:29:53
@@ -1541,7 +1487,6 @@ RichDeto,Spanish,base (R files),124828,19414,10:03:27
 RichDeto,Spanish,base (R files),124829,19414,10:04:26
 RichDeto,Spanish,base (R files),124830,19414,10:04:53
 RichDeto,Spanish,base (R files),124831,19414,12:41:58
-RichDeto,Spanish,base (R files),124832,19414,12:42:18
 RichDeto,Spanish,base (R files),124833,19414,12:43:18
 RichDeto,Spanish,base (R files),124834,19414,12:46:00
 RichDeto,Spanish,base (R files),124835,19414,12:46:52
@@ -1575,15 +1520,6 @@ DeBARtha,Bengali,base (R files),130207,19417,17:46:51
 DeBARtha,Bengali,base (R files),130208,19417,17:48:09
 DeBARtha,Bengali,base (R files),130209,19417,17:49:58
 DeBARtha,Bengali,base (R files),130210,19417,17:50:54
-ShunWang,Chinese (Simplified),base (C files),68513,19424,06:49:07
-ShunWang,Chinese (Simplified),base (C files),68534,19424,06:50:25
-ShunWang,Chinese (Simplified),base (C files),68585,19424,06:52:30
-ShunWang,Chinese (Simplified),base (C files),68633,19424,06:54:15
-ShunWang,Chinese (Simplified),base (C files),68639,19424,06:54:32
-ShunWang,Chinese (Simplified),base (C files),68678,19424,06:56:44
-ShunWang,Chinese (Simplified),base (C files),68685,19424,06:57:42
-ShunWang,Chinese (Simplified),base (C files),68687,19424,06:58:02
-ShunWang,Chinese (Simplified),base (C files),68689,19424,06:58:19
 bjungbogati,Nepali,base (C files),131593,19426,11:25:03
 bjungbogati,Nepali,base (C files),131594,19426,11:25:30
 bjungbogati,Nepali,base (C files),131595,19426,11:26:45
@@ -1899,14 +1835,12 @@ shreshthamodi,Hindi,base (C files),129000,19452,16:07:36
 shreshthamodi,Hindi,base (C files),129001,19452,16:08:24
 shreshthamodi,Hindi,base (C files),129002,19452,16:09:04
 shreshthamodi,Hindi,base (C files),129003,19452,16:09:41
-shreshthamodi,Hindi,base (C files),129004,19452,16:10:11
 shreshthamodi,Hindi,base (C files),129005,19452,16:10:44
 shreshthamodi,Hindi,base (C files),129006,19452,16:11:07
 shreshthamodi,Hindi,base (C files),129007,19452,16:36:13
 shreshthamodi,Hindi,base (C files),129008,19452,16:38:46
 shreshthamodi,Hindi,base (C files),129009,19452,16:40:14
 shreshthamodi,Hindi,base (C files),129010,19452,16:41:42
-shreshthamodi,Hindi,base (C files),129012,19452,16:46:20
 shreshthamodi,Hindi,base (C files),129014,19452,16:49:49
 shreshthamodi,Hindi,base (C files),129015,19452,16:50:42
 shreshthamodi,Hindi,base (C files),129016,19452,16:51:15
@@ -1916,8 +1850,6 @@ EllaKaye,English (United Kingdom),The R Project for Statistical Computing,118549
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,118529,19460,09:26:04
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,126915,19460,09:26:12
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,118571,19460,09:26:17
-hturner,English (United Kingdom),base (C files),128085,19464,09:08:52
-hturner,English (United Kingdom),base (C files),128427,19464,09:08:58
 msquiroga,Spanish,base (R files),124866,19464,21:55:55
 msquiroga,Spanish,base (R files),124895,19464,22:30:19
 msquiroga,Spanish,base (R files),124897,19464,22:30:53
@@ -1958,64 +1890,16 @@ msquiroga,Spanish,base (R files),124998,19465,00:04:07
 msquiroga,Spanish,base (R files),124999,19465,00:04:23
 msquiroga,Spanish,base (R files),125001,19465,00:05:03
 msquiroga,Spanish,base (R files),125005,19465,00:05:42
-msquiroga,Spanish,base (R files),125007,19465,00:05:57
 msquiroga,Spanish,base (R files),125009,19465,00:06:20
 msquiroga,Spanish,base (R files),125013,19465,00:07:26
 msquiroga,Spanish,base (R files),125016,19465,00:08:20
 msquiroga,Spanish,base (R files),125017,19465,00:08:36
 msquiroga,Spanish,base (R files),125021,19465,00:09:13
 msquiroga,Spanish,base (R files),125022,19465,00:09:24
-msquiroga,Spanish,base (R files),125023,19465,00:09:32
 msquiroga,Spanish,base (R files),125026,19465,00:10:00
 msquiroga,Spanish,base (R files),125029,19465,00:11:09
 msquiroga,Spanish,base (R files),125040,19465,00:14:27
-bjungbogati,Nepali,base (C files),131597,19483,17:06:32
-PaoCorrales,Spanish,base (C files),48935,19488,10:13:21
-PaoCorrales,Spanish,base (C files),48983,19488,19:59:07
-PaoCorrales,Spanish,base (C files),48985,19488,19:59:34
-PaoCorrales,Spanish,base (C files),49096,19488,20:05:30
-PaoCorrales,Spanish,base (C files),49115,19488,20:06:56
-PaoCorrales,Spanish,base (C files),49131,19488,20:08:29
-PaoCorrales,Spanish,base (C files),49132,19488,20:09:00
-PaoCorrales,Spanish,base (C files),49163,19488,20:11:24
-PaoCorrales,Spanish,base (C files),49164,19488,20:11:52
-hturner,English (United Kingdom),base (C files),126932,19492,07:45:00
-hturner,English (United Kingdom),base (C files),126933,19492,07:45:07
-hturner,English (United Kingdom),base (C files),126934,19492,07:45:14
-hturner,English (United Kingdom),base (C files),126935,19492,07:45:21
-hturner,English (United Kingdom),base (C files),126936,19492,07:45:57
-hturner,English (United Kingdom),base (C files),126937,19492,07:46:02
-hturner,English (United Kingdom),base (C files),126938,19492,07:46:09
-hturner,English (United Kingdom),base (C files),126939,19492,07:46:15
-hturner,English (United Kingdom),base (C files),126940,19492,07:46:19
-hturner,English (United Kingdom),base (C files),126941,19492,07:46:24
-hturner,English (United Kingdom),base (C files),126942,19492,07:46:28
-hturner,English (United Kingdom),base (C files),126943,19492,07:46:33
-hturner,English (United Kingdom),base (C files),126944,19492,07:46:37
-hturner,English (United Kingdom),base (C files),126945,19492,07:46:41
-hturner,English (United Kingdom),base (C files),126946,19492,07:46:46
-hturner,English (United Kingdom),base (C files),126947,19492,07:46:50
-hturner,English (United Kingdom),base (C files),126948,19492,07:46:54
-hturner,English (United Kingdom),base (C files),126949,19492,07:46:59
-hturner,English (United Kingdom),base (C files),126950,19492,07:47:03
-hturner,English (United Kingdom),base (C files),126951,19492,07:47:06
-hturner,English (United Kingdom),base (C files),126952,19492,07:47:10
-hturner,English (United Kingdom),base (C files),126953,19492,07:47:35
-hturner,English (United Kingdom),base (C files),126954,19492,07:47:44
-hturner,English (United Kingdom),base (C files),126955,19492,07:47:49
-hturner,English (United Kingdom),base (C files),126956,19492,07:47:52
-hturner,English (United Kingdom),base (C files),126957,19492,07:47:56
-hturner,English (United Kingdom),base (C files),126958,19492,07:48:01
-hturner,English (United Kingdom),base (C files),126959,19492,07:48:05
-hturner,English (United Kingdom),base (C files),126960,19492,07:48:09
-hturner,English (United Kingdom),base (C files),126961,19492,07:53:44
 shriharsh,Hindi,base (C files),129017,19512,11:39:28
-PaoCorrales,Spanish,base (C files),49129,19514,23:11:15
-PaoCorrales,Spanish,base (C files),49174,19514,23:11:36
-PaoCorrales,Spanish,base (C files),49175,19514,23:12:00
-PaoCorrales,Spanish,base (C files),49199,19514,23:12:53
-PaoCorrales,Spanish,base (C files),49208,19514,23:13:01
-PaoCorrales,Spanish,base (C files),49271,19514,23:13:13
 ShunWang,Chinese (Simplified),methods (R files),88920,19549,08:09:05
 ShunWang,Chinese (Simplified),methods (R files),88921,19549,08:09:32
 ShunWang,Chinese (Simplified),methods (R files),88924,19549,08:09:53
@@ -2028,7 +1912,6 @@ llrs,Spanish,tcltk (C files),133575,19562,16:00:02
 llrs,Spanish,tcltk (C files),133576,19562,16:00:33
 llrs,Spanish,tcltk (C files),133577,19562,16:01:24
 msquiroga,Spanish,base (R files),124874,19562,21:26:20
-msquiroga,Spanish,base (C files),48746,19279,13:16:20
 mr148,French,grid (R files),82011,19234,14:41:46
 kryekuzhinieri,Albanian,base (R files),124079,19234,16:19:50
 kryekuzhinieri,Albanian,base (C files),123436,19234,16:19:50
@@ -2129,7 +2012,6 @@ lente,Portuguese (Brazil),utils (R files),116105,19237,18:44:35
 lente,Portuguese (Brazil),utils (R files),116108,19237,18:46:36
 lente,Portuguese (Brazil),utils (R files),116120,19237,18:48:52
 lente,Portuguese (Brazil),utils (R files),116135,19237,18:52:34
-eliocamp,Spanish,base (C files),48796,19385,13:53:16
 tidyverse,Korean,compiler,71872,19264,03:22:14
 tidyverse,Korean,grid (C files),81136,19266,01:52:11
 angelasanzo,Spanish,utils (R files),125297,19280,13:48:33
@@ -2141,9 +2023,6 @@ Gabs,Spanish,base (R files),124735,19280,14:28:42
 julilaurino,Spanish,base (R files),124746,19280,14:35:02
 Gabs,Spanish,base (R files),124758,19280,14:44:30
 msquiroga,Spanish,stats (C files),126593,19280,17:42:35
-hgruson,French,base (C files),51951,19460,09:27:30
-rcastelo,Spanish,base (C files),48830,19390,11:35:29
-rcastelo,Spanish,base (C files),48852,19390,11:36:24
 Saranjeet,Hindi,base (R GUI),128583,19392,08:29:27
 Saranjeet,Hindi,base (R GUI),128584,19392,08:55:48
 Saranjeet,Hindi,base (R GUI),128590,19392,09:41:54
@@ -2160,10 +2039,8 @@ Saranjeet,Hindi,base (R GUI),128605,19392,11:33:54
 DeBARtha,Bengali,base (R files),130185,19392,12:12:26
 DeBARtha,Bengali,base (R files),130186,19398,17:25:11
 DeBARtha,Bengali,base (R files),130188,19392,12:20:34
-Sumit,Bengali,base (R files),130189,19409,03:14:38
 Sumit,Bengali,base (R files),130190,19409,03:29:11
 DeBARtha,Bengali,base (R files),130192,19392,12:30:38
-Sumit,Bengali,base (R files),130193,19409,03:30:45
 DeBARtha,Bengali,base (R files),130194,19392,18:06:38
 Saranjeet,Hindi,base (R GUI),128606,19392,17:09:48
 Saranjeet,Hindi,base (R GUI),128607,19392,17:15:59
@@ -2183,7 +2060,6 @@ Saranjeet,Hindi,base (R GUI),128783,19393,09:55:11
 Saranjeet,Hindi,base (R GUI),128785,19393,09:56:23
 Saranjeet,Hindi,base (R GUI),128831,19393,11:20:23
 Saranjeet,Hindi,base (C files),128932,19393,11:41:26
-Saranjeet,Hindi,base (C files),128939,19394,05:26:18
 Saranjeet,Hindi,base (C files),128950,19397,16:08:29
 Saranjeet,Hindi,base (C files),128969,19397,16:42:14
 Sumit,Bengali,base (R files),130198,19409,12:09:00
@@ -2202,9 +2078,7 @@ bjungbogati,Nepali,base (R GUI),132440,19426,12:42:35
 bjungbogati,Nepali,base (R GUI),132456,19426,12:49:46
 shreshthamodi,Hindi,base (C files),128936,19452,14:05:03
 shreshthamodi,Hindi,base (C files),128972,19452,14:14:05
-shreshthamodi,Hindi,base (C files),129011,19452,16:44:54
 shreshthamodi,Hindi,base (C files),129013,19452,16:47:51
 msquiroga,Spanish,base (R files),124964,19464,23:40:55
 msquiroga,Spanish,base (R files),124982,19465,00:00:04
-PaoCorrales,Spanish,base (C files),48981,19488,10:16:14
 ShunWang,Chinese (Simplified),methods (C files),83996,19549,08:11:08
