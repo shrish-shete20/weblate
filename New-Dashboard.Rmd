@@ -870,7 +870,7 @@ date_counts <- table(year_month)
 # display the result
 date_counts<-as.data.frame(date_counts)
 date_counts$cumFreq<-cumsum(date_counts$Freq)
-date_counts<-date_counts[(nrow(date_counts)-12):nrow(date_counts),]
+date_counts<-date_counts[(nrow(date_counts)-11):nrow(date_counts),]
 
 fig <- plot_ly(date_counts, x = ~year_month, y = ~cumFreq, name = 'Graph', type = 'scatter', mode = 'line', stackgroup = 'one', fillcolor = 'pink')
 fig <- fig %>% layout(title = 'Growth of Translations over time',
