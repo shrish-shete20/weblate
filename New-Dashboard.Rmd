@@ -344,48 +344,53 @@ fig
 
 ```
 
-world-map
-=====================================
-
-Row {data-height=450}
------------------------------------------------------------------------
-
-🥇🥈🥉
-```{r}
-```
-
 Languages
 =====================================
 
 Row {data-height=450}
 -----------------------------------------------------------------------
 
-### Languages V/S Populations
+### Languages V/S Translations
 
-```{r}
-fig <- plot_ly(Language_Statistics_new, labels = ~Name, values = ~Population, type = 'pie',width=850,marker = list(line = list(color = '#FFFFFF', width = 1)))
-fig <- fig %>% layout(title = 'No of people speaking that Languages',
-                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+```{r fig.width=20,fig.height=10}
+df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
+df_long <- reshape2::melt(df, id.vars = "Name")
 
-fig
-```
-
-Row {data-height=450}
------------------------------------------------------------------------
-
-### Languages V/S Words to be Translated
-
-```{r}
-fig<-plot_ly(Language_Statistics_new,labels=~Name,values=~Total_Words,width = 850)
-fig <- fig %>% add_pie(hole = 0.5,rotation=90)
-fig <- fig %>% layout(xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-
-fig
+p<-ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Languages", y = "Translation",fill="Legend") +
+  scale_fill_manual(values = c("Translated" = "#A2FF86", "Fuzzy" = "#0079FF", "Untranslated" = "#F31559")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
+p
 
 ```
 
+Row
+----------------------------------------------------------------------------
+
+### Population V/S Translations
+```{r}
+  
+  fig1 <- plot_ly(Language_Statistics_new, y = ~Population, x = ~Name, name = 'Population', type = 'scatter', mode = 'markers')
+  fig2 <- plot_ly(Language_Statistics_new, y = ~Translated, x = ~Name, name = 'Translation', type = 'scatter', mode = 'markers')
+  fig <- subplot(fig1,fig2,nrows=2,margin = 0.07,shareX = TRUE)%>%
+    layout(title = list(text = "Population v/s Translations Completed"), plot_bgcolor='#e5ecf6', xaxis = list(title="Language",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'), yaxis = list(title="Population",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'),yaxis2=list(title="Translations"),showlegend=FALSE)
+  
+  # Add hyperlinks to x-axis labels
+  fig <- fig %>% add_annotations(
+    x=Language_Statistics_new$Name,
+    y=rep(-0.3,length(Language_Statistics_new$Name)),
+    text=paste0("<a href='https://translate.rx.studio/languages/",Language_Statistics_new$Code,"/'>Link</a>"),
+    xref='x',
+    yref='paper',
+    showarrow=FALSE,
+    font=list(color='blue',size=10),
+    xshift=10
+  )
+  
+  fig
+
+
+```
 
 Row {data-height=450}
 -----------------------------------------------------------------------
@@ -419,21 +424,6 @@ fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
 fig
 ```
 
-Row {data-height=450}
------------------------------------------------------------------------
-
-### Languages V/S Translations
-
-```{r fig.width=20,fig.height=10}
-df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
-df_long <- reshape2::melt(df, id.vars = "Name")
-
-ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Languages", y = "Translation",fill="Legend") +
-  scale_fill_manual(values = c("Translated" = "#A2FF86", "Fuzzy" = "#0079FF", "Untranslated" = "#F31559")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
-
-```
 
 Row {data-height=450}
 -----------------------------------------------------------------------
