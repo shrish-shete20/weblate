@@ -72,7 +72,7 @@
 "71",1,"base (C files)","C","English",2258,2258,0,0
 "72",2,"base (C files)","C","Danish",15,7,8,0
 "73",3,"base (C files)","C","German",15,15,0,0
-"74",4,"base (C files)","C","Spanish",15,7,0,8
+"74",4,"base (C files)","C","Spanish",15,15,0,0
 "75",5,"base (C files)","C","Persian",15,0,15,0
 "76",6,"base (C files)","C","French",15,15,0,0
 "77",7,"base (C files)","C","Italian",15,15,0,0
@@ -291,7 +291,7 @@
 "290",12,"stats (C files)","C","Chinese (Simplified)",208,177,27,4
 "291",13,"stats (C files)","C","Chinese (Traditional)",208,193,14,1
 "292",14,"stats (C files)","C","Arabic",208,0,208,0
-"293",15,"stats (C files)","C","Spanish",208,118,60,30
+"293",15,"stats (C files)","C","Spanish",208,149,59,0
 "294",1,"stats (R files)","R","English",818,818,0,0
 "295",2,"stats (R files)","R","Danish",788,41,727,20
 "296",3,"stats (R files)","R","German",788,788,0,0
@@ -322,7 +322,7 @@
 "321",13,"stats4 (R files)","R","Chinese (Simplified)",8,3,4,1
 "322",14,"stats4 (R files)","R","Chinese (Traditional)",8,3,4,1
 "323",15,"stats4 (R files)","R","Arabic",8,0,8,0
-"324",16,"stats4 (R files)","R","Spanish",8,7,1,0
+"324",16,"stats4 (R files)","R","Spanish",8,8,0,0
 "325",1,"tcltk (C files)","C","English",10,10,0,0
 "326",2,"tcltk (C files)","C","Danish",10,9,1,0
 "327",3,"tcltk (C files)","C","German",10,10,0,0
@@ -338,7 +338,7 @@
 "337",13,"tcltk (C files)","C","Chinese (Traditional)",10,9,1,0
 "338",14,"tcltk (C files)","C","Arabic",10,0,10,0
 "339",15,"tcltk (C files)","C","Bengali",10,1,9,0
-"340",16,"tcltk (C files)","C","Spanish",10,5,4,1
+"340",16,"tcltk (C files)","C","Spanish",10,10,0,0
 "341",1,"tcltk (R files)","R","English",30,30,0,0
 "342",2,"tcltk (R files)","R","Danish",30,28,1,1
 "343",3,"tcltk (R files)","R","German",30,30,0,0
