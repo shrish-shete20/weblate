@@ -27,8 +27,8 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 26,Philip Khor,philip-khor,0,2,"c(""Chinese (Simplified)"", ""Indonesian"")",N/A,N/A,Unbegun
 27,Debartha Paul,DeBARtha,37,1,Bengali,2023-02-02T15:53:09.927118Z,2023-03-01T17:50:54.794338Z,Active
 28,Saranjeet Kaur Bhogal,Saranjeet,349,1,Hindi,2023-02-04T07:54:04.351957Z,2023-02-09T16:42:14.021349Z,Inactive
-29,Sumit Ghosh,Sumit,7,2,"c(""Bengali"", ""Hindi"")",2023-02-21T03:26:01.412146Z,2023-02-21T12:12:58.961890Z,Active
-30,Martin Mächler,maechlerETH,15,2,"c(""German"", ""English"")",2023-02-21T16:40:56.000606Z,2023-02-21T16:58:46.396504Z,Active
+29,Sumit Ghosh,Sumit,7,2,"c(""Bengali"", ""Hindi"")",2023-02-21T03:26:01.412146Z,2023-02-21T12:12:58.961890Z,Inactive
+30,Martin Mächler,maechlerETH,15,2,"c(""German"", ""English"")",2023-02-21T16:40:56.000606Z,2023-02-21T16:58:46.396504Z,Inactive
 31,Roberto Villegas-Diaz,villegar,0,1,Spanish,N/A,N/A,Unbegun
 32,Binod Jung Bogati,bjungbogati,295,1,Nepali,2023-03-10T11:24:03.847929Z,2023-03-14T02:39:55.894656Z,Active
 33,Shrish Shete,shrishs21,2,2,"c(""English (United Kingdom)"", ""Hindi"")",2023-06-09T13:56:38.453712Z,2023-06-09T13:58:32.623416Z,Active
