@@ -29,7 +29,12 @@ library(htmltools)
 
 Sidebar {.sidebar data-width=200}
 =====================================
-- [Link to Dashboard 1](New-Dashboard.html)
 ```{r, echo=FALSE, results='asis'}
 htmltools::includeHTML('fragments/sidebar.html')
+```
+Github 
+===========================================================
+
+```{r}
+htmltools::includeHTML('https://contributor.r-project.org/translations/')
 ```
