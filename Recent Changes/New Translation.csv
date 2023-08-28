@@ -32,63 +32,35 @@ mr148,Italian,grid (R files),82185,19234,16:16:58
 mr148,Italian,grid (R files),82186,19234,16:17:12
 mr148,Italian,grid (R files),82204,19234,16:18:19
 kryekuzhinieri,Albanian,base (R files),124078,19234,16:18:47
-kryekuzhinieri,Albanian,base (C files),123435,19234,16:18:47
 kryekuzhinieri,Albanian,base (R files),124080,19234,16:20:19
-kryekuzhinieri,Albanian,base (C files),123437,19234,16:20:19
 kryekuzhinieri,Albanian,base (R files),124081,19234,16:20:33
-kryekuzhinieri,Albanian,base (C files),123438,19234,16:20:33
 kryekuzhinieri,Albanian,base (R files),124083,19234,16:21:49
-kryekuzhinieri,Albanian,base (C files),123440,19234,16:21:49
 kryekuzhinieri,Albanian,base (R files),124084,19234,16:22:13
-kryekuzhinieri,Albanian,base (C files),123441,19234,16:22:13
 kryekuzhinieri,Albanian,base (R files),124085,19234,16:22:28
-kryekuzhinieri,Albanian,base (C files),123442,19234,16:22:29
 kryekuzhinieri,Albanian,base (R files),124087,19234,16:24:43
-kryekuzhinieri,Albanian,base (C files),123444,19234,16:24:43
 kryekuzhinieri,Albanian,base (R files),124089,19234,16:26:22
-kryekuzhinieri,Albanian,base (C files),123446,19234,16:26:22
 mr148,French,base (R files),35011,19234,16:28:31
 mr148,French,utils (R files),113613,19234,16:28:59
 kryekuzhinieri,Albanian,base (R files),124093,19234,16:29:33
-kryekuzhinieri,Albanian,base (C files),123450,19234,16:29:33
 kryekuzhinieri,Albanian,base (R files),124094,19234,16:30:54
-kryekuzhinieri,Albanian,base (C files),123451,19234,16:30:54
 kryekuzhinieri,Albanian,base (R files),124095,19234,16:31:59
-kryekuzhinieri,Albanian,base (C files),123452,19234,16:31:59
 kryekuzhinieri,Albanian,base (R files),124096,19234,16:32:57
-kryekuzhinieri,Albanian,base (C files),123453,19234,16:32:57
 kryekuzhinieri,Albanian,base (R files),124097,19234,16:33:27
-kryekuzhinieri,Albanian,base (C files),123454,19234,16:33:27
 kryekuzhinieri,Albanian,base (R files),124098,19234,16:33:57
-kryekuzhinieri,Albanian,base (C files),123455,19234,16:33:57
 kryekuzhinieri,Albanian,base (R files),124100,19234,16:35:20
-kryekuzhinieri,Albanian,base (C files),123457,19234,16:35:20
 kryekuzhinieri,Albanian,base (R files),124101,19234,16:35:35
-kryekuzhinieri,Albanian,base (C files),123458,19234,16:35:35
 kryekuzhinieri,Albanian,base (R files),124102,19234,16:36:13
-kryekuzhinieri,Albanian,base (C files),123459,19234,16:36:13
 kryekuzhinieri,Albanian,base (R files),124103,19234,16:36:28
-kryekuzhinieri,Albanian,base (C files),123460,19234,16:36:28
 kryekuzhinieri,Albanian,base (R files),124104,19234,16:37:02
-kryekuzhinieri,Albanian,base (C files),123461,19234,16:37:02
 kryekuzhinieri,Albanian,base (R files),124105,19234,16:37:30
-kryekuzhinieri,Albanian,base (C files),123462,19234,16:37:30
 kryekuzhinieri,Albanian,base (R files),124106,19234,16:37:59
-kryekuzhinieri,Albanian,base (C files),123463,19234,16:37:59
 kryekuzhinieri,Albanian,base (R files),124107,19234,16:38:32
-kryekuzhinieri,Albanian,base (C files),123464,19234,16:38:32
 kryekuzhinieri,Albanian,base (R files),124108,19234,16:38:52
-kryekuzhinieri,Albanian,base (C files),123465,19234,16:38:52
 kryekuzhinieri,Albanian,base (R files),124109,19234,16:39:47
-kryekuzhinieri,Albanian,base (C files),123466,19234,16:39:47
 kryekuzhinieri,Albanian,base (R files),124110,19234,16:40:05
-kryekuzhinieri,Albanian,base (C files),123467,19234,16:40:05
 kryekuzhinieri,Albanian,base (R files),124111,19234,16:40:30
-kryekuzhinieri,Albanian,base (C files),123468,19234,16:40:30
 kryekuzhinieri,Albanian,base (R files),124112,19234,16:40:50
-kryekuzhinieri,Albanian,base (C files),123469,19234,16:40:50
 kryekuzhinieri,Albanian,base (R files),124113,19234,16:41:51
-kryekuzhinieri,Albanian,base (C files),123470,19234,16:41:51
 lente,Portuguese (Brazil),base (R files),38617,19234,18:03:59
 lente,Portuguese (Brazil),base (R files),38618,19234,18:04:26
 lente,Portuguese (Brazil),base (R files),38619,19234,18:04:44
@@ -1152,7 +1124,6 @@ dsteuer,German,stats4 (R files),99404,19384,21:00:56
 dsteuer,German,stats4 (R files),99406,19384,21:02:51
 dsteuer,German,base (R files),33388,19384,21:07:31
 dsteuer,German,base (R files),33409,19384,21:10:08
-michaelchirico,Hindi,base (C files),128931,19387,16:50:40
 lente,Portuguese (Brazil),methods (R files),88016,19389,15:40:08
 michaelchirico,Indonesian,base (R files),129514,19389,17:43:18
 michaelchirico,Bengali,base (R files),130221,19389,17:49:47
@@ -1395,34 +1366,6 @@ Saranjeet,Hindi,base (R GUI),128846,19393,11:26:08
 Saranjeet,Hindi,base (R GUI),128762,19393,11:27:15
 Saranjeet,Hindi,base (R GUI),128836,19393,11:28:40
 Saranjeet,Hindi,base (R GUI),128794,19393,11:38:33
-Saranjeet,Hindi,base (C files),128933,19393,11:42:18
-Saranjeet,Hindi,base (C files),128934,19393,11:42:42
-Saranjeet,Hindi,base (C files),128937,19394,05:24:39
-Saranjeet,Hindi,base (C files),128938,19394,05:25:13
-Saranjeet,Hindi,base (C files),128940,19394,05:28:31
-Saranjeet,Hindi,base (C files),128941,19394,05:29:15
-Saranjeet,Hindi,base (C files),128942,19394,05:29:50
-Saranjeet,Hindi,base (C files),128943,19394,08:33:04
-Saranjeet,Hindi,base (C files),128944,19394,08:33:14
-Saranjeet,Hindi,base (C files),128946,19394,08:34:12
-Saranjeet,Hindi,base (C files),128947,19397,16:05:53
-Saranjeet,Hindi,base (C files),128948,19397,16:06:04
-Saranjeet,Hindi,base (C files),128949,19397,16:07:03
-Saranjeet,Hindi,base (C files),128951,19397,16:07:59
-Saranjeet,Hindi,base (C files),128952,19397,16:09:54
-Saranjeet,Hindi,base (C files),128953,19397,16:10:04
-Saranjeet,Hindi,base (C files),128954,19397,16:10:40
-Saranjeet,Hindi,base (C files),128955,19397,16:10:58
-Saranjeet,Hindi,base (C files),128956,19397,16:24:32
-Saranjeet,Hindi,base (C files),128957,19397,16:26:16
-Saranjeet,Hindi,base (C files),128958,19397,16:27:11
-Saranjeet,Hindi,base (C files),128959,19397,16:27:42
-Saranjeet,Hindi,base (C files),128960,19397,16:28:13
-Saranjeet,Hindi,base (C files),128961,19397,16:28:28
-Saranjeet,Hindi,base (C files),128962,19397,16:29:29
-Saranjeet,Hindi,base (C files),128963,19397,16:30:00
-Saranjeet,Hindi,base (C files),128966,19397,16:40:19
-Saranjeet,Hindi,base (C files),128970,19397,16:42:00
 DeBARtha,Bengali,base (R files),130196,19399,17:38:51
 DeBARtha,Bengali,base (R files),130197,19399,17:53:00
 DeBARtha,Bengali,base (R files),130199,19399,17:54:47
@@ -1523,13 +1466,6 @@ DeBARtha,Bengali,base (R files),130210,19417,17:50:54
 bjungbogati,Nepali,base (C files),131593,19426,11:25:03
 bjungbogati,Nepali,base (C files),131594,19426,11:25:30
 bjungbogati,Nepali,base (C files),131595,19426,11:26:45
-bjungbogati,Nepali,base (C files),131598,19426,11:29:05
-bjungbogati,Nepali,base (C files),131599,19426,11:29:41
-bjungbogati,Nepali,base (C files),131600,19426,11:30:05
-bjungbogati,Nepali,base (C files),131602,19426,11:31:59
-bjungbogati,Nepali,base (C files),131604,19426,11:33:23
-bjungbogati,Nepali,base (C files),131605,19426,11:33:55
-bjungbogati,Nepali,base (C files),131606,19426,11:34:30
 bjungbogati,Nepali,base (R GUI),132276,19426,11:36:53
 bjungbogati,Nepali,base (R GUI),132277,19426,11:38:12
 bjungbogati,Nepali,base (R GUI),132278,19426,11:38:31
@@ -1804,48 +1740,8 @@ Sovan,Bengali,base (R GUI),132579,19452,06:23:46
 Sovan,Bengali,base (R GUI),132580,19452,06:24:21
 Sovan,Bengali,base (R GUI),132581,19452,06:25:04
 Sovan,Bengali,base (R files),130211,19452,06:26:29
-shreshthamodi,Hindi,base (C files),128971,19452,14:11:38
-shreshthamodi,Hindi,base (C files),128973,19452,14:14:46
-shreshthamodi,Hindi,base (C files),128974,19452,14:16:09
-shreshthamodi,Hindi,base (C files),128975,19452,14:19:37
-shreshthamodi,Hindi,base (C files),128976,19452,14:20:09
-shreshthamodi,Hindi,base (C files),128977,19452,14:20:46
-shreshthamodi,Hindi,base (C files),128978,19452,14:21:24
-shreshthamodi,Hindi,base (C files),128979,19452,14:22:04
-shreshthamodi,Hindi,base (C files),128985,19452,14:23:01
-shreshthamodi,Hindi,base (C files),128986,19452,14:23:30
-shreshthamodi,Hindi,base (C files),128987,19452,14:24:08
-shreshthamodi,Hindi,base (C files),128988,19452,14:24:52
-shreshthamodi,Hindi,base (C files),128989,19452,14:25:22
-shreshthamodi,Hindi,base (C files),128990,19452,14:26:21
-shreshthamodi,Hindi,base (C files),128992,19452,14:26:58
-shreshthamodi,Hindi,base (C files),128993,19452,14:27:48
-shreshthamodi,Hindi,base (C files),128994,19452,14:28:23
-shreshthamodi,Hindi,base (C files),128995,19452,14:29:22
-shreshthamodi,Hindi,base (C files),128996,19452,14:31:28
-shreshthamodi,Hindi,base (C files),128980,19452,14:40:46
-shreshthamodi,Hindi,base (C files),128981,19452,15:55:49
-shreshthamodi,Hindi,base (C files),128982,19452,15:57:08
-shreshthamodi,Hindi,base (C files),128983,19452,16:02:47
-shreshthamodi,Hindi,base (C files),128984,19452,16:03:18
-shreshthamodi,Hindi,base (C files),128991,19452,16:04:33
-shreshthamodi,Hindi,base (C files),128998,19452,16:05:02
-shreshthamodi,Hindi,base (C files),128999,19452,16:06:21
-shreshthamodi,Hindi,base (C files),129000,19452,16:07:36
 shreshthamodi,Hindi,base (C files),129001,19452,16:08:24
-shreshthamodi,Hindi,base (C files),129002,19452,16:09:04
-shreshthamodi,Hindi,base (C files),129003,19452,16:09:41
-shreshthamodi,Hindi,base (C files),129005,19452,16:10:44
-shreshthamodi,Hindi,base (C files),129006,19452,16:11:07
-shreshthamodi,Hindi,base (C files),129007,19452,16:36:13
-shreshthamodi,Hindi,base (C files),129008,19452,16:38:46
-shreshthamodi,Hindi,base (C files),129009,19452,16:40:14
-shreshthamodi,Hindi,base (C files),129010,19452,16:41:42
-shreshthamodi,Hindi,base (C files),129014,19452,16:49:49
-shreshthamodi,Hindi,base (C files),129015,19452,16:50:42
-shreshthamodi,Hindi,base (C files),129016,19452,16:51:15
 daroczig,Hungarian,The R Project for Statistical Computing,118550,19453,15:20:15
-shreshthamodi,Hindi,base (C files),128997,19457,14:31:16
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,118549,19460,09:25:56
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,118529,19460,09:26:04
 EllaKaye,English (United Kingdom),The R Project for Statistical Computing,126915,19460,09:26:12
@@ -1928,15 +1824,10 @@ jmaspons,Catalan,base (C files),137169,19585,15:20:49
 jmaspons,Catalan,base (C files),137170,19585,15:21:05
 mr148,French,grid (R files),82011,19234,14:41:46
 kryekuzhinieri,Albanian,base (R files),124079,19234,16:19:50
-kryekuzhinieri,Albanian,base (C files),123436,19234,16:19:50
 kryekuzhinieri,Albanian,base (R files),124088,19234,16:26:08
-kryekuzhinieri,Albanian,base (C files),123445,19234,16:26:08
 kryekuzhinieri,Albanian,base (R files),124090,19234,16:28:19
-kryekuzhinieri,Albanian,base (C files),123447,19234,16:28:19
 kryekuzhinieri,Albanian,base (R files),124091,19234,16:28:12
-kryekuzhinieri,Albanian,base (C files),123448,19234,16:28:12
 kryekuzhinieri,Albanian,base (R files),124092,19234,16:28:52
-kryekuzhinieri,Albanian,base (C files),123449,19234,16:28:52
 lente,Portuguese (Brazil),base (R files),38773,19234,18:30:17
 lente,Portuguese (Brazil),base (R files),38804,19235,15:55:29
 lente,Portuguese (Brazil),base (R files),38961,19235,19:21:10
@@ -2073,9 +1964,6 @@ Saranjeet,Hindi,base (R GUI),128765,19393,09:49:04
 Saranjeet,Hindi,base (R GUI),128783,19393,09:55:11
 Saranjeet,Hindi,base (R GUI),128785,19393,09:56:23
 Saranjeet,Hindi,base (R GUI),128831,19393,11:20:23
-Saranjeet,Hindi,base (C files),128932,19393,11:41:26
-Saranjeet,Hindi,base (C files),128950,19397,16:08:29
-Saranjeet,Hindi,base (C files),128969,19397,16:42:14
 Sumit,Bengali,base (R files),130198,19409,12:09:00
 RichDeto,Spanish,base (R files),124790,19414,09:54:48
 RichDeto,Spanish,base (R files),124816,19414,09:29:09
@@ -2090,9 +1978,6 @@ bjungbogati,Nepali,base (R GUI),132371,19426,14:33:27
 bjungbogati,Nepali,base (R GUI),132379,19426,12:24:12
 bjungbogati,Nepali,base (R GUI),132440,19426,12:42:35
 bjungbogati,Nepali,base (R GUI),132456,19426,12:49:46
-shreshthamodi,Hindi,base (C files),128936,19452,14:05:03
-shreshthamodi,Hindi,base (C files),128972,19452,14:14:05
-shreshthamodi,Hindi,base (C files),129013,19452,16:47:51
 msquiroga,Spanish,base (R files),124964,19464,23:40:55
 msquiroga,Spanish,base (R files),124982,19465,00:00:04
 ShunWang,Chinese (Simplified),methods (C files),83996,19549,08:11:08
