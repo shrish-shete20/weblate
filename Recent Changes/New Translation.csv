@@ -1128,8 +1128,6 @@ lente,Portuguese (Brazil),methods (R files),88016,19389,15:40:08
 michaelchirico,Indonesian,base (R files),129514,19389,17:43:18
 michaelchirico,Bengali,base (R files),130221,19389,17:49:47
 michaelchirico,Urdu,base (R files),130896,19389,17:52:09
-DeBARtha,Bengali,The R Project for Statistical Computing,130813,19390,15:58:33
-DeBARtha,Bengali,The R Project for Statistical Computing,130790,19390,16:02:01
 DeBARtha,Bengali,The R Project for Statistical Computing,130859,19390,16:23:18
 Saranjeet,Hindi,The R Project for Statistical Computing,128888,19392,07:54:04
 Saranjeet,Hindi,The R Project for Statistical Computing,128867,19392,07:55:23
@@ -1822,6 +1820,23 @@ jmaspons,Catalan,base (C files),137167,19585,15:19:31
 jmaspons,Catalan,base (C files),137168,19585,15:20:19
 jmaspons,Catalan,base (C files),137169,19585,15:20:49
 jmaspons,Catalan,base (C files),137170,19585,15:21:05
+DeBARtha,Bengali,The R Project for Statistical Computing,138151,19599,08:45:36
+DeBARtha,Bengali,The R Project for Statistical Computing,138179,19599,08:46:12
+villegar,Spanish,Mac GUI,171680,19599,10:52:30
+villegar,Spanish,Mac GUI,171681,19599,10:52:38
+villegar,Spanish,Mac GUI,171683,19599,10:53:02
+villegar,Spanish,Mac GUI,171684,19599,10:53:10
+villegar,Spanish,Mac GUI,171685,19599,10:53:15
+villegar,Spanish,Mac GUI,171686,19599,10:53:23
+villegar,Spanish,Mac GUI,171687,19599,10:53:42
+villegar,Spanish,Mac GUI,171688,19599,10:53:58
+villegar,Spanish,Mac GUI,171689,19599,10:54:14
+villegar,Spanish,Mac GUI,171690,19599,10:54:42
+villegar,Spanish,Mac GUI,171691,19599,10:54:53
+villegar,Spanish,Mac GUI,171692,19599,10:55:38
+villegar,Spanish,Mac GUI,171852,19599,11:12:47
+villegar,Spanish,Mac GUI,171682,19599,11:13:25
+rmhirota,Portuguese (Brazil),parallel (R files),126750,19599,11:14:34
 mr148,French,grid (R files),82011,19234,14:41:46
 kryekuzhinieri,Albanian,base (R files),124079,19234,16:19:50
 kryekuzhinieri,Albanian,base (R files),124088,19234,16:26:08
@@ -1928,6 +1943,8 @@ Gabs,Spanish,base (R files),124735,19280,14:28:42
 julilaurino,Spanish,base (R files),124746,19280,14:35:02
 Gabs,Spanish,base (R files),124758,19280,14:44:30
 msquiroga,Spanish,stats (C files),126593,19280,17:42:35
+DeBARtha,Bengali,The R Project for Statistical Computing,130813,19599,08:41:07
+DeBARtha,Bengali,The R Project for Statistical Computing,130790,19599,08:44:25
 Saranjeet,Hindi,base (R GUI),128583,19392,08:29:27
 Saranjeet,Hindi,base (R GUI),128584,19392,08:55:48
 Saranjeet,Hindi,base (R GUI),128590,19392,09:41:54
@@ -1981,3 +1998,7 @@ bjungbogati,Nepali,base (R GUI),132456,19426,12:49:46
 msquiroga,Spanish,base (R files),124964,19464,23:40:55
 msquiroga,Spanish,base (R files),124982,19465,00:00:04
 ShunWang,Chinese (Simplified),methods (C files),83996,19549,08:11:08
+alswajiab,Arabic,base (C files),119078,19599,11:32:10
+alswajiab,Arabic,base (R files),119718,19599,11:32:10
+alswajiab,Arabic,stats (R files),120646,19599,11:32:10
+alswajiab,Arabic,parallel (R files),120456,19599,11:32:10
