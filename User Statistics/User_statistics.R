@@ -114,12 +114,9 @@ for(user in data2$username)
   }
 }
 data2$created<-timestamp
-
-
 created<-c()
 for(user in data2$username)
 {
-  user="dieghernan"
   url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
 
   res <- curl_fetch_memory(url, handle = h)
@@ -166,6 +163,8 @@ for(time in as.POSIXct(data2$Last_Activity,format = "%Y-%m-%dT%H:%M:%OSZ", tz = 
     if(time>active_time)
     {
       active<-c(active,"Active")
+    }else if(data2$translated[k]==0){
+      active<-c(active,"Unbegun")
     }else
     {
       active<-c(active,"Inactive")

@@ -66,17 +66,23 @@ Sidebar {.sidebar data-width=200}
 ```{r, echo=FALSE, results='asis'}
 htmltools::includeHTML('fragments/sidebar.html')
 ```
-
-Leaderboard
+Languages
 =====================================
+Row 
+---------------------------------------------------------------
+--------
+
+### primary
+```{r}
+valueBox(nrow(subset(Statistics,Active=="Active")), caption = "Active Users", icon = "fa-solid fa-users")
+```
 
 Row {data-height=450}
 -----------------------------------------------------------------------
 
-### Weblate Leaderboard
+### Languages V/S Translations
 
-```{r table, echo=FALSE, message=FALSE}
-
+```{r fig.width=20,fig.height=10}
 Statistics$Languages <- lapply(Statistics$Languages, function(x) {
   if (startsWith(x, "c(")) {
     eval(parse(text = x))
@@ -88,6 +94,135 @@ board<-Statistics[order(Statistics$translated,decreasing = TRUE),]
 boards<-board %>% select(name,username,translated,Languages,Active)
 
 boards<-boards%>%mutate(Rank=row_number())
+df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
+df_long <- reshape2::melt(df, id.vars = "Name")
+
+p<-ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Languages", y = "Translation",fill="Legend") +
+  scale_fill_manual(values = c("Translated" = "#A2FF86", "Fuzzy" = "#0079FF", "Untranslated" = "#F31559")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
+p
+
+```
+
+Row
+----------------------------------------------------------------------------
+
+### Population V/S Translations
+```{r}
+  
+  fig1 <- plot_ly(Language_Statistics_new, y = ~Population, x = ~Name, name = 'Population', type = 'scatter', mode = 'markers')
+  fig2 <- plot_ly(Language_Statistics_new, y = ~Translated, x = ~Name, name = 'Translation', type = 'scatter', mode = 'markers')
+  fig <- subplot(fig1,fig2,nrows=2,margin = 0.07,shareX = TRUE)%>%
+    layout(title = list(text = "Population v/s Translations Completed"), plot_bgcolor='#e5ecf6', xaxis = list(title="Language",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'), yaxis = list(title="Population",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'),yaxis2=list(title="Translations"),showlegend=FALSE)
+  
+  # Add hyperlinks to x-axis labels
+  fig <- fig %>% add_annotations(
+    x=Language_Statistics_new$Name,
+    y=rep(-0.3,length(Language_Statistics_new$Name)),
+    text=paste0("<a href='https://translate.rx.studio/languages/",Language_Statistics_new$Code,"/'>Link</a>"),
+    xref='x',
+    yref='paper',
+    showarrow=FALSE,
+    font=list(color='blue',size=10),
+    xshift=10
+  )
+  
+  fig
+
+
+```
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Translation Status
+
+```{r}
+fig<-plot_ly()
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Translated,name="Translated",domain = list(x = c(0, 0.4), y = c(0.4, 1)),textposition="inside")
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Fuzzy,name="Fuzzy", domain = list(x = c(0.6, 1), y = c(0.4, 1)),textposition="inside")
+fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Untranslated,name="Untranslated",domain = list(x = c(0.25, 0.75), y = c(0, 0.6)),textposition="inside")
+fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
+                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE), annotations = list(
+    list(
+      text = "Translated",
+      x = 0.2,  # x position of the label
+      y = 0.75  # y position of the label
+    ),
+    list(
+      text = "Fuzzy",
+      x = 0.8,  # x position of the label
+      y = 0.75  # y position of the label
+    ),
+    list(
+      text = "Untranslated",
+      x = 0.5,  # x position of the label
+      y = 0.25  # y position of the label
+    )
+  ))
+fig
+```
+
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Languages V/S Users
+
+```{r}
+vec<-numeric()
+for(i in board$Languages)
+{
+  vec<-c(vec,i)
+}
+counting<-Language_Statistics_new
+counting$Count<-rep(0,length(counting$Name))
+for(i in vec)
+{
+  if(i %in% counting$Name)
+  {
+    index<-which(counting$Name==i)
+    counting$Count[index]<-counting$Count[index]+1
+  }
+}
+counting<-counting[ ,!(colnames(counting) %in% c("Code", "Date","Time"))]
+counting$Translations_50<-ifelse(counting$Translated*2>=counting$Total_Words,TRUE,FALSE)
+```
+
+```{r}
+formattable(counting,list(Population = color_tile("white", "orange"),area(col = c("Total_Words")) ~ normalize_bar("pink", 0.2),area(col = c("Translated")) ~ normalize_bar("lightgreen", 0.2),area(col = c("Fuzzy")) ~ normalize_bar("lightblue", 0.2),area(col = c("Untranslated")) ~ normalize_bar("rgb(255, 182, 193)", 0.2),Name = formatter(
+    "span",
+    style = x ~ ifelse(counting$Count == 0, "color:red; font-weight:bold","color:black")
+  ),Count = formatter(
+    "span",
+    style = x ~ ifelse(x == 0, "color:red", "color:black")
+  ),Translations_50 = formatter("span",
+                         style = x ~ style(color = ifelse(x, "green", "red")),
+                         x ~ icontext(ifelse(x, "ok", "remove"), ifelse(x, "Yes", "No")))
+)) 
+```
+
+```{css,echo=FALSE}
+.bootstrap-table{
+overflow-y: scroll !important; 
+height: 450px;
+}
+```
+
+
+Leaderboard
+=====================================
+
+Row {data-height=450}
+-----------------------------------------------------------------------
+
+### Weblate Leaderboard
+
+```{r table, echo=FALSE, message=FALSE}
+
+
 
 shared_data <- SharedData$new(boards)
 
@@ -344,131 +479,6 @@ fig
 
 ```
 
-Languages
-=====================================
-
-Row {data-height=450}
------------------------------------------------------------------------
-
-### Languages V/S Translations
-
-```{r fig.width=20,fig.height=10}
-df<-select(Language_Statistics_new,c(Name,Translated,Fuzzy,Untranslated))
-df_long <- reshape2::melt(df, id.vars = "Name")
-
-p<-ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Languages", y = "Translation",fill="Legend") +
-  scale_fill_manual(values = c("Translated" = "#A2FF86", "Fuzzy" = "#0079FF", "Untranslated" = "#F31559")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
-p
-
-```
-
-Row
-----------------------------------------------------------------------------
-
-### Population V/S Translations
-```{r}
-  
-  fig1 <- plot_ly(Language_Statistics_new, y = ~Population, x = ~Name, name = 'Population', type = 'scatter', mode = 'markers')
-  fig2 <- plot_ly(Language_Statistics_new, y = ~Translated, x = ~Name, name = 'Translation', type = 'scatter', mode = 'markers')
-  fig <- subplot(fig1,fig2,nrows=2,margin = 0.07,shareX = TRUE)%>%
-    layout(title = list(text = "Population v/s Translations Completed"), plot_bgcolor='#e5ecf6', xaxis = list(title="Language",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'), yaxis = list(title="Population",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'),yaxis2=list(title="Translations"),showlegend=FALSE)
-  
-  # Add hyperlinks to x-axis labels
-  fig <- fig %>% add_annotations(
-    x=Language_Statistics_new$Name,
-    y=rep(-0.3,length(Language_Statistics_new$Name)),
-    text=paste0("<a href='https://translate.rx.studio/languages/",Language_Statistics_new$Code,"/'>Link</a>"),
-    xref='x',
-    yref='paper',
-    showarrow=FALSE,
-    font=list(color='blue',size=10),
-    xshift=10
-  )
-  
-  fig
-
-
-```
-
-Row {data-height=450}
------------------------------------------------------------------------
-
-### Languages V/S Translation Status
-
-```{r}
-fig<-plot_ly()
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Translated,name="Translated",domain = list(x = c(0, 0.4), y = c(0.4, 1)),textposition="inside")
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Fuzzy,name="Fuzzy", domain = list(x = c(0.6, 1), y = c(0.4, 1)),textposition="inside")
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Untranslated,name="Untranslated",domain = list(x = c(0.25, 0.75), y = c(0, 0.6)),textposition="inside")
-fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
-                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE), annotations = list(
-    list(
-      text = "Translated",
-      x = 0.2,  # x position of the label
-      y = 0.75  # y position of the label
-    ),
-    list(
-      text = "Fuzzy",
-      x = 0.8,  # x position of the label
-      y = 0.75  # y position of the label
-    ),
-    list(
-      text = "Untranslated",
-      x = 0.5,  # x position of the label
-      y = 0.25  # y position of the label
-    )
-  ))
-fig
-```
-
-
-Row {data-height=450}
------------------------------------------------------------------------
-
-### Languages V/S Users
-
-```{r}
-vec<-numeric()
-for(i in board$Languages)
-{
-  vec<-c(vec,i)
-}
-counting<-Language_Statistics_new
-counting$Count<-rep(0,length(counting$Name))
-for(i in vec)
-{
-  if(i %in% counting$Name)
-  {
-    index<-which(counting$Name==i)
-    counting$Count[index]<-counting$Count[index]+1
-  }
-}
-counting<-counting[ ,!(colnames(counting) %in% c("Code", "Date","Time"))]
-counting$Translations_50<-ifelse(counting$Translated*2>=counting$Total_Words,TRUE,FALSE)
-```
-
-```{r}
-formattable(counting,list(Population = color_tile("white", "orange"),area(col = c("Total_Words")) ~ normalize_bar("pink", 0.2),area(col = c("Translated")) ~ normalize_bar("lightgreen", 0.2),area(col = c("Fuzzy")) ~ normalize_bar("lightblue", 0.2),area(col = c("Untranslated")) ~ normalize_bar("rgb(255, 182, 193)", 0.2),Name = formatter(
-    "span",
-    style = x ~ ifelse(counting$Count == 0, "color:red; font-weight:bold","color:black")
-  ),Count = formatter(
-    "span",
-    style = x ~ ifelse(x == 0, "color:red", "color:black")
-  ),Translations_50 = formatter("span",
-                         style = x ~ style(color = ifelse(x, "green", "red")),
-                         x ~ icontext(ifelse(x, "ok", "remove"), ifelse(x, "Yes", "No")))
-)) 
-```
-
-```{css,echo=FALSE}
-.bootstrap-table{
-overflow-y: scroll !important; 
-height: 450px;
-}
-```
 Library
 =====================================
 
