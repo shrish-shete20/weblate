@@ -16,26 +16,53 @@ api_url <- "https://translate.rx.studio/api/"
 
 # API request: Fetch all languages
 endpoint <- paste0(api_url, "users/")
-headers2 <- add_headers(Authorization = paste("Token",api_token2))
-response <- GET(url = endpoint,authenticate("shrishs21","kvell@2003"))
-users <- content(response, "text", encoding = "UTF-8")
-users <- fromJSON(users)
+h <- new_handle()
+handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
+handle_setopt(h, customrequest = "GET")
+handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
+
+response<-curl_fetch_memory(endpoint, handle = h)
+users<-rawToChar(response$content)
+users<-fromJSON(users)
+
 count<-users$count
-name<-users$results$full_name[5:count]
-username<-users$results$username[5:count]
+remain<-count%%50
+pages=0
+if(remain==0)
+{
+  pages<-count/50
+}else
+{
+  pages<-ceiling(count/50)
+}
+name<-c()
+username<-c()
+for (i in 1:pages) {
+  pages_url <- paste0("https://translate.rx.studio/api/users/?page=", i)
+  
+  pages_response <- curl_fetch_memory(pages_url, handle = h)
+  
+  pages_changes <- rawToChar(pages_response$content)
+  
+  pages_changes <- fromJSON(pages_changes)
+  extracted_name<-pages_changes$results$full_name
+  extracted_username<-pages_changes$results$username
+  name<-c(name,extracted_name)
+  username<-c(username,extracted_username)
+}  
 data<-data.frame(name=name,username=username)
 stats_endpoint<-paste0(endpoint,username,"/","statistics/")
-stat<-numeric((count-4))
+stat<-numeric((count))
 stats<-list()
-for(i in 1:(count-4))
+for(i in 1:(count))
 {
-  stats_response<-GET(url=stats_endpoint[i],headers=headers)
-  stat[i] <- content(stats_response, "text", encoding = "UTF-8")
+  stats_response<-curl_fetch_memory(stats_endpoint[i], handle = h)
+  stat[i] <- rawToChar(stats_response$content)
   stats[[i]]<-fromJSON(stat[i])
 }
-translated<-numeric(count-4)
-languages_count<-numeric(count-4)
-for(i in 1:(count-4))
+translated<-numeric(count)
+languages_count<-numeric(count)
+for(i in 1:(count))
 {
   translated[i]<-stats[[i]]$translated
   languages_count[i]<-stats[[i]]$languages
@@ -75,8 +102,8 @@ timestamp<-c()
 for(user in data2$username)
 {
   url_timestamp<-paste0("https://translate.rx.studio/api/changes/?user=",user)
-  response_timestamp <- GET(url = url_timestamp, headers = headers, authenticate("shrishs21","kvell@2003"))
-  users_timestamp <- content(response_timestamp, "text", encoding = "UTF-8")
+  response_timestamp <- curl_fetch_memory(url_timestamp,handle = h)
+  users_timestamp <- rawToChar(response_timestamp$content)
   users_timestamp <- fromJSON(users_timestamp)
   if(users_timestamp$count==0)
   {
@@ -92,11 +119,9 @@ data2$created<-timestamp
 created<-c()
 for(user in data2$username)
 {
+  user="dieghernan"
   url<-paste0("https://translate.rx.studio/api/changes/?user=",user)
-  h <- new_handle()
-  handle_setopt(h, ssl_verifyhost = 0L, ssl_verifypeer = 0L)
-  handle_setopt(h, customrequest = "GET")
-  handle_setopt(h, httpheader = c("Authorization: Token wlu_U8k6Kk12pyhXuBeXOP6imHRFiPrUMwHgHari"))
+
   res <- curl_fetch_memory(url, handle = h)
   
   content <- rawToChar(res$content)
@@ -124,11 +149,18 @@ data2$Last_Activity<-created
 now<-Sys.time()
 active_time<-now %m+% months(-6)
 active<-c()
+k=1
 for(time in as.POSIXct(data2$Last_Activity,format = "%Y-%m-%dT%H:%M:%OSZ", tz = "Asia/Kolkata") )
 {
+  print(k)
   if(is.na(time))
   {
-    active<-c(active,"Unbegun")
+    if(data2$translated[k]==0)
+    {
+      active<-c(active,"Unbegun")
+    }else{
+      active<-c(active,"Active")
+    }
   }else
   {
     if(time>active_time)
@@ -139,6 +171,7 @@ for(time in as.POSIXct(data2$Last_Activity,format = "%Y-%m-%dT%H:%M:%OSZ", tz = 
       active<-c(active,"Inactive")
     }
   }
+  k=k+1
 }
 data2$Active<-active
 write_csv(data2, "Statistics.csv")
