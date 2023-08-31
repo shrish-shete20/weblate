@@ -651,7 +651,7 @@ for (i in seq_along(plots)) {
   plots[[i]] <- plots[[i]] %>% layout(margin = list(t = 60, b = 30))
 }
 
-subplots2 <- subplot(plots, nrows = length(libraries) / 2) %>% layout(width = 1030, height = 305 * length(libraries))
+subplots2 <- subplot(plots, nrows = ceiling(length(libraries) / 2)) %>% layout(width = 1030, height = 305 * length(libraries))
 scrollable_div <- div(
   style = "overflow-y: scroll; height: 600px;",
   subplots2
