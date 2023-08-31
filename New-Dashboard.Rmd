@@ -135,10 +135,10 @@ Row
 ### Population V/S Translations
 ```{r}
   
-  fig1 <- plot_ly(Language_Statistics_new, y = ~Population, x = ~Name, name = 'Population', type = 'scatter', mode = 'markers')
-  fig2 <- plot_ly(Language_Statistics_new, y = ~Translated, x = ~Name, name = 'Translation', type = 'scatter', mode = 'markers')
+  fig1 <- plot_ly(Language_Statistics_new, y = ~Population, x = ~Name, name = 'Population', type = 'bar')
+  fig2 <- plot_ly(Language_Statistics_new, y = ~Translated, x = ~Name, name = 'Translation', type = 'bar')
   fig <- subplot(fig1,fig2,nrows=2,margin = 0.07,shareX = TRUE)%>%
-    layout(title = list(text = "Population v/s Translations Completed"), plot_bgcolor='#e5ecf6', xaxis = list(title="Language",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'), yaxis = list(title="Population",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'),yaxis2=list(title="Translations"),showlegend=FALSE)
+    layout(title = list(text = "Population v/s Translations Completed"), plot_bgcolor='#e5ecf6', xaxis = list(title="Language",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'), yaxis = list(title="Population",zerolinecolor = '#ffff', zerolinewidth = 2, gridcolor = 'ffff'),yaxis2=list(title="Translations"),showlegend=FALSE,barmode="stack")
   
   # Add hyperlinks to x-axis labels
   fig <- fig %>% add_annotations(
@@ -157,36 +157,16 @@ Row
 
 ```
 
-Row {data-height=450}
+Row
 -----------------------------------------------------------------------
 
 ### Languages V/S Translation Status
 
 ```{r}
-fig<-plot_ly()
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Translated,name="Translated",domain = list(x = c(0, 0.4), y = c(0.4, 1)),textposition="inside")
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Fuzzy,name="Fuzzy", domain = list(x = c(0.6, 1), y = c(0.4, 1)),textposition="inside")
-fig<-fig%>%add_pie(data=Language_Statistics_new,labels = ~Name,values = ~Untranslated,name="Untranslated",domain = list(x = c(0.25, 0.75), y = c(0, 0.6)),textposition="inside")
-fig <- fig %>% layout(title = "Charts with Translation Status", showlegend = T,
-                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE), annotations = list(
-    list(
-      text = "Translated",
-      x = 0.2,  # x position of the label
-      y = 0.75  # y position of the label
-    ),
-    list(
-      text = "Fuzzy",
-      x = 0.8,  # x position of the label
-      y = 0.75  # y position of the label
-    ),
-    list(
-      text = "Untranslated",
-      x = 0.5,  # x position of the label
-      y = 0.25  # y position of the label
-    )
-  ))
-fig
+plot_trans<-plot_ly(Language_Statistics_new,x=~Name,y=~Translated,name="Translated",type = "bar")
+plot_trans<-plot_trans%>%add_trace(y=~Untranslated,name="Untranslated")
+plot_trans<-plot_trans%>%add_trace(y=~Fuzzy,name="Fuzzy")%>%layout(barmode="stack")
+plot_trans
 ```
 
 
@@ -695,7 +675,7 @@ scrollable_div
 
 Row{data-height=800px}
 ---------------------------------------------------------------------------------
-### Component Translation Status
+### Translation Status per Language
 
 ```{r}
 component<-unique(Library_Language_Statistics$Component)
@@ -841,7 +821,7 @@ data$date<-as.Date(data$date)
 Row 
 --------------------------------------------------------------------------------
 
-### Needs Editing
+### Translation in Weblate that require review
 
 ```{r}
 htmltools::div(
@@ -857,6 +837,7 @@ htmltools::div(
     pagination = TRUE,
     columns = list(
       linked = colDef(show = FALSE),
+      units =colDef(name="Translation_message_id"),
       links = colDef(
         name = "",
         sortable = FALSE,
@@ -921,7 +902,23 @@ htmltools::div(
     defaultColDef = colDef(show = TRUE),
     groupBy=c("library","language"),
     showPageSizeOptions = TRUE,
-    columns = list()
+    columns = list(
+      new_linked = colDef(show = FALSE),
+      units =colDef(show=FALSE),
+      links = colDef(
+        name = "",
+        sortable = FALSE,
+        cell = function() htmltools::tags$button("Links")
+      )
+    ),
+    onClick = JS("function(rowInfo, column) {
+      if (column.id !== 'links') {
+        return
+      }
+      var link = rowInfo.row.linked;
+      console.log(link);
+      window.open(link, '_blank');
+    }")
   )
 )
 ```
