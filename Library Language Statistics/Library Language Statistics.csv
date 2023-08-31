@@ -22,10 +22,10 @@
 "21",21,"base (R GUI)","R","Bengali",264,4,260,0
 "22",22,"base (R GUI)","R","Catalan",264,264,0,0
 "23",23,"base (R GUI)","R","Dutch",264,0,264,0
-"24",1,"The R Project for Statistical Computing","English","English",120,120,0,0
+"24",1,"The R Project for Statistical Computing","English","English",121,121,0,0
 "25",2,"The R Project for Statistical Computing","English","Danish",7,0,7,0
 "26",3,"The R Project for Statistical Computing","English","German",7,4,3,0
-"27",4,"The R Project for Statistical Computing","English","Spanish",49,49,0,0
+"27",4,"The R Project for Statistical Computing","English","Spanish",50,50,0,0
 "28",5,"The R Project for Statistical Computing","English","Persian",7,0,7,0
 "29",6,"The R Project for Statistical Computing","English","French",7,3,4,0
 "30",7,"The R Project for Statistical Computing","English","Italian",7,3,4,0
@@ -226,7 +226,7 @@
 "225",12,"grid (R files)","R","Chinese (Simplified)",190,138,21,31
 "226",13,"grid (R files)","R","Chinese (Traditional)",190,148,18,24
 "227",14,"grid (R files)","R","Arabic",172,0,172,0
-"228",15,"grid (R files)","R","Spanish",190,104,85,1
+"228",15,"grid (R files)","R","Spanish",190,111,78,1
 "229",16,"grid (R files)","R","Dutch",190,0,190,0
 "230",17,"grid (R files)","R","Hindi",190,0,190,0
 "231",18,"grid (R files)","R","Nepali",190,0,190,0
