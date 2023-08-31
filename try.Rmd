@@ -1,0 +1,84 @@
+---
+title: "Weblate dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      heading_font:
+        google: Sen
+      base_font: 
+        google: Prompt
+    orientation: rows
+    self_contained: false
+    vertical_layout: scroll
+    source_code: embed
+    navbar:
+      - { title: "Github", href: "https://github.com/shrish-shete20/weblate", align: right, icon: fa-github}
+    css: ["fragments/custom.css"]
+    skin:
+      header_bg: "#ffffff"
+      header_fg: "#000000"
+      sidebar_bg: "#00438d"
+      sidebar_fg: "#ffffff"
+      body_bg: "#f8f9fa"
+      body_fg: "#000000"
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(htmltools)
+library(fontawesome)
+library(reactable)
+library(dplyr)
+library(crosstalk)
+library(DT)
+library(plotly)
+library(reshape2)
+library(formattable)
+library(htmlwidgets)
+library(curl)
+library(lubridate)
+library(jsonlite)
+source("Data_contains.R")
+compute_active <- function() {
+  active_count<-nrow(subset(Statistics,Active=="Active"))
+  total<-nrow(Statistics)
+  return(active_count*100/total)
+}
+compute_inactive <- function() {
+  inactive_count<-nrow(subset(Statistics,Active=="Inactive"))
+  total<-nrow(Statistics)
+  return(inactive_count*100/total)
+}
+compute_unbegun <- function() {
+  unbegun_count<-nrow(subset(Statistics,Active=="Unbegun"))
+  total<-nrow(Statistics)
+  return(unbegun_count*100/total)
+}
+
+# Install thematic and un-comment for themed static plots (i.e., ggplot2)
+#thematic::thematic_rmd()
+```
+Row{data-height=800px}
+--------------------------------------------------------
+
+### Hard
+
+
+```{r}
+
+# create a new data frame with two y columns
+df <- mtcars %>%
+  group_by(cyl, am) %>%
+  summarize(mpg = mean(mpg), disp = mean(disp))
+
+# create a stacked bar plot with two y columns
+p <- plot_ly(data = df, x = ~factor(cyl)) %>%
+  add_trace(y = ~mpg, color = ~factor(am), type = "bar", name = "mpg") %>%
+  add_trace(y = ~disp, color = ~factor(am), type = "bar", name = "disp") %>%
+  layout(barmode = "stack")
+
+# display the plot
+p
+
+```

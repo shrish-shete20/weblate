@@ -72,17 +72,35 @@ Row
 ---------------------------------------------------------------
 --------
 
-### primary
+### Total Languages
+
 ```{r}
-valueBox(nrow(subset(Statistics,Active=="Active")), caption = "Active Users", icon = "fa-solid fa-users")
+valueBox(nrow(Language_Statistics_new), icon = "fa-language", color = "white")
+```
+### Translated Messages
+
+```{r}
+valueBox(sum(Language_Statistics_new$Translated), icon = "fa-comment", color = "white")
 ```
 
-Row {data-height=450}
+### Untranslated Messages
+
+```{r}
+valueBox(sum(Language_Statistics_new$Untranslated), icon = "fa-comment-slash", color = "white")
+```
+
+### Fuzzy Messages
+
+```{r}
+valueBox(sum(Language_Statistics_new$Fuzzy), icon = "fa-puzzle-piece", color = "white")
+```
+
+Row{data-height=800px}
 -----------------------------------------------------------------------
 
 ### Languages V/S Translations
 
-```{r fig.width=20,fig.height=10}
+```{r fig.width=10,fig.height=30}
 Statistics$Languages <- lapply(Statistics$Languages, function(x) {
   if (startsWith(x, "c(")) {
     eval(parse(text = x))
@@ -101,10 +119,16 @@ p<-ggplot(df_long, aes(x = Name, y = value, fill = variable)) +
   geom_bar(stat = "identity") +
   labs(x = "Languages", y = "Translation",fill="Legend") +
   scale_fill_manual(values = c("Translated" = "#A2FF86", "Fuzzy" = "#0079FF", "Untranslated" = "#F31559")) +theme(axis.text.x = element_text(angle = 90,size=18),legend.text = element_text(size = 14),legend.box = "horizontal",legend.title = element_text(size=30),axis.title.x = element_text(angle = 0,size=22),axis.title.y = element_text(angle = 90,size=22),axis.text.y = element_text(angle = 0,size=18),legend.background=element_rect(fill="pink", size=1, linetype="solid"))
-p
-
+p_plotly <- ggplotly(p)
 ```
+This graph decipts the translation status of each language.
 
+This graph gives a clear idea of which languages require more attention.
+
+```{r fig.width=10,fig.height=10}
+p <- p_plotly %>% layout(xaxis = list(tickfont = list(size = 10),titlefont = list(size = 1)),yaxis = list(tickfont = list(size = 10)),legend=list(font=list(size=10),title=list(font=list(size=16))))
+p
+```
 Row
 ----------------------------------------------------------------------------
 
@@ -178,32 +202,33 @@ for(i in board$Languages)
   vec<-c(vec,i)
 }
 counting<-Language_Statistics_new
-counting$Count<-rep(0,length(counting$Name))
+counting$Contributors<-rep(0,length(counting$Name))
 for(i in vec)
 {
   if(i %in% counting$Name)
   {
     index<-which(counting$Name==i)
-    counting$Count[index]<-counting$Count[index]+1
+    counting$Contributors[index]<-counting$Contributors[index]+1
   }
 }
 counting<-counting[ ,!(colnames(counting) %in% c("Code", "Date","Time"))]
-counting$Translations_50<-ifelse(counting$Translated*2>=counting$Total_Words,TRUE,FALSE)
+counting$`50% translation`<-ifelse(counting$Translated*2>=counting$Total_Words,TRUE,FALSE)
+counting<-subset(counting,select = -...1)
 ```
 
 ```{r}
 formattable(counting,list(Population = color_tile("white", "orange"),area(col = c("Total_Words")) ~ normalize_bar("pink", 0.2),area(col = c("Translated")) ~ normalize_bar("lightgreen", 0.2),area(col = c("Fuzzy")) ~ normalize_bar("lightblue", 0.2),area(col = c("Untranslated")) ~ normalize_bar("rgb(255, 182, 193)", 0.2),Name = formatter(
     "span",
-    style = x ~ ifelse(counting$Count == 0, "color:red; font-weight:bold","color:black")
-  ),Count = formatter(
+    style = x ~ ifelse(counting$Contributors == 0, "color:red; font-weight:bold","color:black")
+  ),Contributors = formatter(
     "span",
     style = x ~ ifelse(x == 0, "color:red", "color:black")
-  ),Translations_50 = formatter("span",
+  ),`50% translation` = formatter("span",
                          style = x ~ style(color = ifelse(x, "green", "red")),
                          x ~ icontext(ifelse(x, "ok", "remove"), ifelse(x, "Yes", "No")))
 )) 
 ```
-
+*The Languages marked in RED have no Contributors.
 ```{css,echo=FALSE}
 .bootstrap-table{
 overflow-y: scroll !important; 
@@ -221,8 +246,6 @@ Row {data-height=450}
 ### Weblate Leaderboard
 
 ```{r table, echo=FALSE, message=FALSE}
-
-
 
 shared_data <- SharedData$new(boards)
 
@@ -746,49 +769,48 @@ eng_df<-data.frame(libra,total_word,translate)
 # 
 
 
-plot_r<-plot_ly(r_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers")
-plot_r<-plot_r%>%add_trace(y=~translate,name="Translate",mode="lines+markers")%>%layout(showlegend = FALSE,annotations = list(
+plot_r<-plot_ly(r_df,x=~libra,y=~total_word,name="Total words",type = "bar")
+plot_r<-plot_r%>%add_trace(y=~translate,name="Translate")%>%layout(showlegend = FALSE,annotations = list(
   list(
     x = 0.5,
     y = 1.1,
-    text = "R component",
+    text = "R",
     showarrow = F,
     xref = 'paper',
     yref = 'paper',
     xanchor = 'center',
     yanchor = 'top',
     font=list(size=16)
-  ))
-)
-plot_c<-plot_ly(c_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers")
+  )),barmode="stack")
+plot_c<-plot_ly(c_df,x=~libra,y=~total_word,name="Total words",type = "bar")
 plot_c<-plot_c%>%add_trace(y=~translate,name="Translate",mode="lines+markers")%>%layout(showlegend = FALSE,annotations = list(
   list(
     x = 0.5,
     y = 1.1,
-    text = "C component",
+    text = "C",
     showarrow = F,
     xref = 'paper',
     yref = 'paper',
     xanchor = 'center',
     yanchor = 'top',
     font=list(size=16)
-  )))
+  )),barmode="stack")
 
-plot_eng<-plot_ly(eng_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers",line=list(color="pink"))
-plot_eng<-plot_eng%>%add_trace(y=~translate,name="Translate",mode="lines+markers",line=list(color="rgb(0,100,80)"))%>%layout(showlegend = FALSE,annotations = list(
-  list(
-    x = 0.5,
-    y = 1.1,
-    text = "English",
-    showarrow = F,
-    xref = 'paper',
-    yref = 'paper',
-    xanchor = 'center',
-    yanchor = 'top',
-    font=list(size=16)
-  )))
+# plot_eng<-plot_ly(eng_df,x=~libra,y=~total_word,name="Total words",type = "scatter",mode="lines+markers",line=list(color="pink"))
+# plot_eng<-plot_eng%>%add_trace(y=~translate,name="Translate",mode="lines+markers",line=list(color="rgb(0,100,80)"))%>%layout(showlegend = FALSE,annotations = list(
+#   list(
+#     x = 0.5,
+#     y = 1.1,
+#     text = "English",
+#     showarrow = F,
+#     xref = 'paper',
+#     yref = 'paper',
+#     xanchor = 'center',
+#     yanchor = 'top',
+#     font=list(size=16)
+#   )))
 
-subplot(plot_r,plot_c,plot_eng,nrows=3,margin = 0.07)
+subplot(plot_r,plot_c,nrows=2,margin = 0.07)
 
 
 ```
