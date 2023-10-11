@@ -2646,7 +2646,6 @@ rcastelo,Catalan,stats (R files),222480,19617,18:13:59
 rcastelo,Catalan,stats (R files),222481,19617,18:15:11
 jospueyo,Catalan,grDevices (R files),221112,19631,13:48:09
 jospueyo,Catalan,tcltk (C files),221307,19631,13:52:46
-jospueyo,Catalan,graphics (R files),221317,19631,13:53:11
 jospueyo,Catalan,methods (R files),221472,19631,13:53:55
 jospueyo,Catalan,grDevices (C files),221953,19631,13:54:28
 jospueyo,Catalan,tcltk (R files),222298,19631,13:55:14
@@ -2970,3 +2969,4 @@ alswajiab,Arabic,Mac GUI,172855,19601,14:52:24
 rcastelo,Catalan,graphics (R files),221361,19612,08:45:24
 rcastelo,Catalan,stats (R files),222472,19620,13:48:54
 rcastelo,Catalan,stats (R files),222475,19620,13:49:30
+jmaspons,Catalan,graphics (R files),221317,19641,06:56:21
