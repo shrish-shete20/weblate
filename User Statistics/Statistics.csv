@@ -22,7 +22,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 21,Yheni Farfan,Yheni,0,1,Spanish,N/A,N/A,Unbegun
 22,Gaby Sandoval,Gabs,16,1,Spanish,2022-10-15T14:21:22.704160Z,2022-10-15T14:49:49.456997Z,Inactive
 23,Richard Detomasi,RichDeto,117,1,Spanish,2022-10-17T03:06:43.307770Z,2023-04-04T19:54:37.257614Z,Inactive
-24,Ella Kaye,EllaKaye,17,1,English (United Kingdom),2023-02-16T09:15:31.685928Z,2023-04-13T09:26:17.599315Z,Active
+24,Ella Kaye,EllaKaye,17,1,English (United Kingdom),2023-02-16T09:15:31.685928Z,2023-04-13T09:26:17.599315Z,Inactive
 25,Ahmadou Dicko,dickoa,7,1,French,2023-01-20T15:53:59.050941Z,2023-01-20T15:53:59.050941Z,Inactive
 26,Michael Chirico,michaelchirico,4,1,Japanese,2023-01-30T16:48:31.203351Z,2023-09-01T12:37:02.879916Z,Active
 27,Elio,eliocamp,7,1,Spanish,2023-01-28T13:50:36.554909Z,2023-01-28T13:50:36.554909Z,Inactive
@@ -39,8 +39,8 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 38,Om Shivam Verma,omsv135,0,0,character(0),N/A,N/A,Unbegun
 39,Sovan Karmakar,Sovan,7,3,"c(""Bengali"", ""English (United Kingdom)"", ""English"")",2023-04-05T06:19:12.199744Z,2023-04-05T06:30:03.843731Z,Inactive
 40,Shreshtha Modi,shreshthamodi,52,2,"c(""Hindi"", ""English (United Kingdom)"")",2023-04-05T16:08:24.913425Z,2023-04-05T16:08:24.913425Z,Inactive
-41,María Cristina Nanton,MCNanton,38,1,Spanish,2023-08-09T23:38:29.713931Z,2023-10-11T23:28:13.768820Z,Active
-42,Hugo Gruson,hgruson,17,1,French,2023-04-13T09:31:55.858098Z,2023-04-13T09:36:34.017717Z,Active
+41,María Cristina Nanton,MCNanton,38,1,Spanish,2023-08-09T23:38:29.713931Z,2023-10-12T22:05:36.232630Z,Active
+42,Hugo Gruson,hgruson,17,1,French,2023-04-13T09:31:55.858098Z,2023-04-13T09:36:34.017717Z,Inactive
 43,Paola Corrales,PaoCorrales,188,1,Spanish,2023-05-16T14:10:27.470268Z,2023-10-06T23:47:03.176329Z,Active
 44,Shriharsh,shriharsh,3,2,"c(""Hindi"", ""English"")",N/A,N/A,Active
 45,Joan Maspons,jmaspons,1939,1,Catalan,2023-08-16T12:59:29.808589Z,2023-10-11T18:19:59.428923Z,Active
