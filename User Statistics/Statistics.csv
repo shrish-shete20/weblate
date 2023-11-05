@@ -11,7 +11,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 10,Lluís,llrs,222,1,Spanish,2022-08-31T19:02:49.185580Z,2023-09-01T11:02:58.649996Z,Active
 11,Beatriz Milz,beatrizmilz,94,1,Portuguese (Brazil),2022-10-15T13:47:30.049688Z,2022-10-21T23:53:19.527141Z,Inactive
 12,Martin Mächler,mmaechler,0,1,German,N/A,N/A,Unbegun
-13,Shun Wang,ShunWang,2044,1,Chinese (Simplified),2022-09-25T03:54:47.221413Z,2023-09-17T06:48:12.789613Z,Active
+13,Shun Wang,ShunWang,2091,1,Chinese (Simplified),2022-09-25T03:54:47.221413Z,2023-11-05T03:21:58.810092Z,Active
 14,Kwangchun Lee,tidyverse,15,1,Korean,2022-09-28T02:06:44.906538Z,2022-10-01T01:52:11.092991Z,Inactive
 15,joygram,joygram,2,1,Korean,2022-09-29T03:28:33.524393Z,2022-09-29T04:55:07.852687Z,Inactive
 16,Macarena Quiroga,msquiroga,321,1,Spanish,2022-10-14T13:18:07.512475Z,2023-07-24T21:27:34.073617Z,Active
@@ -68,3 +68,4 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 67,Riva Quiroga,riva-quiroga,8,1,Spanish,2023-10-20T14:26:13.045839Z,2023-10-20T15:43:49.938958Z,Active
 68,Silvana Pereyra,spereyra,10,1,Spanish,2023-10-20T18:45:05.762564Z,2023-10-20T18:54:42.593639Z,Active
 69,Rafael Fontenelle,rffontenelle,8,1,Portuguese (Brazil),2023-10-31T18:24:54.537614Z,2023-10-31T18:28:57.555580Z,Active
+70,Mayeul Kauffmann,mayeul_kauffmann,3,4,"c(""French"", ""Italian"", ""Spanish"", ""English"")",2023-11-04T16:55:02.499619Z,2023-11-04T17:49:59.393796Z,Active
