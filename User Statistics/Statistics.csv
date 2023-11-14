@@ -15,7 +15,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 14,Kwangchun Lee,tidyverse,15,1,Korean,2022-09-28T02:06:44.906538Z,2022-10-01T01:52:11.092991Z,Inactive
 15,joygram,joygram,2,1,Korean,2022-09-29T03:28:33.524393Z,2022-09-29T04:55:07.852687Z,Inactive
 16,Macarena Quiroga,msquiroga,321,1,Spanish,2022-10-14T13:18:07.512475Z,2023-07-24T21:27:34.073617Z,Active
-17,Heather Turner,hturner,153,1,English (United Kingdom),2022-10-15T14:27:41.332173Z,2023-04-17T08:21:51.320902Z,Inactive
+17,Heather Turner,hturner,155,1,English (United Kingdom),2022-10-15T14:27:41.332173Z,2023-11-13T15:05:07.441872Z,Active
 18,Patricia loto,PatriLoto,64,1,Spanish,2022-10-15T13:39:10.341490Z,2023-10-20T15:44:15.589887Z,Active
 19,Gabriel Tormin,Gtormin,25,2,"c(""English (United Kingdom)"", ""English"")",2022-10-15T13:16:32.835564Z,2022-10-15T14:45:41.494345Z,Inactive
 20,Julieta Laurino,julilaurino,61,1,Spanish,2022-10-15T13:46:13.327172Z,2022-10-15T15:11:34.486152Z,Inactive
@@ -41,7 +41,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 40,Shreshtha Modi,shreshthamodi,52,2,"c(""Hindi"", ""English (United Kingdom)"")",2023-04-05T16:08:24.913425Z,2023-04-05T16:08:24.913425Z,Inactive
 41,María Cristina Nanton,MCNanton,38,1,Spanish,2023-08-09T23:38:29.713931Z,2023-10-12T22:05:36.232630Z,Active
 42,Hugo Gruson,hgruson,17,1,French,2023-04-13T09:31:55.858098Z,2023-04-13T09:36:34.017717Z,Inactive
-43,Paola Corrales,PaoCorrales,190,1,Spanish,2023-05-16T14:10:27.470268Z,2023-10-20T14:09:32.615734Z,Active
+43,Paola Corrales,PaoCorrales,191,1,Spanish,2023-05-16T14:10:27.470268Z,2023-10-20T14:09:32.615734Z,Active
 44,Shriharsh,shriharsh,3,2,"c(""Hindi"", ""English"")",N/A,N/A,Active
 45,Joan Maspons,jmaspons,5170,1,Catalan,2023-08-16T12:59:29.808589Z,2023-10-24T10:52:00.213200Z,Active
 46,Renata Hirota,rmhirota,499,1,Portuguese (Brazil),2023-08-30T11:12:07.994061Z,2023-10-19T18:17:41.271735Z,Active
@@ -63,7 +63,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 62,Néstor Montaño,Nestor.Montano,10,1,Spanish,2023-10-20T14:10:36.781007Z,2023-10-20T14:40:07.668072Z,Active
 63,Mara Geraldina Destefanis,Mara,0,1,Spanish,N/A,N/A,Unbegun
 64,Toby Dylan Hocking,tdhock,0,0,character(0),N/A,N/A,Unbegun
-65,Natalia Labadie,natilab,46,1,Spanish,2023-10-21T01:39:41.324921Z,2023-10-21T02:19:05.666035Z,Active
+65,Natalia Labadie,natilab,47,1,Spanish,2023-10-21T01:39:41.324921Z,2023-10-21T02:19:05.666035Z,Active
 66,Jan Strappa,jansf,38,1,Spanish,2023-10-20T14:30:31.175547Z,2023-10-20T14:47:18.061102Z,Active
 67,Riva Quiroga,riva-quiroga,8,1,Spanish,2023-10-20T14:26:13.045839Z,2023-10-20T15:43:49.938958Z,Active
 68,Silvana Pereyra,spereyra,10,1,Spanish,2023-10-20T18:45:05.762564Z,2023-10-20T18:54:42.593639Z,Active
