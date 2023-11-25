@@ -1,5 +1,5 @@
 serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_Activity,Active
-1,Anonymous,anonymous,0,0,character(0),2022-08-30T14:20:03.409262Z,2023-11-16T19:19:14.886311Z,Active
+1,Anonymous,anonymous,0,0,character(0),2022-08-30T14:20:03.409262Z,2023-11-25T04:26:38.426104Z,Active
 2,Gergely Daroczi,daroczig,19,1,Hungarian,2022-05-26T10:44:35.658195Z,2023-09-02T22:21:13.596015Z,Active
 3,G,daroczig2test,0,0,character(0),N/A,N/A,Unbegun
 4,d g,dgtest,0,0,character(0),N/A,N/A,Unbegun
@@ -61,7 +61,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 60,Jesica Formoso,Jformoso,34,1,Spanish,2023-10-20T14:16:47.126949Z,2023-10-20T15:45:55.584893Z,Active
 61,Luis D. Verde Arregoitia,luisdverde,11,1,Spanish,2023-10-20T14:31:03.078902Z,2023-11-08T02:56:00.837803Z,Active
 62,Néstor Montaño,Nestor.Montano,10,1,Spanish,2023-10-20T14:10:36.781007Z,2023-10-20T14:40:07.668072Z,Active
-63,Mara Geraldina Destefanis,Mara,0,1,Spanish,N/A,N/A,Unbegun
+63,Mara Geraldina Destefanis,Mara,7,1,Spanish,2023-11-24T14:41:27.408887Z,2023-11-24T14:45:01.345156Z,Active
 64,Toby Dylan Hocking,tdhock,0,0,character(0),N/A,N/A,Unbegun
 65,Natalia Labadie,natilab,47,1,Spanish,2023-10-21T01:39:41.324921Z,2023-10-21T02:19:05.666035Z,Active
 66,Jan Strappa,jansf,38,1,Spanish,2023-10-20T14:30:31.175547Z,2023-10-20T14:47:18.061102Z,Active
