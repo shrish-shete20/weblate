@@ -87,7 +87,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 86,Tomasz Żółtak,tzoltak,21,1,Polish,2024-07-02T15:37:10.562766Z,2024-07-02T16:12:25.077363Z,Active
 87,Gergely Daroczi,daroczig-user2024,1,1,Hungarian,2024-07-02T15:37:31.527386Z,2024-07-02T15:37:31.529025Z,Active
 88,Fernando Corrêa,azeloc,2,1,English,2024-07-12T07:51:14.506188Z,2024-07-12T12:44:50.983992Z,Active
-89,Youcef Mokrane,yOOs,0,1,Arabic,2024-08-12T19:30:38.423322Z,2024-08-12T19:50:54.807236Z,Active
+89,Youcef Mokrane,yOOs,0,1,Arabic,2024-08-12T19:30:38.423322Z,2024-10-07T18:23:54.610982Z,Active
 90,Holly Cui,hollyyfc,0,0,character(0),N/A,N/A,Unbegun
 91,Christian Wiat,christianWiat,993,1,French,2024-08-17T16:33:21.893078Z,2024-09-11T07:44:58.354065Z,Active
 92,Christophe Regouby,cregouby,0,1,French,N/A,N/A,Unbegun
@@ -100,3 +100,4 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 99,Jyoti Bhogal,jyoti-bhogal,34,1,Hindi,2024-09-05T11:01:43.414499Z,2024-09-05T13:44:44.504752Z,Active
 100,yes,155138y@,6,1,Chinese (Simplified),2024-09-22T07:52:28.695572Z,2024-09-26T09:24:47.247151Z,Active
 101,Samuel Carleial Fernandes,SamuelCF,0,1,Portuguese (Brazil),N/A,N/A,Unbegun
+102,Gabriela de Lima Marin,GabiLima,0,2,"c(""Portuguese (Brazil)"", ""Spanish"")",N/A,N/A,Unbegun
