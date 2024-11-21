@@ -41,7 +41,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 40,Shreshtha Modi,shreshthamodi,52,2,"c(""Hindi"", ""English (United Kingdom)"")",2023-04-05T16:08:24.913425Z,2023-04-05T16:08:24.913425Z,Inactive
 41,María Cristina Nanton,MCNanton,38,1,Spanish,2023-08-09T23:38:29.713931Z,2023-10-12T22:05:36.232630Z,Inactive
 42,Hugo Gruson,hgruson,17,1,French,2023-04-13T09:31:55.858098Z,2023-04-13T09:36:34.017717Z,Inactive
-43,Paola Corrales,PaoCorrales,440,1,Spanish,2023-05-16T14:10:27.470268Z,2024-11-20T00:18:38.696163Z,Active
+43,Paola Corrales,PaoCorrales,501,1,Spanish,2023-05-16T14:10:27.470268Z,2024-11-21T06:15:41.508243Z,Active
 44,Shriharsh,shriharsh,3,2,"c(""Hindi"", ""English"")",N/A,N/A,Active
 45,Joan Maspons,jmaspons,5451,1,Catalan,2023-08-16T12:59:29.808589Z,2024-09-26T09:07:52.075246Z,Active
 46,Renata Hirota,rmhirota,499,1,Portuguese (Brazil),2023-08-30T11:14:34.166031Z,2023-10-19T18:17:41.271735Z,Inactive
@@ -102,7 +102,7 @@ serial_number,name,username,translated,Lanaguages_Count,Languages,created,Last_A
 101,Samuel Carleial Fernandes,SamuelCF,0,1,Portuguese (Brazil),N/A,N/A,Unbegun
 102,Gabriela de Lima Marin,GabiLima,859,2,"c(""Portuguese (Brazil)"", ""Spanish"")",2024-10-08T13:49:35.674011Z,2024-10-17T19:26:03.141260Z,Active
 103,mario reiman,marioreiman,0,0,character(0),N/A,N/A,Unbegun
-104,Lucio Queiroz,luciorq,12,2,"c(""Portuguese (Brazil)"", ""English"")",2024-11-18T20:34:53.333239Z,2024-11-19T01:44:04.190806Z,Active
+104,Lucio Queiroz,luciorq,85,2,"c(""Portuguese (Brazil)"", ""English"")",2024-11-18T20:34:53.333239Z,2024-11-20T21:50:38.244769Z,Active
 105,Francisco Cardozo,focardozom,194,1,Spanish,2024-11-18T21:23:56.091270Z,2024-11-19T22:25:56.342397Z,Active
 106,Tony Stone,sToney,5,2,"c(""Chinese (Simplified)"", ""English"")",2024-11-19T00:10:50.162711Z,2024-11-19T00:16:33.518706Z,Active
 107,ANDREA GOMEZ VARGAS,agomezvargas,0,1,Spanish,N/A,N/A,Unbegun
